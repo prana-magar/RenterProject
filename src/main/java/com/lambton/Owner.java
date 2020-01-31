@@ -14,4 +14,14 @@ public class Owner extends Person {
         this.landLineNumber = landLineNumber;
         this.url = url;
     }
+
+    @Override
+    public String toString() {
+        return "Owner{" +
+                super.toString()+
+                " companyTitle='" + companyTitle + '\'' +
+                ", landLineNumber='" + landLineNumber + '\'' +
+                ", url='" + url + '\'' +
+                '}';
+    }
 }
