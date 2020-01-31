@@ -20,4 +20,13 @@ public class Driver extends Person implements IDisplay {
         System.out.println(this.toString());
     }
 
+    @Override
+    public String toString() {
+        return "Driver{" +
+                super.toString()+
+                " drivingLicenceNumber='" + drivingLicenceNumber + '\'' +
+                ", isDrivingHistoryClean=" + isDrivingHistoryClean +
+                ", salary=" + salary +
+                '}';
+    }
 }
