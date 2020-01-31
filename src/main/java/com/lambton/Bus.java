@@ -12,4 +12,14 @@ public class Bus extends Vehicle {
         this.accessibilityServices = accessibilityServices;
         this.wifiAvailability = wifiAvailability;
     }
+
+    @Override
+    public String toString() {
+        return "Bus{" +
+                super.toString()+
+                "busType='" + busType + '\'' +
+                ", accessibilityServices=" + accessibilityServices +
+                ", wifiAvailability=" + wifiAvailability +
+                '}';
+    }
 }
