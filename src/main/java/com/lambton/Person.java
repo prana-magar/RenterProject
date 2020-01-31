@@ -2,7 +2,7 @@ package com.lambton;
 
 import java.time.LocalDate;
 
-abstract public class Person {
+ public abstract class Person {
     private String id;
     private String firstName;
     private String lastName;
