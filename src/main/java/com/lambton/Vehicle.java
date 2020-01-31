@@ -6,7 +6,7 @@ enum FuelType{
     ELECTRIC
 }
 
-public abstract class Vehicle {
+public abstract class Vehicle implements IDisplay {
     private String vehicleId;
     private String description;
     private String manufacturer;
@@ -17,7 +17,22 @@ public abstract class Vehicle {
     private FuelType fuelType;
     private float baseRate;
 
-    public Vehicle(String vehicleId, String description, String manufacturer, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, FuelType fuelType, float baseRate) {
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "vehicleId='" + vehicleId + '\'' +
+                ", description='" + description + '\'' +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", isSelfDrive=" + isSelfDrive +
+                ", isInsured=" + isInsured +
+                ", insuranceProviderName='" + insuranceProviderName + '\'' +
+                ", numberOfSeat=" + numberOfSeat +
+                ", fuelType=" + fuelType +
+                ", baseRate=" + baseRate +
+                '}';
+    }
+
+    Vehicle(String vehicleId, String description, String manufacturer, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, FuelType fuelType, float baseRate) {
         this.vehicleId = vehicleId;
         this.description = description;
         this.manufacturer = manufacturer;
@@ -28,4 +43,11 @@ public abstract class Vehicle {
         this.fuelType = fuelType;
         this.baseRate = baseRate;
     }
+
+
+    public void display(){
+        System.out.println(this.toString());
+    }
+
+
 }
