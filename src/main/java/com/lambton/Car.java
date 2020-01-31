@@ -10,9 +10,19 @@ public class Car extends Vehicle {
         this.carType = carType;
         this.carColor = carColor;
     }
-        public void display(){
-            System.out.println(this.toString());
-        }
+
+    public void display() {
+        System.out.println(this.toString());
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                super.toString() +
+                " carType='" + carType + '\'' +
+                ", carColor='" + carColor + '\'' +
+                '}';
+    }
+}
 
 

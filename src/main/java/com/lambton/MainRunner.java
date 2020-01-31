@@ -8,7 +8,6 @@ public class MainRunner {
         //c1.display();
 
         Car car1 = new Car("WAUMF98K09A690525","Brakes don't always work, good luck","Honda","Sedan","Purple",true,true,"Lambton",4,FuelType.PETROL,100);
-       System.out.println(car1.toString());
-        // car1.display();
+         car1.display();
     }
 }
