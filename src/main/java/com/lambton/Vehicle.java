@@ -44,10 +44,4 @@ public abstract class Vehicle implements IDisplay {
         this.baseRate = baseRate;
     }
 
-
-    public void display(){
-        System.out.println(this.toString());
-    }
-
-
 }
