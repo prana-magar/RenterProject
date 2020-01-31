@@ -1,6 +1,8 @@
-package com.lambton;
+package com.lambton.vehicle;
 
-public class Bus extends Vehicle implements IDisplay{
+import com.lambton.utill.IDisplay;
+
+public class Bus extends Vehicle implements IDisplay {
 
     private String busType;
     private Boolean accessibilityServices;

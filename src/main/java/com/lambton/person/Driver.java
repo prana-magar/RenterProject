@@ -1,4 +1,8 @@
-package com.lambton;
+package com.lambton.person;
+
+import com.lambton.person.Gender;
+import com.lambton.utill.IDisplay;
+import com.lambton.person.Person;
 
 import java.time.LocalDate;
 
@@ -9,7 +13,7 @@ public class Driver extends Person implements IDisplay {
     private Float salary;
 
 
-    Driver(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, int age, String mobileNumber, String emailId, String userName, String password, String drivingLicenceNumber, Boolean isDrivingHistoryClean, Float salary) {
+    public Driver(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, int age, String mobileNumber, String emailId, String userName, String password, String drivingLicenceNumber, Boolean isDrivingHistoryClean, Float salary) {
         super(id, firstName, lastName, gender, birthDate, mobileNumber, emailId, userName, password);
         this.drivingLicenceNumber = drivingLicenceNumber;
         this.isDrivingHistoryClean = isDrivingHistoryClean;

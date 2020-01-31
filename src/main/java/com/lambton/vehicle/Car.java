@@ -1,4 +1,4 @@
-package com.lambton;
+package com.lambton.vehicle;
 
 public class Car extends Vehicle {
 

@@ -1,5 +1,7 @@
-package com.lambton;
+package com.lambton.person;
 
+
+import com.lambton.vehicle.Vehicle;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

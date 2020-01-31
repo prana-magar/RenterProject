@@ -1,14 +1,18 @@
-package com.lambton;
+package com.lambton.person;
+
+import com.lambton.utill.Address;
+import com.lambton.utill.IDisplay;
+import com.lambton.VehicleRent;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Customer extends Person implements IDisplay{
+public class Customer extends Person implements IDisplay {
 
     private Address address;
     private ArrayList<VehicleRent> vehicleRents;
 
-     Customer(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String mobileNumber, String emailId, String userName, String password, Address address, ArrayList<VehicleRent> vehicleRents) {
+    public Customer(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String mobileNumber, String emailId, String userName, String password, Address address, ArrayList<VehicleRent> vehicleRents) {
         super(id, firstName, lastName, gender, birthDate, mobileNumber, emailId, userName, password);
         this.address = address;
         this.vehicleRents = vehicleRents;

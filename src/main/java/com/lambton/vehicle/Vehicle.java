@@ -1,10 +1,6 @@
-package com.lambton;
+package com.lambton.vehicle;
 
-enum FuelType{
-    PETROL,
-    DIESEL,
-    ELECTRIC
-}
+import com.lambton.utill.IDisplay;
 
 public abstract class Vehicle implements IDisplay {
     private String vehicleId;

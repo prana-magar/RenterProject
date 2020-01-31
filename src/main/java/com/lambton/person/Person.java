@@ -1,4 +1,4 @@
-package com.lambton;
+package com.lambton.person;
 
 import java.time.LocalDate;
 

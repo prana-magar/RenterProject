@@ -1,6 +1,8 @@
-package com.lambton;
+package com.lambton.vehicle;
 
-public class MotorCycle extends Vehicle implements IDisplay{
+import com.lambton.utill.IDisplay;
+
+public class MotorCycle extends Vehicle implements IDisplay {
 
     private int topSpeed;
     private int Mileage;

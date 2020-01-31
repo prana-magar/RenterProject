@@ -1,4 +1,4 @@
-package com.lambton;
+package com.lambton.utill;
 
 public class Address {
     String country;

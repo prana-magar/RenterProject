@@ -1,8 +1,11 @@
 package com.lambton;
 
+import com.lambton.utill.IDisplay;
+import com.lambton.vehicle.Vehicle;
+
 import java.time.LocalDate;
 
-public class VehicleRent implements IDisplay{
+public class VehicleRent implements IDisplay {
     private LocalDate rentStartDate;
     private LocalDate rentEndDate;
     private int numberOfDays;
