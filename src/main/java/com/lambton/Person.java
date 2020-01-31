@@ -40,6 +40,17 @@ import java.time.LocalDate;
 
     @Override
     public String toString() {
-        return String.format("\nPerson(\nid= %s,\nfirstName= %s,\nlastName=%s\n)",id,firstName,lastName);
+       return "Person{" +
+               "id='" + id + '\'' +
+               ", firstName='" + firstName + '\'' +
+               ", lastName='" + lastName + '\'' +
+               ", gender=" + gender +
+               ", birthDate=" + birthDate +
+               ", age=" + age +
+               ", mobileNumber='" + mobileNumber + '\'' +
+               ", emailId='" + emailId + '\'' +
+               ", userName='" + userName + '\'' +
+               ", password='" + password + '\'' +
+               '}';
     }
-}
+ }
