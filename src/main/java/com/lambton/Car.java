@@ -10,5 +10,9 @@ public class Car extends Vehicle {
         this.carType = carType;
         this.carColor = carColor;
     }
-}
+        public void display(){
+            System.out.println(this.toString());
+        }
+    }
+
 
