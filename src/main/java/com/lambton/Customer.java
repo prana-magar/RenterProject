@@ -16,8 +16,12 @@ public class Customer extends Person implements IDisplay{
         System.out.println(this.toString());
     }
 
+
     @Override
     public String toString() {
-        return String.format("\nCustomer(%s,\nAddress=%s\n)",super.toString(),this.address);
+        return "Customer{" +
+                super.toString()+
+                " address=" + address +
+                '}';
     }
 }
