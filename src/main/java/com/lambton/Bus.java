@@ -1,6 +1,6 @@
 package com.lambton;
 
-public class Bus extends Vehicle {
+public class Bus extends Vehicle implements IDisplay{
 
     private String busType;
     private Boolean accessibilityServices;
@@ -21,5 +21,9 @@ public class Bus extends Vehicle {
                 ", accessibilityServices=" + accessibilityServices +
                 ", wifiAvailability=" + wifiAvailability +
                 '}';
+    }
+
+    public void display(){
+        System.out.println(this.toString());
     }
 }
