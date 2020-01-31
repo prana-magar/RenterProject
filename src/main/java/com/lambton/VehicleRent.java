@@ -1,6 +1,6 @@
 package com.lambton;
 
-import com.lambton.utill.IDisplay;
+import com.lambton.util.IDisplay;
 import com.lambton.vehicle.Vehicle;
 
 import java.time.LocalDate;

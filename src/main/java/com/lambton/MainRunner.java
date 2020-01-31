@@ -2,7 +2,7 @@ package com.lambton;
 
 import com.lambton.person.Customer;
 import com.lambton.person.Gender;
-import com.lambton.utill.Address;
+import com.lambton.util.Address;
 import com.lambton.vehicle.Car;
 import com.lambton.vehicle.FuelType;
 

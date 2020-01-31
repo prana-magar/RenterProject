@@ -1,4 +1,4 @@
-package com.lambton.utill;
+package com.lambton.util;
 
 public interface IDisplay {
      void display();

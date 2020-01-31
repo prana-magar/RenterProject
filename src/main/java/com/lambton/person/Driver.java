@@ -1,8 +1,6 @@
 package com.lambton.person;
 
-import com.lambton.person.Gender;
-import com.lambton.utill.IDisplay;
-import com.lambton.person.Person;
+import com.lambton.util.IDisplay;
 
 import java.time.LocalDate;
 

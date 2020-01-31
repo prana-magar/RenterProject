@@ -1,6 +1,6 @@
 package com.lambton.vehicle;
 
-import com.lambton.utill.IDisplay;
+import com.lambton.util.IDisplay;
 
 public class MotorCycle extends Vehicle implements IDisplay {
 

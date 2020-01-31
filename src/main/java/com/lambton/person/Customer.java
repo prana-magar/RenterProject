@@ -1,7 +1,7 @@
 package com.lambton.person;
 
-import com.lambton.utill.Address;
-import com.lambton.utill.IDisplay;
+import com.lambton.util.Address;
+import com.lambton.util.IDisplay;
 import com.lambton.VehicleRent;
 
 import java.time.LocalDate;
