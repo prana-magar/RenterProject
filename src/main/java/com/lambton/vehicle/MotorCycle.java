@@ -27,4 +27,20 @@ public class MotorCycle extends Vehicle implements IDisplay {
     public void display() {
         System.out.println(this.toString());
     }
+
+    public int getTopSpeed() {
+        return topSpeed;
+    }
+
+    public void setTopSpeed(int topSpeed) {
+        this.topSpeed = topSpeed;
+    }
+
+    public int getMileage() {
+        return Mileage;
+    }
+
+    public void setMileage(int mileage) {
+        Mileage = mileage;
+    }
 }
