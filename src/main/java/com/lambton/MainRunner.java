@@ -105,6 +105,7 @@ public class MainRunner {
         //List of vehicles and information of second owner
         ArrayList<Vehicle> vehicles2 = new ArrayList<Vehicle>();
         vehicles2.add(car3);
+        vehicles2.add(bus3);
         Owner o2 = new Owner("2", "Emilia", "Clarke", Gender.FEMALE, LocalDate.now(), "(463) 4263352", "emiliac@gmail.com", "emc", "emilia7%66", "Independent", "8127456713", "emiliascars.com", vehicles2);
         o2.display();
 
@@ -114,6 +115,13 @@ public class MainRunner {
         vehicles3.add(bus1);
         Owner o3 = new Owner("3", "Simon", "Cowell", Gender.MALE, LocalDate.now(), "(689) 51263458", "simontheman@gmail.com", "SimonCl", "password", "Indus Dealers", "812245789", "indusdealers.com", vehicles3);
         o3.display();
+
+        //List of vehicles and information of fourth owner
+        ArrayList<Vehicle> vehicles4 = new ArrayList<Vehicle>();
+        vehicles4.add(car5);
+        vehicles4.add(bus2);
+        vehicles4.add(bus4);
+        vehicles4.add(mc2);
 
     }
 }
