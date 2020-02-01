@@ -36,4 +36,35 @@ public class Owner extends Person {
     public void display() {
         System.out.println(this.toString());
     }
+    public String getCompanyTitle() {
+        return companyTitle;
+    }
+
+    public void setCompanyTitle(String companyTitle) {
+        this.companyTitle = companyTitle;
+    }
+
+    public String getLandLineNumber() {
+        return landLineNumber;
+    }
+
+    public void setLandLineNumber(String landLineNumber) {
+        this.landLineNumber = landLineNumber;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public ArrayList<Vehicle> getVehicles() {
+        return vehicles;
+    }
+
+    public void setVehicles(ArrayList<Vehicle> vehicles) {
+        this.vehicles = vehicles;
+    }
 }
