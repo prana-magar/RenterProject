@@ -34,7 +34,10 @@ public class MainRunner {
         Customer c4 = new Customer("C4", "Ozzy", "Osbourne", Gender.MALE, LocalDate.now(), "(437) 9807678", "therealozzy@gmail.com", "OzzyOsbourne", "ozzy@1249", new Address(), vehicleRents4);
         c4.display();
 
-
+        //Customer 5
+        ArrayList<VehicleRent> vehicleRents5 = new ArrayList<>();
+        Customer c5 = new Customer("C5", "Zayn", "Malik", Gender.MALE, LocalDate.now(), "(989) 9805690", "zayn@gmail.com", "Zaynnn", "nodirection22", new Address(), vehicleRents5);
+        c5.display();
 
         //Driver 1
         Driver d1 = new Driver("1", "Ram", "Rana", Gender.MALE, LocalDate.now(), "120938123", "asda@asd.com", "wwwas_as", "asdas", "23123da", Boolean.TRUE, 32332.6F);
