@@ -55,8 +55,9 @@ public class MainRunner {
         Driver d4 = new Driver("D4", "Caria", "MacNamee", Gender.FEMALE, LocalDate.now(), "(878) 7670009", "cmacnee@asd.com", "CMac", "cmanee090", "255-69-1229", Boolean.TRUE, 32019.0F);
         d4.display();
 
-
-
+        //Driver 5
+        Driver d5 = new Driver("D4", "Eveline", "Lumox", Gender.FEMALE, LocalDate.now(), "(863) 2253855", "lumoxine@asd.com", "Elumonin", "lumox1992", "335-87-9680", Boolean.TRUE, 32231.0F);
+        d4.display();
 
         //Creation of different vehicle objects BEGIN here
         //Car Objects
