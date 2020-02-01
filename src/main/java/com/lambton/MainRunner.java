@@ -112,6 +112,8 @@ public class MainRunner {
         ArrayList<Vehicle> vehicles3 = new ArrayList<Vehicle>();
         vehicles3.add(car4);
         vehicles3.add(bus1);
+        Owner o3 = new Owner("3", "Simon", "Cowell", Gender.MALE, LocalDate.now(), "(689) 51263458", "simontheman@gmail.com", "SimonCl", "password", "Indus Dealers", "812245789", "indusdealers.com", vehicles3);
+        o3.display();
 
     }
 }
