@@ -35,6 +35,14 @@ public class MainRunner {
 
         Bus bus1 = new Bus("SALVN2BG3DH848046","Low-floor","None","Dion",false,true,"BigBus Insurance",48,32, true,true,FuelType.DIESEL,250);
         bus1.display();
+
+        Bus bus2 = new Bus("1B3BD2FB3BN077941","Coach","None","Dion",false,true,"Good Fortune Insurance",54,36, true,false,FuelType.DIESEL,250);
+        bus2.display();
+
+        Bus bus3 = new Bus("JM3KE2BE1F0888904","Minibus","None","Intas",true,true,"LittleBus Insurance",12,14, false,false,FuelType.DIESEL,250);
+        bus3.display();
+
+        //
         ArrayList<Vehicle> vehicles1 = new ArrayList<Vehicle>();
         vehicles1.add(car1);
         vehicles1.add(car2);
