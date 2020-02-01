@@ -56,6 +56,34 @@ public class MainRunner {
         Bus bus3 = new Bus("JM3KE2BE1F0888904", "Minibus", "None", "Intas", true, true, "LittleBus Insurance", 12, 14, false, false, FuelType.DIESEL, 250);
         bus3.display();
 
+        Bus bus4 = new Bus("WBAAV33461F067610",
+                "Double-decker",
+                "Realigned object-oriented interface",
+                "Nissan",
+                false,
+                true,
+                "Aviva",
+                32,
+                14,
+                true,
+                true,
+                FuelType.DIESEL,
+                250);
+
+        Bus bus5 = new Bus("1C4RDHEG9EC794096",
+                "Double-decker",
+                "Assimilated eco-centric process improvement",
+                "BMW",
+                false,
+                true,
+                "Intact Insurance",
+                33,
+                14,
+                true,
+                false,
+                FuelType.DIESEL,
+                250);
+
         MotorCycle mc1 = new MotorCycle("WAUKF98E78A943050", "2018 Ducati Multistrada", "Ducati", false, true, "Good Fortune Insurance", 2, FuelType.PETROL, 45, 150, 50);
         mc1.display();
 
