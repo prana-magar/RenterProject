@@ -22,9 +22,15 @@ public class MainRunner {
         //Customer 2
         ArrayList<VehicleRent> vehicleRents2 = new ArrayList<>();
         Customer c2 = new Customer("C2", "Abhishek", "Jaya", Gender.MALE, LocalDate.now(), "(437) 9807865", "abhisheksj@gmail.com", "abysj", "abhishek199566", new Address(), vehicleRents2);
-        c1.display();
+        c2.display();
 
         //Customer 3
+        ArrayList<VehicleRent> vehicleRents3 = new ArrayList<>();
+        Customer c3 = new Customer("C2", "Raghav", "Bobal", Gender.MALE, LocalDate.now(), "(437) 6784595", "raghav21@gmail.com", "raghav22", "raghav77", new Address(), vehicleRents3);
+        c2.display();
+
+
+        //Driver 1
         Driver d1 = new Driver("1", "Ram", "Rana", Gender.MALE, LocalDate.now(), "120938123", "asda@asd.com", "wwwas_as", "asdas", "23123da", Boolean.TRUE, 32332.6F);
         d1.display();
 
