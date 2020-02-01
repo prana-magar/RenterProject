@@ -90,7 +90,7 @@ public class MainRunner {
         MotorCycle mc2 = new MotorCycle("2C3CDZAG8FH338790", "2019 Scrambler", "Triumph", true, true, "Saferoads Insurance", 2, FuelType.PETROL, 26, 135, 50);
         mc2.display();
 
-        MotorCycle mc3 = new MotorCycle("3C63DPNL5CG066788", "2004 Thundercat YZF600R", "Yamaha", true, true, "Bikesareus Insurance", 2, FuelType.PETROL, 43, 145, 50);
+        MotorCycle mc3 = new MotorCycle("1FTEW1E82AF943821", "2004 Thundercat YZF600R", "Yamaha", true, true, "Bikesareus Insurance", 2, FuelType.PETROL, 43, 145, 50);
         mc3.display();
 
         //Vehicle objects END here
