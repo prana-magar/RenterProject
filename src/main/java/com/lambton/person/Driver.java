@@ -31,4 +31,28 @@ public class Driver extends Person implements IDisplay {
                 ", salary=" + salary +
                 '}';
     }
+
+    public String getDrivingLicenceNumber() {
+        return drivingLicenceNumber;
+    }
+
+    public void setDrivingLicenceNumber(String drivingLicenceNumber) {
+        this.drivingLicenceNumber = drivingLicenceNumber;
+    }
+
+    public Boolean getDrivingHistoryClean() {
+        return isDrivingHistoryClean;
+    }
+
+    public void setDrivingHistoryClean(Boolean drivingHistoryClean) {
+        isDrivingHistoryClean = drivingHistoryClean;
+    }
+
+    public Float getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Float salary) {
+        this.salary = salary;
+    }
 }

@@ -40,4 +40,75 @@ public abstract class Vehicle implements IDisplay {
         this.baseRate = baseRate;
     }
 
+    public String getVehicleId() {
+        return vehicleId;
+    }
+
+    public void setVehicleId(String vehicleId) {
+        this.vehicleId = vehicleId;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public Boolean getSelfDrive() {
+        return isSelfDrive;
+    }
+
+    public void setSelfDrive(Boolean selfDrive) {
+        isSelfDrive = selfDrive;
+    }
+
+    public Boolean getInsured() {
+        return isInsured;
+    }
+
+    public void setInsured(Boolean insured) {
+        isInsured = insured;
+    }
+
+    public String getInsuranceProviderName() {
+        return insuranceProviderName;
+    }
+
+    public void setInsuranceProviderName(String insuranceProviderName) {
+        this.insuranceProviderName = insuranceProviderName;
+    }
+
+    public int getNumberOfSeat() {
+        return numberOfSeat;
+    }
+
+    public void setNumberOfSeat(int numberOfSeat) {
+        this.numberOfSeat = numberOfSeat;
+    }
+
+    public FuelType getFuelType() {
+        return fuelType;
+    }
+
+    public void setFuelType(FuelType fuelType) {
+        this.fuelType = fuelType;
+    }
+
+    public float getBaseRate() {
+        return baseRate;
+    }
+
+    public void setBaseRate(float baseRate) {
+        this.baseRate = baseRate;
+    }
 }
