@@ -9,7 +9,7 @@ public class VehicleRent implements IDisplay {
     private LocalDate rentStartDate;
     private LocalDate rentEndDate;
     private int numberOfDays;
-    private int kmDrived;
+    private int kmDriven;
     private float totalBill;
     private Vehicle vehicle;
 
@@ -19,7 +19,7 @@ public class VehicleRent implements IDisplay {
                 "rentStartDate=" + rentStartDate +
                 ", rentEndDate=" + rentEndDate +
                 ", numberOfDays=" + numberOfDays +
-                ", kmDrived=" + kmDrived +
+                ", kmDriven=" + kmDriven +
                 ", totalBill=" + totalBill +
                 ", vehicle=" + vehicle +
                 '}';
@@ -54,12 +54,12 @@ public class VehicleRent implements IDisplay {
         this.numberOfDays = numberOfDays;
     }
 
-    public int getKmDrived() {
-        return kmDrived;
+    public int getKmDriven() {
+        return kmDriven;
     }
 
-    public void setKmDrived(int kmDrived) {
-        this.kmDrived = kmDrived;
+    public void setKmDriven(int kmDriven) {
+        this.kmDriven = kmDriven;
     }
 
     public float getTotalBill() {
