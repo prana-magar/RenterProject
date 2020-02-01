@@ -28,4 +28,28 @@ public class Bus extends Vehicle implements IDisplay {
     public void display(){
         System.out.println(this.toString());
     }
+
+    public String getBusType() {
+        return busType;
+    }
+
+    public void setBusType(String busType) {
+        this.busType = busType;
+    }
+
+    public Boolean getAccessibilityServices() {
+        return accessibilityServices;
+    }
+
+    public void setAccessibilityServices(Boolean accessibilityServices) {
+        this.accessibilityServices = accessibilityServices;
+    }
+
+    public Boolean getWifiAvailability() {
+        return wifiAvailability;
+    }
+
+    public void setWifiAvailability(Boolean wifiAvailability) {
+        this.wifiAvailability = wifiAvailability;
+    }
 }
