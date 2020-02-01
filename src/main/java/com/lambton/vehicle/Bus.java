@@ -7,10 +7,12 @@ public class Bus extends Vehicle implements IDisplay {
     private String busType;
     private Boolean accessibilityServices;
     private Boolean wifiAvailability;
+    private int StandingCapacity;
 
-    public Bus(String vehicleId, String busType, String description, String manufacturer, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, Boolean wifiAvailability, Boolean accessibilityServices, FuelType fuelType, float baseRate) {
+    public Bus(String vehicleId, String busType, String description, String manufacturer, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, int StandingCapacity, Boolean wifiAvailability, Boolean accessibilityServices, FuelType fuelType, float baseRate) {
         super(vehicleId, description, manufacturer, isSelfDrive, isInsured, insuranceProviderName, numberOfSeat, fuelType, baseRate);
         this.busType = busType;
+        this.StandingCapacity = StandingCapacity;
         this.accessibilityServices = accessibilityServices;
         this.wifiAvailability = wifiAvailability;
     }
@@ -35,6 +37,12 @@ public class Bus extends Vehicle implements IDisplay {
 
     public void setBusType(String busType) {
         this.busType = busType;
+    }
+
+    public int getStandingCapacity() {  return StandingCapacity; }
+
+    public void setStandingCapacity(int standingCapacity) {
+        StandingCapacity = standingCapacity;
     }
 
     public Boolean getAccessibilityServices() {

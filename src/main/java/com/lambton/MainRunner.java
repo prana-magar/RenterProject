@@ -5,6 +5,7 @@ import com.lambton.person.Driver;
 import com.lambton.person.Gender;
 import com.lambton.person.Owner;
 import com.lambton.util.Address;
+import com.lambton.vehicle.Bus;
 import com.lambton.vehicle.Car;
 import com.lambton.vehicle.FuelType;
 import com.lambton.vehicle.Vehicle;
@@ -22,6 +23,7 @@ public class MainRunner {
         Driver d1 = new Driver("1","Ram","Rana",Gender.MALE,LocalDate.now(),"120938123","asda@asd.com","wwwas_as","asdas","23123da",Boolean.TRUE,32332.6F);
         d1.display();
 
+        //Creation of different vehicle objects begin here
         Car car1 = new Car("WAUMF98K09A690525","Brakes don't always work, good luck","Honda","Sedan","Purple",true,true,"Saferoads Insurance",4, FuelType.PETROL,100);
          car1.display();
 
@@ -30,6 +32,9 @@ public class MainRunner {
 
         Car car3 = new Car("1D7RB1CP8AS240571","Low kMs driven","Toyota","Hatchback","Black",true,true,"Digit Insurance",4,FuelType.DIESEL,100);
         car3.display();
+
+        Bus bus1 = new Bus("SALVN2BG3DH848046","Low-floor","None","Dion",false,true,"BigBus Insurance",48,32, true,true,FuelType.DIESEL,250);
+        bus1.display();
         ArrayList<Vehicle> vehicles1 = new ArrayList<Vehicle>();
         vehicles1.add(car1);
         vehicles1.add(car2);
