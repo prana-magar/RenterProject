@@ -34,15 +34,15 @@ public class MainRunner {
         Car car4 = new Car("WBAWL1C57AP711666", "1969 Ford Mustang", "Ford", "Sedan", "White", true, true, "Digit Insurance", 4, FuelType.DIESEL, 100);
         car4.display();
 
-        Car car5 = new Car("WBAWL1C57AP71112",
-                "1969 Ford Mustang",
-                "Ford",
-                "Sedan",
-                "White",
+        Car car5 = new Car("5TDBKRFH4ES020941",
+                "2020 Mercedes-Benz GLE SUV",
+                "Mercedes",
+                "SUV",
+                "Blue",
                 true,
                 true,
                 "Digit Insurance",
-                4,
+                6,
                 FuelType.DIESEL,
                 100);
         car5.display();
@@ -56,7 +56,7 @@ public class MainRunner {
         Bus bus3 = new Bus("JM3KE2BE1F0888904", "Minibus", "None", "Intas", true, true, "LittleBus Insurance", 12, 14, false, false, FuelType.DIESEL, 250);
         bus3.display();
 
-        Bus bus4 = new Bus("WBAAV33461F067610",
+        Bus bus4 = new Bus("1G6YV34A945415578",
                 "Double-decker",
                 "Realigned object-oriented interface",
                 "Nissan",
@@ -70,14 +70,14 @@ public class MainRunner {
                 FuelType.DIESEL,
                 250);
 
-        Bus bus5 = new Bus("1C4RDHEG9EC794096",
+        Bus bus5 = new Bus("SCBGU3ZA2FC057391",
                 "Double-decker",
                 "Assimilated eco-centric process improvement",
                 "BMW",
                 false,
                 true,
                 "Intact Insurance",
-                33,
+                34,
                 14,
                 true,
                 false,
