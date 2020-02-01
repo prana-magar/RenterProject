@@ -36,13 +36,18 @@ public class MainRunner {
 
         //Customer 5
         ArrayList<VehicleRent> vehicleRents5 = new ArrayList<>();
-        Customer c5 = new Customer("C5", "Zayn", "Malik", Gender.MALE, LocalDate.now(), "(989) 9805690", "zayn@gmail.com", "Zaynnn", "nodirection22", new Address(), vehicleRents5);
+        Customer c5 = new Customer("C5", "Alicia", "Keys", Gender.FEMALE, LocalDate.now(), "(989) 9805690", "alicia@gmail.com", "AlKeys", "alicia22", new Address(), vehicleRents5);
         c5.display();
 
-
         //Driver 1
-        Driver d1 = new Driver("D1", "Ram", "Rana", Gender.MALE, LocalDate.now(), "(989) 9076891", "ramrana@asd.com", "RamRana", "rananana11", "677-43-0205", Boolean.TRUE, 32332.6F);
+        Driver d1 = new Driver("D1", "Ram", "Rana", Gender.MALE, LocalDate.now(), "(989) 9076891", "ramrana@yahoo.com", "RamRana", "rananana11", "677-43-0205", Boolean.TRUE, 32332.6F);
         d1.display();
+
+        //Driver2
+        Driver d2 = new Driver("D2", "Scott", "Adkins", Gender.MALE, LocalDate.now(), "(437) 9870091", "scottadkins@asd.com", "Scotty", "sctt77", "885-66-0755", Boolean.TRUE, 28099.6F);
+        d1.display();
+
+        //Driver 3
 
 
         //Creation of different vehicle objects BEGIN here
