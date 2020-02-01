@@ -14,14 +14,22 @@ import java.util.ArrayList;
 public class MainRunner {
     public static void main(String[] args) {
 
-        ArrayList<VehicleRent> vehicleRents = new ArrayList<>();
-        Customer c1 = new Customer("1", "Prakash", "Rana", Gender.MALE, LocalDate.now(), "98123123", "prakash@gmail.com", "ranaprakash", "asdq321e1231231", new Address(), vehicleRents);
+        //Customer 1
+        ArrayList<VehicleRent> vehicleRents1 = new ArrayList<>();
+        Customer c1 = new Customer("C1", "Prakash", "Rana", Gender.MALE, LocalDate.now(), "(437) 9908989 ", "prakash@gmail.com", "ranaprakash", "asdq321e1231231", new Address(), vehicleRents1);
         c1.display();
 
+        //Customer 2
+        ArrayList<VehicleRent> vehicleRents2 = new ArrayList<>();
+        Customer c2 = new Customer("C2", "Abhishek", "Jaya", Gender.MALE, LocalDate.now(), "(437) 9807865", "abhisheksj@gmail.com", "abysj", "abhishek199566", new Address(), vehicleRents2);
+        c1.display();
+
+        //Customer 3
         Driver d1 = new Driver("1", "Ram", "Rana", Gender.MALE, LocalDate.now(), "120938123", "asda@asd.com", "wwwas_as", "asdas", "23123da", Boolean.TRUE, 32332.6F);
         d1.display();
 
         //Creation of different vehicle objects BEGIN here
+        //Car Objects
         Car car1 = new Car("WAUMF98K09A690525", "2019 Honda Accord", "Honda", "Sedan", "Purple", false, true, "Saferoads Insurance", 4, FuelType.PETROL, 100);
         car1.display();
 
@@ -40,6 +48,7 @@ public class MainRunner {
         Bus bus1 = new Bus("SALVN2BG3DH848046", "Low-floor", "None", "Dion", false, true, "BigBus Insurance", 48, 32, true, true, FuelType.DIESEL, 250);
         bus1.display();
 
+        //Bus Objects
         Bus bus2 = new Bus("1B3BD2FB3BN077941", "Coach", "None", "Dion", false, true, "Good Fortune Insurance", 54, 36, true, false, FuelType.DIESEL, 250);
         bus2.display();
 
@@ -50,6 +59,7 @@ public class MainRunner {
 
         Bus bus5 = new Bus("SCBGU3ZA2FC057391","Double-decker", "Assimilated eco-centric process improvement", "BMW", false, true, "Intact Insurance", 34, 14, true, false, FuelType.DIESEL, 250);
 
+        //MotorCycle Objects
         MotorCycle mc1 = new MotorCycle("WAUKF98E78A943050", "2018 Ducati Multistrada", "Ducati", false, true, "Good Fortune Insurance", 2, FuelType.PETROL, 45, 150, 50);
         mc1.display();
 
