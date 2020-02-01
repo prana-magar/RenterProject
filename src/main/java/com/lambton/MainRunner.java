@@ -31,7 +31,7 @@ public class MainRunner {
         ArrayList<Vehicle> vehicles1 = new ArrayList<Vehicle>();
         vehicles1.add(car1);
         vehicles1.add(car2);
-        Owner o1 = new Owner("1","reo","eet",Gender.MALE,LocalDate.now(),"1231298","asdas@gmail.com","wewew_ad","asdas","Hello","8127289","asdas.com",vehicles1);
+        Owner o1 = new Owner("1","Odetta","Vlasov",Gender.FEMALE,LocalDate.now(),"(463) 6723367","odetta@gmail.com","odettavlasov","asdas","Quick Motors","8127289453","quickmotors.com",vehicles1);
         o1.display();
     }
 }
