@@ -51,6 +51,13 @@ public class MainRunner {
         Driver d3 = new Driver("D3", "Charles", "Manson", Gender.MALE, LocalDate.now(), "(437) 8790991", "charlesmanson@asd.com", "CharlesManson", "charles44", "796-04-3290", Boolean.FALSE, 19090.0F);
         d3.display();
 
+        //Driver 4
+        Driver d4 = new Driver("D4", "Caria", "MacNamee", Gender.FEMALE, LocalDate.now(), "(878) 7670009", "cmacnee@asd.com", "CMac", "cmanee090", "255-69-1229", Boolean.TRUE, 32019.0F);
+        d4.display();
+
+
+
+
         //Creation of different vehicle objects BEGIN here
         //Car Objects
         Car car1 = new Car("WAUMF98K09A690525", "2019 Honda Accord", "Honda", "Sedan", "Purple", false, true, "Saferoads Insurance", 4, FuelType.PETROL, 100);
