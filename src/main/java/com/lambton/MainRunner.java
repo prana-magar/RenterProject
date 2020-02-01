@@ -109,6 +109,9 @@ public class MainRunner {
         o2.display();
 
         //List of vehicles and information of third owner
+        ArrayList<Vehicle> vehicles3 = new ArrayList<Vehicle>();
+        vehicles3.add(car4);
+        vehicles3.add(bus1);
 
     }
 }
