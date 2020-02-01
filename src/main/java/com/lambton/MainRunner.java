@@ -34,17 +34,7 @@ public class MainRunner {
         Car car4 = new Car("WBAWL1C57AP711666", "1969 Ford Mustang", "Ford", "Sedan", "White", true, true, "Digit Insurance", 4, FuelType.DIESEL, 100);
         car4.display();
 
-        Car car5 = new Car("5TDBKRFH4ES020941",
-                "2020 Mercedes-Benz GLE SUV",
-                "Mercedes",
-                "SUV",
-                "Blue",
-                true,
-                true,
-                "Digit Insurance",
-                6,
-                FuelType.DIESEL,
-                100);
+        Car car5 = new Car("5TDBKRFH4ES020941", "2020 Mercedes-Benz GLE SUV", "Mercedes", "SUV", "Blue", true, true, "Digit Insurance", 6, FuelType.DIESEL, 100);
         car5.display();
 
         Bus bus1 = new Bus("SALVN2BG3DH848046", "Low-floor", "None", "Dion", false, true, "BigBus Insurance", 48, 32, true, true, FuelType.DIESEL, 250);
@@ -56,33 +46,9 @@ public class MainRunner {
         Bus bus3 = new Bus("JM3KE2BE1F0888904", "Minibus", "None", "Intas", true, true, "LittleBus Insurance", 12, 14, false, false, FuelType.DIESEL, 250);
         bus3.display();
 
-        Bus bus4 = new Bus("1G6YV34A945415578",
-                "Double-decker",
-                "Realigned object-oriented interface",
-                "Nissan",
-                false,
-                true,
-                "Aviva",
-                32,
-                14,
-                true,
-                true,
-                FuelType.DIESEL,
-                250);
+        Bus bus4 = new Bus("1G6YV34A945415578", "Double-decker", "Realigned object-oriented interface", "Nissan", false, true, "Aviva", 32, 14, true, true, FuelType.DIESEL, 250);
 
-        Bus bus5 = new Bus("SCBGU3ZA2FC057391",
-                "Double-decker",
-                "Assimilated eco-centric process improvement",
-                "BMW",
-                false,
-                true,
-                "Intact Insurance",
-                34,
-                14,
-                true,
-                false,
-                FuelType.DIESEL,
-                250);
+        Bus bus5 = new Bus("SCBGU3ZA2FC057391","Double-decker", "Assimilated eco-centric process improvement", "BMW", false, true, "Intact Insurance", 34, 14, true, false, FuelType.DIESEL, 250);
 
         MotorCycle mc1 = new MotorCycle("WAUKF98E78A943050", "2018 Ducati Multistrada", "Ducati", false, true, "Good Fortune Insurance", 2, FuelType.PETROL, 45, 150, 50);
         mc1.display();
@@ -92,7 +58,6 @@ public class MainRunner {
 
         MotorCycle mc3 = new MotorCycle("1FTEW1E82AF943821", "2004 Thundercat YZF600R", "Yamaha", true, true, "Bikesareus Insurance", 2, FuelType.PETROL, 43, 145, 50);
         mc3.display();
-
         //Vehicle objects END here
 
         //List of vehicles and information of first owner
