@@ -32,4 +32,20 @@ public class Customer extends Person implements IDisplay {
                 " vehicleRents=" + vehicleRents +
                 '}';
     }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public ArrayList<VehicleRent> getVehicleRents() {
+        return vehicleRents;
+    }
+
+    public void setVehicleRents(ArrayList<VehicleRent> vehicleRents) {
+        this.vehicleRents = vehicleRents;
+    }
 }
