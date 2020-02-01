@@ -45,10 +45,11 @@ public class MainRunner {
 
         //Driver2
         Driver d2 = new Driver("D2", "Scott", "Adkins", Gender.MALE, LocalDate.now(), "(437) 9870091", "scottadkins@asd.com", "Scotty", "sctt77", "885-66-0755", Boolean.TRUE, 28099.6F);
-        d1.display();
+        d2.display();
 
         //Driver 3
-
+        Driver d3 = new Driver("D3", "Charles", "Manson", Gender.MALE, LocalDate.now(), "(437) 8790991", "charlesmanson@asd.com", "CharlesManson", "charles44", "796-04-3290", Boolean.FALSE, 19090.0F);
+        d3.display();
 
         //Creation of different vehicle objects BEGIN here
         //Car Objects
