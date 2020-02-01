@@ -39,9 +39,11 @@ public class MainRunner {
         Customer c5 = new Customer("C5", "Zayn", "Malik", Gender.MALE, LocalDate.now(), "(989) 9805690", "zayn@gmail.com", "Zaynnn", "nodirection22", new Address(), vehicleRents5);
         c5.display();
 
+
         //Driver 1
-        Driver d1 = new Driver("1", "Ram", "Rana", Gender.MALE, LocalDate.now(), "120938123", "asda@asd.com", "wwwas_as", "asdas", "23123da", Boolean.TRUE, 32332.6F);
+        Driver d1 = new Driver("D1", "Ram", "Rana", Gender.MALE, LocalDate.now(), "(989) 9076891", "ramrana@asd.com", "RamRana", "rananana11", "677-43-0205", Boolean.TRUE, 32332.6F);
         d1.display();
+
 
         //Creation of different vehicle objects BEGIN here
         //Car Objects
