@@ -129,5 +129,7 @@ public class MainRunner {
         ArrayList<Vehicle> vehicles5 = new ArrayList<Vehicle>();
         vehicles5.add(mc1);
         vehicles5.add(bus5);
+        Owner o5 = new Owner("5", "Jeff", "Cavaliere", Gender.MALE, LocalDate.now(), "(689) 44665590", "jeffcavaliere@gmail.com", "Jeff", "abc123", "AthleanX Motors", "890459789", "athleanx.com", vehicles5);
+        o5.display();
     }
 }
