@@ -99,14 +99,16 @@ public class MainRunner {
         ArrayList<Vehicle> vehicles1 = new ArrayList<Vehicle>();
         vehicles1.add(car1);
         vehicles1.add(car2);
-        Owner o1 = new Owner("1", "Odetta", "Vlasov", Gender.FEMALE, LocalDate.now(), "(463) 6723367", "odetta@gmail.com", "odettavlasov", "asdas", "Quick Motors", "8127289453", "quickmotors.com", vehicles1);
+        Owner o1 = new Owner("1", "Odetta", "Vlasov", Gender.FEMALE, LocalDate.now(), "(463) 6723367", "odetta@gmail.com", "odettavlasov", "ode22", "Quick Motors", "8127289453", "quickmotors.com", vehicles1);
         o1.display();
 
         //List of vehicles and information of second owner
         ArrayList<Vehicle> vehicles2 = new ArrayList<Vehicle>();
         vehicles2.add(car3);
+        Owner o2 = new Owner("2", "Emilia", "Clarke", Gender.FEMALE, LocalDate.now(), "(463) 4263352", "emiliac@gmail.com", "emc", "emilia7%66", "Independent", "8127456713", "emiliascars.com", vehicles2);
+        o2.display();
 
-
+        //List of vehicles and information of third owner
 
     }
 }
