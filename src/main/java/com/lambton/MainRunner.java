@@ -94,10 +94,19 @@ public class MainRunner {
         mc3.display();
 
         //Vehicle objects END here
+
+        //List of vehicles and information of first owner
         ArrayList<Vehicle> vehicles1 = new ArrayList<Vehicle>();
         vehicles1.add(car1);
         vehicles1.add(car2);
         Owner o1 = new Owner("1", "Odetta", "Vlasov", Gender.FEMALE, LocalDate.now(), "(463) 6723367", "odetta@gmail.com", "odettavlasov", "asdas", "Quick Motors", "8127289453", "quickmotors.com", vehicles1);
         o1.display();
+
+        //List of vehicles and information of second owner
+        ArrayList<Vehicle> vehicles2 = new ArrayList<Vehicle>();
+        vehicles2.add(car3);
+
+
+
     }
 }
