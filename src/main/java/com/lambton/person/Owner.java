@@ -31,4 +31,9 @@ public class Owner extends Person {
                 ", url='" + url + '\'' +
                 '}';
     }
+
+    @Override
+    public void display() {
+        System.out.println(this.toString());
+    }
 }

@@ -1,8 +1,10 @@
 package com.lambton.person;
 
+import com.lambton.util.IDisplay;
+
 import java.time.LocalDate;
 
- public abstract class Person {
+ public abstract class Person implements IDisplay {
     private String id;
     private String firstName;
     private String lastName;
