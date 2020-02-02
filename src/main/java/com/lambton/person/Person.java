@@ -16,6 +16,7 @@ import java.time.LocalDate;
     private String emailId;
     private String userName;
     private String password;
+    private String salt;
 
      Person(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String mobileNumber, String emailId, String userName, String password) {
         String salt = PasswordUtil.getSalt(password.length());
@@ -138,8 +139,19 @@ import java.time.LocalDate;
        this.password = password;
     }
 
+    public String getSalt() {
+       return salt;
+    }
+
+    public void setSalt(String salt) {
+       this.salt = salt;
+    }
+
+
     @Override
     public void display() {
        System.out.println(this.toString());
     }
+
+
  }
