@@ -37,22 +37,6 @@ public class Customer extends Person {
                 '}';
     }
 
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    public List<VehicleRent> getVehicleRents() {
-        return vehicleRents;
-    }
-
-    public void setVehicleRents(List<VehicleRent> vehicleRents) {
-        this.vehicleRents = (ArrayList<VehicleRent>)vehicleRents;
-    }
-
     public void addVehicleRent(VehicleRent vehicleRent){
 
         if(this.vehicleRents == null){
@@ -84,5 +68,22 @@ public class Customer extends Person {
         }
         return false;
     }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public List<VehicleRent> getVehicleRents() {
+        return vehicleRents;
+    }
+
+    public void setVehicleRents(List<VehicleRent> vehicleRents) {
+        this.vehicleRents = (ArrayList<VehicleRent>)vehicleRents;
+    }
+
 
 }
