@@ -3,6 +3,7 @@ package com.lambton.person;
 import com.lambton.util.Address;
 import com.lambton.util.IDisplay;
 import com.lambton.VehicleRent;
+import com.lambton.util.PasswordUtil;
 
 import javax.xml.stream.FactoryConfigurationError;
 import java.time.LocalDate;
@@ -14,6 +15,7 @@ public class Customer extends Person {
 
     private Address address;
     private ArrayList<VehicleRent> vehicleRents;
+    private String salt;
 
     public Customer(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String mobileNumber, String emailId, String userName, String password, Address address) {
         super(id, firstName, lastName, gender, birthDate, mobileNumber, emailId, userName, password);
@@ -83,5 +85,11 @@ public class Customer extends Person {
         this.vehicleRents = (ArrayList<VehicleRent>)vehicleRents;
     }
 
+    public String getSalt() {
+        return salt;
+    }
 
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
 }
