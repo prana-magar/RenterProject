@@ -27,7 +27,7 @@ import java.time.LocalDate;
         this.emailId = emailId;
         this.userName = userName;
         this.password = password;
-        this.setAge();
+        this.age = setAge();
     }
 
      String getFullName(){
@@ -35,8 +35,9 @@ import java.time.LocalDate;
     }
 
 
-    private void setAge(){
+    private int setAge(){
         this.age = LocalDate.now().getYear() - this.birthDate.getYear();
+        return this.age;
     }
 
 

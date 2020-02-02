@@ -420,11 +420,13 @@ public class MainRunner {
         init();
 
         // Print all owners
+        System.out.println("\n*LIST OF ALL OWNERS*\n");
         for(Owner owner: owners){
             owner.display();
         }
 
         // Print all customers with their bookings
+        System.out.println("\n*CUSTOMERS AND THEIR BOOKINGS*\n");
         for(Customer customer: customers){
             customer.display();
             for(VehicleRent vehicleRent:vehicleRents){
