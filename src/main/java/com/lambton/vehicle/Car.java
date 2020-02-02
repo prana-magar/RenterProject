@@ -1,5 +1,7 @@
 package com.lambton.vehicle;
 
+import com.lambton.person.Driver;
+
 public class Car extends Vehicle {
 
     private String carType;
@@ -10,6 +12,16 @@ public class Car extends Vehicle {
         this.carType = carType;
         this.carColor = carColor;
     }
+
+
+    public Car(String vehicleId, String description, String manufacturer, String carType, String carColor, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, FuelType fuelType, float baseRate,Driver driver) {
+        super(vehicleId, description, manufacturer, isSelfDrive, isInsured, insuranceProviderName, numberOfSeat, fuelType, baseRate,driver);
+        this.carType = carType;
+        this.carColor = carColor;
+    }
+
+
+
 
     public void display() {
         System.out.println(this.toString());

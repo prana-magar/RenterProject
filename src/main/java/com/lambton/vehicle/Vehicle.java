@@ -1,5 +1,6 @@
 package com.lambton.vehicle;
 
+import com.lambton.person.Driver;
 import com.lambton.util.IDisplay;
 
 public abstract class Vehicle implements IDisplay {
@@ -12,23 +13,22 @@ public abstract class Vehicle implements IDisplay {
     private int numberOfSeat;
     private FuelType fuelType;
     private float baseRate;
+    private Driver driver;
 
-    @Override
-    public String toString() {
-        return "Vehicle{" +
-                "vehicleId='" + vehicleId + '\'' +
-                ", description='" + description + '\'' +
-                ", manufacturer='" + manufacturer + '\'' +
-                ", isSelfDrive=" + isSelfDrive +
-                ", isInsured=" + isInsured +
-                ", insuranceProviderName='" + insuranceProviderName + '\'' +
-                ", numberOfSeat=" + numberOfSeat +
-                ", fuelType=" + fuelType +
-                ", baseRate=" + baseRate +
-                '}';
+    public Vehicle(String vehicleId, String description, String manufacturer, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, FuelType fuelType, float baseRate, Driver driver) {
+        this.vehicleId = vehicleId;
+        this.description = description;
+        this.manufacturer = manufacturer;
+        this.isSelfDrive = isSelfDrive;
+        this.isInsured = isInsured;
+        this.insuranceProviderName = insuranceProviderName;
+        this.numberOfSeat = numberOfSeat;
+        this.fuelType = fuelType;
+        this.baseRate = baseRate;
+        this.driver = driver;
     }
 
-    Vehicle(String vehicleId, String description, String manufacturer, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, FuelType fuelType, float baseRate) {
+    public Vehicle(String vehicleId, String description, String manufacturer, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, FuelType fuelType, float baseRate) {
         this.vehicleId = vehicleId;
         this.description = description;
         this.manufacturer = manufacturer;
@@ -39,6 +39,7 @@ public abstract class Vehicle implements IDisplay {
         this.fuelType = fuelType;
         this.baseRate = baseRate;
     }
+
 
     public String getVehicleId() {
         return vehicleId;
@@ -110,5 +111,21 @@ public abstract class Vehicle implements IDisplay {
 
     public void setBaseRate(float baseRate) {
         this.baseRate = baseRate;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "vehicleId='" + vehicleId + '\'' +
+                ", description='" + description + '\'' +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", isSelfDrive=" + isSelfDrive +
+                ", isInsured=" + isInsured +
+                ", insuranceProviderName='" + insuranceProviderName + '\'' +
+                ", numberOfSeat=" + numberOfSeat +
+                ", fuelType=" + fuelType +
+                ", baseRate=" + baseRate +
+                ", driver=" + driver +
+                '}';
     }
 }

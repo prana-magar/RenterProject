@@ -1,5 +1,6 @@
 package com.lambton.vehicle;
 
+import com.lambton.person.Driver;
 import com.lambton.util.IDisplay;
 
 public class Bus extends Vehicle implements IDisplay {
@@ -11,6 +12,14 @@ public class Bus extends Vehicle implements IDisplay {
 
     public Bus(String vehicleId, String busType, String description, String manufacturer, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, int StandingCapacity, Boolean wifiAvailability, Boolean accessibilityServices, FuelType fuelType, float baseRate) {
         super(vehicleId, description, manufacturer, isSelfDrive, isInsured, insuranceProviderName, numberOfSeat, fuelType, baseRate);
+        this.busType = busType;
+        this.StandingCapacity = StandingCapacity;
+        this.accessibilityServices = accessibilityServices;
+        this.wifiAvailability = wifiAvailability;
+    }
+
+    public Bus(String vehicleId, String busType, String description, String manufacturer, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, int StandingCapacity, Boolean wifiAvailability, Boolean accessibilityServices, FuelType fuelType, float baseRate, Driver driver) {
+        super(vehicleId, description, manufacturer, isSelfDrive, isInsured, insuranceProviderName, numberOfSeat, fuelType, baseRate,driver);
         this.busType = busType;
         this.StandingCapacity = StandingCapacity;
         this.accessibilityServices = accessibilityServices;
