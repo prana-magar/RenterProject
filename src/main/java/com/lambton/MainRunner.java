@@ -400,6 +400,9 @@ public class MainRunner {
         ArrayList<Vehicle> vehicles1 = new ArrayList<Vehicle>();
         vehicles1.add(car1);
         vehicles1.add(car2);
+        password = "ode22";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Owner o1 = new Owner("1",
                 "Odetta",
                 "Vlasov",
@@ -408,7 +411,7 @@ public class MainRunner {
                 "(463) 6723367",
                 "odetta@gmail.com",
                 "odettavlasov",
-                "ode22",
+                securePassword,
                 "Quick Motors",
                 "8127289453",
                 "quickmotors.com",
@@ -418,6 +421,9 @@ public class MainRunner {
         ArrayList<Vehicle> vehicles2 = new ArrayList<Vehicle>();
         vehicles2.add(car3);
         vehicles2.add(bus1);
+        password = "emilia7%66";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Owner o2 = new Owner("2",
                 "Emilia",
                 "Clarke",
@@ -426,7 +432,7 @@ public class MainRunner {
                 "(463) 4263352",
                 "emiliac@gmail.com",
                 "emc",
-                "emilia7%66",
+                securePassword,
                 "Independent",
                 "8127456713",
                 "emiliascars.com", vehicles2);
@@ -435,6 +441,9 @@ public class MainRunner {
         ArrayList<Vehicle> vehicles3 = new ArrayList<Vehicle>();
         vehicles3.add(car4);
         vehicles3.add(bus2);
+        password = "password";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Owner o3 = new Owner("3",
                 "Simon",
                 "Cowell",
@@ -443,7 +452,7 @@ public class MainRunner {
                 "(689) 51263458",
                 "simontheman@gmail.com",
                 "SimonCl",
-                "password",
+                securePassword,
                 "Indus Dealers",
                 "812245789",
                 "indusdealers.com", vehicles3);
@@ -454,6 +463,9 @@ public class MainRunner {
         vehicles4.add(bus3);
         vehicles4.add(bus4);
         vehicles4.add(mc2);
+        password = "qwerty";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Owner o4 = new Owner("4",
                 "Frederick",
                 "Mercury",
@@ -462,7 +474,7 @@ public class MainRunner {
                 "(689) 36763478",
                 "queen@gmail.com",
                 "Fmerc",
-                "qwerty",
+                securePassword,
                 "Feels on Wheels",
                 "907645909",
                 "feelsonwheels.com", vehicles4);
@@ -471,6 +483,9 @@ public class MainRunner {
         ArrayList<Vehicle> vehicles5 = new ArrayList<Vehicle>();
         vehicles5.add(mc1);
         vehicles5.add(bus5);
+        password = "abc123";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Owner o5 = new Owner("5",
                 "Jeff",
                 "Cavaliere",
@@ -478,10 +493,12 @@ public class MainRunner {
                 LocalDate.of(1983,12,21),
                 "(689) 44665590",
                 "jeffcavaliere@gmail.com",
-                "Jeff", "abc123",
+                "Jeff",
+                securePassword,
                 "AthleanX Motors",
                 "890459789",
-                "athleanx.com", vehicles5);
+                "athleanx.com",
+                vehicles5);
 
         //VehicleRents objects and addition to customer
         LocalDate startDate = LocalDate.of(2019,11,5);
