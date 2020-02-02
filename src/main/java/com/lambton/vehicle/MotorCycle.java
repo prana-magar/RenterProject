@@ -1,24 +1,23 @@
 package com.lambton.vehicle;
 
 import com.lambton.person.Driver;
-import com.lambton.util.IDisplay;
 
-public class MotorCycle extends Vehicle implements IDisplay {
+public class MotorCycle extends Vehicle {
 
     private int topSpeed;
-    private int Mileage;
+    private int mileage;
 
     public MotorCycle(String vehicleId, String description, String manufacturer, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, FuelType fuelType, int Mileage, int topSpeed, float baseRate) {
         super(vehicleId, description, manufacturer, isSelfDrive, isInsured, insuranceProviderName, numberOfSeat, fuelType, baseRate);
         this.topSpeed = topSpeed;
-        this.Mileage = Mileage;
+        this.mileage = Mileage;
 
     }
 
     public MotorCycle(String vehicleId, String description, String manufacturer, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, FuelType fuelType, int Mileage, int topSpeed, float baseRate, Driver driver) {
         super(vehicleId, description, manufacturer, isSelfDrive, isInsured, insuranceProviderName, numberOfSeat, fuelType, baseRate,driver);
         this.topSpeed = topSpeed;
-        this.Mileage = Mileage;
+        this.mileage = Mileage;
 
     }
 
@@ -27,7 +26,7 @@ public class MotorCycle extends Vehicle implements IDisplay {
         return "MotorCycle{" +
                 super.toString()+
                 " topSpeed=" + topSpeed +
-                ", Mileage=" + Mileage +
+                ", mileage=" + mileage +
                 '}';
     }
 
@@ -41,10 +40,10 @@ public class MotorCycle extends Vehicle implements IDisplay {
     }
 
     public int getMileage() {
-        return Mileage;
+        return mileage;
     }
 
     public void setMileage(int mileage) {
-        Mileage = mileage;
+        this.mileage = mileage;
     }
 }

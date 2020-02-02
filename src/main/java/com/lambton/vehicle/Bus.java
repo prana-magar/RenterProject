@@ -3,7 +3,7 @@ package com.lambton.vehicle;
 import com.lambton.person.Driver;
 import com.lambton.util.IDisplay;
 
-public class Bus extends Vehicle implements IDisplay {
+public class Bus extends Vehicle {
 
     private String busType;
     private Boolean accessibilityServices;
