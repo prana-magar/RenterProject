@@ -76,6 +76,7 @@ public class MainRunner {
                 "raghav22",
                 securePassword,
                 address3);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Customer 4
         Address address4 = new Address("Canada","Ontario","Toronto","M4B3A4","41.7616","84.4112","down town");
@@ -92,6 +93,7 @@ public class MainRunner {
                 "OzzyOsbourne",
                 securePassword,
                 address4);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Customer 5
         Address address5 = new Address("Canada","Ontario","Toronto","C3A2V2","41.7617","66.4156","eron avenue");
