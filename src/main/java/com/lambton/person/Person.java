@@ -135,4 +135,9 @@ import java.time.LocalDate;
     public void setPassword(String password) {
        this.password = password;
     }
+
+    @Override
+    public void display() {
+       System.out.println(this.toString());
+    }
  }

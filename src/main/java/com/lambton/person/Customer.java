@@ -28,11 +28,6 @@ public class Customer extends Person implements IDisplay {
     }
 
 
-    public void display(){
-        System.out.println(this.toString());
-    }
-
-
     @Override
     public String toString() {
         return "Customer{" +

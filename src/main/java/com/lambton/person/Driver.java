@@ -18,9 +18,6 @@ public class Driver extends Person implements IDisplay {
         this.salary = salary;
     }
 
-    public void display(){
-        System.out.println(this.toString());
-    }
 
     @Override
     public String toString() {

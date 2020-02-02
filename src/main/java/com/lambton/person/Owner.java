@@ -33,10 +33,7 @@ public class Owner extends Person {
                 '}';
     }
 
-    @Override
-    public void display() {
-        System.out.println(this.toString());
-    }
+
     public String getCompanyTitle() {
         return companyTitle;
     }
