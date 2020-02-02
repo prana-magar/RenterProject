@@ -104,6 +104,7 @@ public class MainRunner {
 
         //Driver 1
         String salt6 = PasswordUtil.getSalt("alicia22".length());
+        String securePassword5 = PasswordUtil.generateSecurePassword("rananana11", salt6);
         Driver d1 = new Driver("D1",
                 "Ram",
                 "Rana",
@@ -112,13 +113,14 @@ public class MainRunner {
                 "(989) 9076891",
                 "ramrana@yahoo.com",
                 "RamRana",
-                "rananana11",
+                securePassword5,
                 "677-43-0205",
                 Boolean.TRUE,
                 32332.6F);
 
         //Driver2
         String salt7 = PasswordUtil.getSalt("alicia22".length());
+        String securePassword6 = PasswordUtil.generateSecurePassword("sctt77", salt7);
         Driver d2 = new Driver("D2",
                 "Scott",
                 "Adkins",
@@ -127,13 +129,14 @@ public class MainRunner {
                 "(437) 9870091",
                 "scottadkins@asd.com",
                 "Scotty",
-                "sctt77",
+                securePassword6,
                 "885-66-0755",
                 Boolean.TRUE,
                 28099.6F);
 
         //Driver 3
         String salt8 = PasswordUtil.getSalt("alicia22".length());
+        String securePassword7 = PasswordUtil.generateSecurePassword("charles44", salt8);
         Driver d3 = new Driver("D3",
                 "Charles",
                 "Manson",
@@ -142,7 +145,7 @@ public class MainRunner {
                 "(437) 8790991",
                 "charlesmanson@asd.com",
                 "CharlesManson",
-                "charles44",
+                securePassword7,
                 "796-04-3290",
                 Boolean.FALSE,
                 19090.0F);
