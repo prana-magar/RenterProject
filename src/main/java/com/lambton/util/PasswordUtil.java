@@ -6,6 +6,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 import java.util.Arrays;
+import java.util.Base64;
 import java.util.Random;
 
 /**
@@ -53,6 +54,19 @@ public class PasswordUtil {
         {
             spec.clearPassword();
         }
+    }
+
+    /**
+     * Generate the secured Password
+     * @param password
+     * @param salt
+     * @return
+     */
+    public static String generateSecurePassword(String password, String salt)
+    {
+        //TODO
+        //This method generates the secure password by calling getHash
+        return null;
     }
 
 }
