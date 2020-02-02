@@ -45,7 +45,7 @@ public class MainRunner {
         //Customer 2
         Address address2 = new Address("Canada","Ontario","Toronto","M3B3A2","46.7615","86.4111"," cosburn avenue");
         String salt2 = PasswordUtil.getSalt("abhishek199566".length());
-        String securePassword1 = PasswordUtil.generateSecurePassword("abhishek199566", salt1);
+        String securePassword1 = PasswordUtil.generateSecurePassword("abhishek199566", salt2);
         Customer c2 = new Customer("C2",
                 "Abhishek",
                 "Jaya",
@@ -60,6 +60,7 @@ public class MainRunner {
         //Customer 3
         Address address3 = new Address("Canada","Ontario","Toronto","M3B3A3","42.7615","85.4111"," cosburn avenue");
         String salt3 = PasswordUtil.getSalt("raghav77".length());
+        String securePassword2 = PasswordUtil.generateSecurePassword("raghav77", salt3);
         Customer c3 = new Customer("C3",
                 "Raghav",
                 "Bobal",
@@ -68,11 +69,13 @@ public class MainRunner {
                 "(437) 6784597",
                 "raghav21@gmail.com",
                 "raghav22",
-                "raghav77", address3);
+                securePassword2,
+                address3);
 
         //Customer 4
         Address address4 = new Address("Canada","Ontario","Toronto","M4B3A4","41.7616","84.4112","down town");
         String salt4 = PasswordUtil.getSalt("ozzy@1249".length());
+        String securePassword3 = PasswordUtil.generateSecurePassword("ozzy@1249", salt4);
         Customer c4 = new Customer("C4",
                 "Ozzy",
                 "Osbourne",
@@ -81,11 +84,13 @@ public class MainRunner {
                 "(437) 9807678",
                 "therealozzy@gmail.com",
                 "OzzyOsbourne",
-                "ozzy@1249", address4);
+                securePassword3,
+                address4);
 
         //Customer 5
         Address address5 = new Address("Canada","Ontario","Toronto","C3A2V2","41.7617","66.4156","eron avenue");
         String salt5 = PasswordUtil.getSalt("alicia22".length());
+        String securePassword4 = PasswordUtil.generateSecurePassword("alicia22", salt5);
         Customer c5 = new Customer("C5",
                 "Alicia",
                 "Keys",
@@ -94,7 +99,8 @@ public class MainRunner {
                 "(989) 9805690",
                 "alicia@gmail.com",
                 "AlKeys",
-                "alicia22", address5);
+                securePassword4
+                , address5);
 
         //Driver 1
         String salt6 = PasswordUtil.getSalt("alicia22".length());
