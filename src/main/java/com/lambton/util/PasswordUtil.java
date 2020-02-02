@@ -1,6 +1,11 @@
 package com.lambton.util;
 
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.PBEKeySpec;
+import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+import java.security.spec.InvalidKeySpecException;
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -23,6 +28,20 @@ public class PasswordUtil {
             returnValue.append(ALPHABET.charAt(RANDOM.nextInt(ALPHABET.length())));
         }
         return new String(returnValue);
+    }
+
+    /**
+     * Use password-based encryption to encrypt user password
+     * @param password
+     * @param salt
+     * @return
+     */
+    public static byte[] getHash(char[] password, byte[] salt)
+    {
+        //TODO
+        // This method will generate a secure password
+
+        return null;
     }
 
 }
