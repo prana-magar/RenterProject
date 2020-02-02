@@ -1,6 +1,6 @@
 package com.lambton;
 
-import com.google.gson.Gson;
+//import com.google.gson.Gson;
 import com.lambton.person.*;
 import com.lambton.util.Address;
 import com.lambton.vehicle.*;
@@ -189,6 +189,7 @@ public class MainRunner {
                 FuelType.DIESEL,
                 100);
 
+        //Bus Objects
         Bus bus1 = new Bus("SALVN2BG3DH848046",
                 "Low-floor",
                 "None",
@@ -204,7 +205,6 @@ public class MainRunner {
                 250,
                 d3);
 
-        //Bus Objects
         Bus bus2 = new Bus("1B3BD2FB3BN077941",
                 "Coach",
                 "great bus",
@@ -335,7 +335,6 @@ public class MainRunner {
         vehicles5.add(bus5);
         Owner o5 = new Owner("5", "Jeff", "Cavaliere", Gender.MALE, LocalDate.now(), "(689) 44665590", "jeffcavaliere@gmail.com", "Jeff", "abc123", "AthleanX Motors", "890459789", "athleanx.com", vehicles5);
 
-
         //VehicleRents objects and addition to customer
         LocalDate startDate = LocalDate.of(2019,11,5);
         LocalDate endDate = startDate.plusDays(2);
@@ -417,17 +416,13 @@ public class MainRunner {
 
     }
 
-
-
     public static void main(String[] args) {
         init();
-
 
         // Print all owners
         for(Owner owner: owners){
             owner.display();
         }
-
 
         // Print all customers with their bookings
         for(Customer customer: customers){
@@ -437,8 +432,8 @@ public class MainRunner {
             }
         }
 
-
         // all customers with some bookings
+        System.out.println("\n*CUSTOMERS WITH SOME BOOKINGS*\n");
         for(Customer customer: customers){
             if(customer.getVehicleRents() != null){
                 customer.display();
@@ -446,6 +441,7 @@ public class MainRunner {
         }
 
         // all customers with some live/current bookings
+        System.out.println("\n*CUSTOMERS WITH LIVE/CURRENT BOOKINGS*\n");
         for(Customer customer: customers){
             customer.display();
             ArrayList<VehicleRent> vehicleRents = (ArrayList<VehicleRent>) customer.getVehicleRents();
@@ -457,15 +453,5 @@ public class MainRunner {
                 }
             }
         }
-
-
-
-
-
-
-
-
-
-
     }
 }
