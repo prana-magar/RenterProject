@@ -13,9 +13,10 @@ public class VehicleRent implements IDisplay {
     private float totalBill;
     private Vehicle vehicle;
 
-    public VehicleRent(LocalDate rentStartDate, LocalDate rentEndDate,  Vehicle vehicle) {
+    public VehicleRent(LocalDate rentStartDate, LocalDate rentEndDate,  Vehicle vehicle, int numberOfDays) {
         this.rentStartDate = rentStartDate;
         this.rentEndDate = rentEndDate;
+        this.numberOfDays = numberOfDays;
         this.vehicle = vehicle;
     }
 

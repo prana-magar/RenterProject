@@ -5,6 +5,7 @@ import com.lambton.person.*;
 import com.lambton.util.Address;
 import com.lambton.vehicle.*;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +37,7 @@ public class MainRunner {
                 address1);
 
         //Customer 2
-        Address address2 = new Address("Canada","Ontario","Toronto","M3B3A2","42.7615","82.4111"," cosburn avenue");
+        Address address2 = new Address("Canada","Ontario","Toronto","M3B3A2","46.7615","86.4111"," cosburn avenue");
         Customer c2 = new Customer("C2",
                 "Abhishek",
                 "Jaya",
@@ -48,7 +49,7 @@ public class MainRunner {
                 "abhishek199566", address2);
 
         //Customer 3
-        Address address3 = new Address("Canada","Ontario","Toronto","M3B3A2","42.7615","82.4111"," cosburn avenue");
+        Address address3 = new Address("Canada","Ontario","Toronto","M3B3A3","42.7615","85.4111"," cosburn avenue");
         Customer c3 = new Customer("C3",
                 "Raghav",
                 "Bobal",
@@ -60,7 +61,7 @@ public class MainRunner {
                 "raghav77", address3);
 
         //Customer 4
-        Address address4 = new Address("Canada","Ontario","Toronto","M4B3A2","41.7615","85.4111","down town");
+        Address address4 = new Address("Canada","Ontario","Toronto","M4B3A4","41.7616","84.4112","down town");
         Customer c4 = new Customer("C4",
                 "Ozzy",
                 "Osbourne",
@@ -72,7 +73,7 @@ public class MainRunner {
                 "ozzy@1249", address4);
 
         //Customer 5
-        Address address5 = new Address("Canada","Ontario","Toronto","C3A2V2","41.7615","85.4111","eron avenue");
+        Address address5 = new Address("Canada","Ontario","Toronto","C3A2V2","41.7617","66.4156","eron avenue");
         Customer c5 = new Customer("C5",
                 "Alicia",
                 "Keys",
