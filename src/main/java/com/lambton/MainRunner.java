@@ -29,8 +29,9 @@ public class MainRunner {
 
         //Customer 1
         Address address1 = new Address("Canada","Ontario","Toronto","M3B3A1","43.7615","79.4111"," graydon hall drive");
-        String salt1 = PasswordUtil.getSalt("asdq321e1231231".length());
-        String securePassword = PasswordUtil.generateSecurePassword("asdq321e1231231", salt1);
+        String password = "asdq321e1231231";
+        String salt = PasswordUtil.getSalt(password.length());
+        String securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Customer c1 = new Customer("C1",
                 "Prakash",
                 "Rana",
@@ -41,11 +42,13 @@ public class MainRunner {
                 "ranaprakash",
                 securePassword,
                 address1);
+        boolean isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Customer 2
         Address address2 = new Address("Canada","Ontario","Toronto","M3B3A2","46.7615","86.4111"," cosburn avenue");
-        String salt2 = PasswordUtil.getSalt("abhishek199566".length());
-        String securePassword1 = PasswordUtil.generateSecurePassword("abhishek199566", salt2);
+        password = "abhishek199566";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Customer c2 = new Customer("C2",
                 "Abhishek",
                 "Jaya",
@@ -54,13 +57,15 @@ public class MainRunner {
                 "(437) 9807865",
                 "abhisheksj@gmail.com",
                 "abysj",
-                securePassword1,
+                securePassword,
                 address2);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Customer 3
         Address address3 = new Address("Canada","Ontario","Toronto","M3B3A3","42.7615","85.4111"," cosburn avenue");
-        String salt3 = PasswordUtil.getSalt("raghav77".length());
-        String securePassword2 = PasswordUtil.generateSecurePassword("raghav77", salt3);
+        password = "raghav77";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword("raghav77", salt);
         Customer c3 = new Customer("C3",
                 "Raghav",
                 "Bobal",
@@ -69,13 +74,14 @@ public class MainRunner {
                 "(437) 6784597",
                 "raghav21@gmail.com",
                 "raghav22",
-                securePassword2,
+                securePassword,
                 address3);
 
         //Customer 4
         Address address4 = new Address("Canada","Ontario","Toronto","M4B3A4","41.7616","84.4112","down town");
-        String salt4 = PasswordUtil.getSalt("ozzy@1249".length());
-        String securePassword3 = PasswordUtil.generateSecurePassword("ozzy@1249", salt4);
+        password = "ozzy@1249";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Customer c4 = new Customer("C4",
                 "Ozzy",
                 "Osbourne",
@@ -84,13 +90,14 @@ public class MainRunner {
                 "(437) 9807678",
                 "therealozzy@gmail.com",
                 "OzzyOsbourne",
-                securePassword3,
+                securePassword,
                 address4);
 
         //Customer 5
         Address address5 = new Address("Canada","Ontario","Toronto","C3A2V2","41.7617","66.4156","eron avenue");
-        String salt5 = PasswordUtil.getSalt("alicia22".length());
-        String securePassword4 = PasswordUtil.generateSecurePassword("alicia22", salt5);
+        password = "alicia22";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Customer c5 = new Customer("C5",
                 "Alicia",
                 "Keys",
@@ -99,12 +106,13 @@ public class MainRunner {
                 "(989) 9805690",
                 "alicia@gmail.com",
                 "AlKeys",
-                securePassword4
+                securePassword
                 , address5);
 
         //Driver 1
-        String salt6 = PasswordUtil.getSalt("alicia22".length());
-        String securePassword5 = PasswordUtil.generateSecurePassword("rananana11", salt6);
+        password = "rananana11";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Driver d1 = new Driver("D1",
                 "Ram",
                 "Rana",
@@ -113,14 +121,15 @@ public class MainRunner {
                 "(989) 9076891",
                 "ramrana@yahoo.com",
                 "RamRana",
-                securePassword5,
+                securePassword,
                 "677-43-0205",
                 Boolean.TRUE,
                 32332.6F);
 
         //Driver2
-        String salt7 = PasswordUtil.getSalt("alicia22".length());
-        String securePassword6 = PasswordUtil.generateSecurePassword("sctt77", salt7);
+        password = "sctt77";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Driver d2 = new Driver("D2",
                 "Scott",
                 "Adkins",
@@ -129,14 +138,15 @@ public class MainRunner {
                 "(437) 9870091",
                 "scottadkins@asd.com",
                 "Scotty",
-                securePassword6,
+                securePassword,
                 "885-66-0755",
                 Boolean.TRUE,
                 28099.6F);
 
         //Driver 3
-        String salt8 = PasswordUtil.getSalt("alicia22".length());
-        String securePassword7 = PasswordUtil.generateSecurePassword("charles44", salt8);
+        password = "charles44";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Driver d3 = new Driver("D3",
                 "Charles",
                 "Manson",
@@ -145,14 +155,15 @@ public class MainRunner {
                 "(437) 8790991",
                 "charlesmanson@asd.com",
                 "CharlesManson",
-                securePassword7,
+                securePassword,
                 "796-04-3290",
                 Boolean.FALSE,
                 19090.0F);
 
         //Driver 4
-        String salt9 = PasswordUtil.getSalt("alicia22".length());
-        String securePassword8 = PasswordUtil.generateSecurePassword("cmanee090", salt9);
+        password = "cmanee090";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Driver d4 = new Driver("D4",
                 "Caria",
                 "MacNamee",
@@ -161,14 +172,15 @@ public class MainRunner {
                 "(878) 7670009",
                 "cmacnee@asd.com",
                 "CMac",
-                securePassword8,
+                securePassword,
                 "255-69-1229",
                 Boolean.TRUE,
                 32019.0F);
 
         //Driver 5
-        String salt10 = PasswordUtil.getSalt("alicia22".length());
-        String securePassword9 = PasswordUtil.generateSecurePassword("lumox1992", salt10);
+        password = "lumox1992";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Driver d5 = new Driver("D5",
                 "Eveline",
                 "Lumox",
@@ -177,14 +189,16 @@ public class MainRunner {
                 "(863) 2253855",
                 "lumoxine@asd.com",
                 "Elumonin",
-                securePassword9,
+                securePassword,
                 "335-87-9680",
                 Boolean.TRUE,
                 32231.0F);
 
+
         //Driver 6
-        String salt11 = PasswordUtil.getSalt("alicia22".length());
-        String securePassword10 = PasswordUtil.generateSecurePassword("lumox1992", salt11);
+        password = "lumox1992";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Driver d6 = new Driver("D6",
                 "Eveline",
                 "rente",
@@ -193,7 +207,7 @@ public class MainRunner {
                 "(863) 2253855",
                 "lumoxaaine@asd.com",
                 "Elumonin34",
-                securePassword10,
+                securePassword,
                 "335-87-9620",
                 Boolean.TRUE,
                 32231.0F);
