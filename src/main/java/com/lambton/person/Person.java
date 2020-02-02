@@ -18,8 +18,8 @@ import java.time.LocalDate;
     private String password;
 
      Person(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String mobileNumber, String emailId, String userName, String password) {
-         String salt = PasswordUtil.getSalt(password.length());
-         this.id = id;
+        String salt = PasswordUtil.getSalt(password.length());
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
@@ -27,7 +27,7 @@ import java.time.LocalDate;
         this.mobileNumber = mobileNumber;
         this.emailId = emailId;
         this.userName = userName;
-        this.password = password;
+        this.password = PasswordUtil.generateSecurePassword(password, salt);
         this.age = setAge();
     }
 
