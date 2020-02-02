@@ -83,9 +83,15 @@ public class PasswordUtil {
     public static boolean validatePassword(String userPassword,
                                            String securedPassword, String salt)
     {
-       //TODO
-        //Logic to verify user input password
-        return Boolean.TRUE;
+        boolean returnValue = false;
+
+        // Generate New secure password with the same salt
+        String newSecurePassword = generateSecurePassword(userPassword, salt);
+
+        // Check if two passwords are equal
+        returnValue = newSecurePassword.equalsIgnoreCase(securedPassword);
+
+        return returnValue;
     }
 
 }
