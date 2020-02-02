@@ -31,10 +31,6 @@ public class MotorCycle extends Vehicle implements IDisplay {
                 '}';
     }
 
-    @Override
-    public void display() {
-        System.out.println(this.toString());
-    }
 
     public int getTopSpeed() {
         return topSpeed;

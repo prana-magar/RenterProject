@@ -128,4 +128,9 @@ public abstract class Vehicle implements IDisplay {
                 ", driver=" + driver +
                 '}';
     }
+
+    @Override
+    public void display() {
+        System.out.println(this.toString());
+    }
 }

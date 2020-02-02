@@ -21,12 +21,6 @@ public class Car extends Vehicle {
     }
 
 
-
-
-    public void display() {
-        System.out.println(this.toString());
-    }
-
     @Override
     public String toString() {
         return "Car{" +

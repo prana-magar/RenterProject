@@ -36,9 +36,6 @@ public class Bus extends Vehicle implements IDisplay {
                 '}';
     }
 
-    public void display(){
-        System.out.println(this.toString());
-    }
 
     public String getBusType() {
         return busType;
