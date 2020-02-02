@@ -30,6 +30,7 @@ public class MainRunner {
         //Customer 1
         Address address1 = new Address("Canada","Ontario","Toronto","M3B3A1","43.7615","79.4111"," graydon hall drive");
         String salt1 = PasswordUtil.getSalt("asdq321e1231231".length());
+        String securePassword = PasswordUtil.generateSecurePassword("asdq321e1231231", salt1);
         Customer c1 = new Customer("C1",
                 "Prakash",
                 "Rana",
@@ -38,12 +39,13 @@ public class MainRunner {
                 "(437) 9908989 ",
                 "prakash@gmail.com",
                 "ranaprakash",
-                "asdq321e1231231",
+                securePassword,
                 address1);
 
         //Customer 2
         Address address2 = new Address("Canada","Ontario","Toronto","M3B3A2","46.7615","86.4111"," cosburn avenue");
         String salt2 = PasswordUtil.getSalt("abhishek199566".length());
+        String securePassword1 = PasswordUtil.generateSecurePassword("abhishek199566", salt1);
         Customer c2 = new Customer("C2",
                 "Abhishek",
                 "Jaya",
@@ -52,7 +54,8 @@ public class MainRunner {
                 "(437) 9807865",
                 "abhisheksj@gmail.com",
                 "abysj",
-                "abhishek199566", address2);
+                securePassword1,
+                address2);
 
         //Customer 3
         Address address3 = new Address("Canada","Ontario","Toronto","M3B3A3","42.7615","85.4111"," cosburn avenue");
