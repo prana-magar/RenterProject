@@ -73,4 +73,19 @@ public class PasswordUtil {
         return returnValue;
     }
 
+    /**
+     * Verify user Provided password
+     * @param userPassword
+     * @param securedPassword
+     * @param salt
+     * @return
+     */
+    public static boolean validatePassword(String userPassword,
+                                           String securedPassword, String salt)
+    {
+       //TODO
+        //Logic to verify user input password
+        return Boolean.TRUE;
+    }
+
 }
