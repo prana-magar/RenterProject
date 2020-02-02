@@ -4,6 +4,7 @@ import com.lambton.util.Address;
 import com.lambton.util.IDisplay;
 import com.lambton.VehicleRent;
 
+import javax.xml.stream.FactoryConfigurationError;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -74,4 +75,19 @@ public class Customer extends Person implements IDisplay {
             this.addVehicleRent(vehicleRent);
         }
     }
+
+    public Boolean hasBookings(){
+        return this.vehicleRents != null;
+    }
+
+    public Boolean hasLiveBookings(){
+
+        for(VehicleRent vehicleRent: this.vehicleRents){
+            if(vehicleRent.isLive()){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

@@ -83,4 +83,8 @@ public class VehicleRent implements IDisplay {
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
+
+    public boolean isLive(){
+        return !this.rentEndDate.isBefore(LocalDate.now());
+    }
 }

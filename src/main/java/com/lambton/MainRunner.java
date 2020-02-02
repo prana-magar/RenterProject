@@ -304,8 +304,8 @@ public class MainRunner {
         VehicleRent vehicleRent5 = new VehicleRent(startDate5,endDate5,mc1);
         c4.addVehicleRent(vehicleRent5);
 
-        LocalDate startDate6 = LocalDate.of(2019,1,25);
-        LocalDate endDate6 = startDate6.plusDays(1);
+        LocalDate startDate6 = LocalDate.of(2020,1,25);
+        LocalDate endDate6 = LocalDate.now();
         VehicleRent vehicleRent6 = new VehicleRent(startDate6,endDate6,mc3);
         c4.addVehicleRent(vehicleRent6);
 
@@ -364,15 +364,21 @@ public class MainRunner {
     public static void main(String[] args) {
         init();
 
-        // Print all customers
-        for(Person person: customers){
-            person.display();
-        }
 
         // Print all owners
         for(Owner owner: owners){
             owner.display();
         }
+
+
+        // Print all customers with their bookings
+        for(Customer customer: customers){
+            customer.display();
+            for(VehicleRent vehicleRent:vehicleRents){
+                vehicleRent.display();
+            }
+        }
+
 
         // all customers with some bookings
         for(Customer customer: customers){
@@ -380,6 +386,25 @@ public class MainRunner {
                 customer.display();
             }
         }
+
+        // all customers with some live/current bookings
+        for(Customer customer: customers){
+            customer.display();
+            ArrayList<VehicleRent> vehicleRents = (ArrayList<VehicleRent>) customer.getVehicleRents();
+            if(customer.getVehicleRents() != null){
+                for(VehicleRent vehicleRent: vehicleRents){
+                    if(vehicleRent.isLive()){
+                        vehicleRent.display();
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
 
 
 

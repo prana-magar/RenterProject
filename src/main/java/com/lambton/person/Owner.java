@@ -5,12 +5,13 @@ import com.lambton.vehicle.Vehicle;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Owner extends Person {
     private String companyTitle;
     private String landLineNumber;
     private String url;
-    private ArrayList<Vehicle> vehicles;
+    private List<Vehicle> vehicles;
 
     public Owner(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String mobileNumber, String emailId, String userName, String password, String companyTitle, String landLineNumber, String url, ArrayList<Vehicle> vehicles) {
         super(id, firstName, lastName, gender, birthDate, mobileNumber, emailId, userName, password);
@@ -60,11 +61,11 @@ public class Owner extends Person {
         this.url = url;
     }
 
-    public ArrayList<Vehicle> getVehicles() {
+    public List<Vehicle> getVehicles() {
         return vehicles;
     }
 
-    public void setVehicles(ArrayList<Vehicle> vehicles) {
-        this.vehicles = vehicles;
+    public void setVehicles(List<Vehicle> vehicles) {
+        this.vehicles =  vehicles;
     }
 }
