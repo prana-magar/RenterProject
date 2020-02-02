@@ -38,10 +38,21 @@ public class PasswordUtil {
      */
     public static byte[] getHash(char[] password, byte[] salt)
     {
-        //TODO
-        // This method will generate a secure password
-
-        return null;
+        PBEKeySpec spec = new PBEKeySpec(password, salt, ITERATIONS, KEY_LENGTH);
+        Arrays.fill(password, Character.MIN_VALUE);
+        try
+        {
+            SecretKeyFactory skf = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
+            return skf.generateSecret(spec).getEncoded();
+        }
+        catch (NoSuchAlgorithmException | InvalidKeySpecException e)
+        {
+            throw new AssertionError("Error while hashing a password: " + e.getMessage(), e);
+        }
+        finally
+        {
+            spec.clearPassword();
+        }
     }
 
 }
