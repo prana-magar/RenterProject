@@ -15,28 +15,23 @@ public class MainRunner {
     public static void main(String[] args) {
 
         //Customer 1
-        ArrayList<VehicleRent> vehicleRents1 = new ArrayList<>();
-        Customer c1 = new Customer("C1", "Prakash", "Rana", Gender.MALE, LocalDate.now(), "(437) 9908989 ", "prakash@gmail.com", "ranaprakash", "asdq321e1231231", new Address(), vehicleRents1);
+        Customer c1 = new Customer("C1", "Prakash", "Rana", Gender.MALE, LocalDate.now(), "(437) 9908989 ", "prakash@gmail.com", "ranaprakash", "asdq321e1231231", new Address());
         c1.display();
 
         //Customer 2
-        ArrayList<VehicleRent> vehicleRents2 = new ArrayList<>();
-        Customer c2 = new Customer("C2", "Abhishek", "Jaya", Gender.MALE, LocalDate.now(), "(437) 9807865", "abhisheksj@gmail.com", "abysj", "abhishek199566", new Address(), vehicleRents2);
+        Customer c2 = new Customer("C2", "Abhishek", "Jaya", Gender.MALE, LocalDate.now(), "(437) 9807865", "abhisheksj@gmail.com", "abysj", "abhishek199566", new Address());
         c2.display();
 
         //Customer 3
-        ArrayList<VehicleRent> vehicleRents3 = new ArrayList<>();
-        Customer c3 = new Customer("C3", "Raghav", "Bobal", Gender.MALE, LocalDate.now(), "(437) 6784597", "raghav21@gmail.com", "raghav22", "raghav77", new Address(), vehicleRents3);
+        Customer c3 = new Customer("C3", "Raghav", "Bobal", Gender.MALE, LocalDate.now(), "(437) 6784597", "raghav21@gmail.com", "raghav22", "raghav77", new Address());
         c3.display();
 
         //Customer 4
-        ArrayList<VehicleRent> vehicleRents4 = new ArrayList<>();
-        Customer c4 = new Customer("C4", "Ozzy", "Osbourne", Gender.MALE, LocalDate.now(), "(437) 9807678", "therealozzy@gmail.com", "OzzyOsbourne", "ozzy@1249", new Address(), vehicleRents4);
+        Customer c4 = new Customer("C4", "Ozzy", "Osbourne", Gender.MALE, LocalDate.now(), "(437) 9807678", "therealozzy@gmail.com", "OzzyOsbourne", "ozzy@1249", new Address());
         c4.display();
 
         //Customer 5
-        ArrayList<VehicleRent> vehicleRents5 = new ArrayList<>();
-        Customer c5 = new Customer("C5", "Alicia", "Keys", Gender.FEMALE, LocalDate.now(), "(989) 9805690", "alicia@gmail.com", "AlKeys", "alicia22", new Address(), vehicleRents5);
+        Customer c5 = new Customer("C5", "Alicia", "Keys", Gender.FEMALE, LocalDate.now(), "(989) 9805690", "alicia@gmail.com", "AlKeys", "alicia22", new Address());
         c5.display();
 
         //Driver 1
