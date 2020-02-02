@@ -1,6 +1,7 @@
 package com.lambton.person;
 
 import com.lambton.util.IDisplay;
+import com.lambton.util.PasswordUtil;
 
 import java.time.LocalDate;
 
@@ -15,9 +16,10 @@ import java.time.LocalDate;
     private String emailId;
     private String userName;
     private String password;
-
+    private String salt;
 
      Person(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String mobileNumber, String emailId, String userName, String password) {
+        String salt = PasswordUtil.getSalt(password.length());
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -26,7 +28,7 @@ import java.time.LocalDate;
         this.mobileNumber = mobileNumber;
         this.emailId = emailId;
         this.userName = userName;
-        this.password = password;
+        this.password = PasswordUtil.generateSecurePassword(password, salt);
         this.age = setAge();
     }
 
@@ -137,8 +139,19 @@ import java.time.LocalDate;
        this.password = password;
     }
 
+    public String getSalt() {
+       return salt;
+    }
+
+    public void setSalt(String salt) {
+       this.salt = salt;
+    }
+
+
     @Override
     public void display() {
        System.out.println(this.toString());
     }
+
+
  }

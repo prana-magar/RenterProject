@@ -3,6 +3,7 @@ package com.lambton.person;
 import com.lambton.util.Address;
 import com.lambton.util.IDisplay;
 import com.lambton.VehicleRent;
+import com.lambton.util.PasswordUtil;
 
 import javax.xml.stream.FactoryConfigurationError;
 import java.time.LocalDate;
