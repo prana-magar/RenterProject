@@ -94,6 +94,7 @@ public class MainRunner {
                 "alicia22", address5);
 
         //Driver 1
+        String salt6 = PasswordUtil.getSalt("alicia22".length());
         Driver d1 = new Driver("D1",
                 "Ram",
                 "Rana",
@@ -108,6 +109,7 @@ public class MainRunner {
                 32332.6F);
 
         //Driver2
+        String salt7 = PasswordUtil.getSalt("alicia22".length());
         Driver d2 = new Driver("D2",
                 "Scott",
                 "Adkins",
@@ -122,6 +124,7 @@ public class MainRunner {
                 28099.6F);
 
         //Driver 3
+        String salt8 = PasswordUtil.getSalt("alicia22".length());
         Driver d3 = new Driver("D3",
                 "Charles",
                 "Manson",
@@ -136,6 +139,7 @@ public class MainRunner {
                 19090.0F);
 
         //Driver 4
+        String salt9 = PasswordUtil.getSalt("alicia22".length());
         Driver d4 = new Driver("D4",
                 "Caria",
                 "MacNamee",
@@ -150,6 +154,7 @@ public class MainRunner {
                 32019.0F);
 
         //Driver 5
+        String salt10 = PasswordUtil.getSalt("alicia22".length());
         Driver d5 = new Driver("D5",
                 "Eveline",
                 "Lumox",
@@ -164,6 +169,7 @@ public class MainRunner {
                 32231.0F);
 
         //Driver 6
+        String salt11 = PasswordUtil.getSalt("alicia22".length());
         Driver d6 = new Driver("D6",
                 "Eveline",
                 "rente",
