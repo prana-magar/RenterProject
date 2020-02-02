@@ -416,6 +416,7 @@ public class MainRunner {
                 "8127289453",
                 "quickmotors.com",
                 vehicles1);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //List of vehicles and information of second owner
         ArrayList<Vehicle> vehicles2 = new ArrayList<Vehicle>();
@@ -436,6 +437,7 @@ public class MainRunner {
                 "Independent",
                 "8127456713",
                 "emiliascars.com", vehicles2);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //List of vehicles and information of third owner
         ArrayList<Vehicle> vehicles3 = new ArrayList<Vehicle>();
@@ -456,6 +458,7 @@ public class MainRunner {
                 "Indus Dealers",
                 "812245789",
                 "indusdealers.com", vehicles3);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //List of vehicles and information of fourth owner
         ArrayList<Vehicle> vehicles4 = new ArrayList<Vehicle>();
@@ -478,6 +481,7 @@ public class MainRunner {
                 "Feels on Wheels",
                 "907645909",
                 "feelsonwheels.com", vehicles4);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //List of vehicles and information of fifth owner
         ArrayList<Vehicle> vehicles5 = new ArrayList<Vehicle>();
@@ -499,6 +503,7 @@ public class MainRunner {
                 "890459789",
                 "athleanx.com",
                 vehicles5);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //VehicleRents objects and addition to customer
         LocalDate startDate = LocalDate.of(2019,11,5);
