@@ -6,6 +6,7 @@ import com.lambton.VehicleRent;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.TreeMap;
 
 public class Customer extends Person implements IDisplay {
@@ -48,27 +49,29 @@ public class Customer extends Person implements IDisplay {
         this.address = address;
     }
 
-    public ArrayList<VehicleRent> getVehicleRents() {
+    public List<VehicleRent> getVehicleRents() {
         return vehicleRents;
     }
 
-    public void setVehicleRents(ArrayList<VehicleRent> vehicleRents) {
-        this.vehicleRents = vehicleRents;
+    public void setVehicleRents(List<VehicleRent> vehicleRents) {
+        this.vehicleRents = (ArrayList<VehicleRent>)vehicleRents;
     }
 
-    public Boolean addVehicleRent(VehicleRent vehicleRent){
-        if(vehicleRent == null){
-            return false;
-        }
+    public void addVehicleRent(VehicleRent vehicleRent){
+
         if(this.vehicleRents == null){
             this.vehicleRents = new ArrayList<>();
         }
 
         if(this.vehicleRents.contains(vehicleRent)){
             System.out.println("Already Present");
-            return false;
         }
         this.vehicleRents.add(vehicleRent);
-        return true;
+    }
+
+    public void addVehicleRents(List<VehicleRent> vehicleRents){
+        for(VehicleRent vehicleRent: vehicleRents){
+            this.addVehicleRent(vehicleRent);
+        }
     }
 }
