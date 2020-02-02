@@ -1,6 +1,7 @@
 package com.lambton.person;
 
 import com.lambton.util.IDisplay;
+import com.lambton.util.PasswordUtil;
 
 import java.time.LocalDate;
 
@@ -15,10 +16,10 @@ import java.time.LocalDate;
     private String emailId;
     private String userName;
     private String password;
-   private String salt;
 
      Person(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String mobileNumber, String emailId, String userName, String password) {
-        this.id = id;
+         String salt = PasswordUtil.getSalt(password.length());
+         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
