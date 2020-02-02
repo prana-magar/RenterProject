@@ -12,8 +12,18 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class MainRunner {
-    public static void main(String[] args) {
 
+    private static ArrayList<Customer> customers;
+    private static ArrayList<Driver> drivers;
+    private static ArrayList<Owner> owners;
+
+    private static ArrayList<Car> cars;
+    private static ArrayList<Bus> buses;
+    private static ArrayList<MotorCycle> motorCycles;
+
+    private static ArrayList<VehicleRent> vehicleRents;
+
+    static void init(){
         //Customer 1
         Customer c1 = new Customer("C1", "Prakash", "Rana", Gender.MALE, LocalDate.now(), "(437) 9908989 ", "prakash@gmail.com", "ranaprakash", "asdq321e1231231", new Address());
         c1.display();
@@ -229,7 +239,7 @@ public class MainRunner {
                 150,
                 50,
                 d6
-                );
+        );
         mc1.display();
 
         MotorCycle mc2 = new MotorCycle("2C3CDZAG8FH338790",
@@ -328,5 +338,58 @@ public class MainRunner {
         VehicleRent vehicleRent6 = new VehicleRent(startDate6,endDate6,mc3);
         c5.addVehicleRent(vehicleRent6);
 
+        customers = new ArrayList<>();
+        customers.add(c1);
+        customers.add(c2);
+        customers.add(c3);
+        customers.add(c4);
+        customers.add(c5);
+
+        drivers = new ArrayList<>();
+        drivers.add(d1);
+        drivers.add(d2);
+        drivers.add(d3);
+        drivers.add(d4);
+        drivers.add(d5);
+
+        owners = new ArrayList<>();
+        owners.add(o1);
+        owners.add(o2);
+        owners.add(o3);
+        owners.add(o4);
+        owners.add(o5);
+
+        buses = new ArrayList<>();
+        buses.add(bus1);
+        buses.add(bus2);
+        buses.add(bus3);
+        buses.add(bus4);
+        buses.add(bus5);
+
+        cars = new ArrayList<>();
+        cars.add(car1);
+        cars.add(car2);
+        cars.add(car3);
+        cars.add(car4);
+        cars.add(car5);
+
+        motorCycles = new ArrayList<>();
+        motorCycles.add(mc1);
+        motorCycles.add(mc2);
+        motorCycles.add(mc3);
+
+        vehicleRents = new ArrayList<>();
+        vehicleRents.add(vehicleRent1);
+        vehicleRents.add(vehicleRent2);
+        vehicleRents.add(vehicleRent3);
+        vehicleRents.add(vehicleRent4);
+        vehicleRents.add(vehicleRent5);
+        vehicleRents.add(vehicleRent6);
+
+    }
+
+
+    public static void main(String[] args) {
+        init();
     }
 }
