@@ -13,6 +13,12 @@ public class VehicleRent implements IDisplay {
     private float totalBill;
     private Vehicle vehicle;
 
+    public VehicleRent(LocalDate rentStartDate, LocalDate rentEndDate,  Vehicle vehicle) {
+        this.rentStartDate = rentStartDate;
+        this.rentEndDate = rentEndDate;
+        this.vehicle = vehicle;
+    }
+
     @Override
     public String toString() {
         return "VehicleRent{" +
