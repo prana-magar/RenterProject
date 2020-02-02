@@ -7,6 +7,7 @@ import com.lambton.vehicle.*;
 
 import java.time.Duration;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -434,33 +435,39 @@ public class MainRunner {
 
         //VehicleRents objects and addition to customer
         LocalDate startDate = LocalDate.of(2019,11,5);
-        LocalDate endDate = startDate.plusDays(2);
-        VehicleRent vehicleRent1 = new VehicleRent(startDate,endDate,car1);
+        LocalDate endDate = startDate.plusDays(3);
+        int numberOfDays = (int) ChronoUnit.DAYS.between(startDate,endDate);
+        VehicleRent vehicleRent1 = new VehicleRent(startDate,endDate, numberOfDays, car1);
         c1.addVehicleRent(vehicleRent1);
 
         LocalDate startDate2 = LocalDate.of(2020,1,15);
         LocalDate endDate2 = startDate2.plusDays(1);
-        VehicleRent vehicleRent2 = new VehicleRent(startDate2,endDate2,car3);
+        int numberOfDays2 = (int) ChronoUnit.DAYS.between(startDate2,endDate2);
+        VehicleRent vehicleRent2 = new VehicleRent(startDate2,endDate2, numberOfDays2, car3);
         c2.addVehicleRent(vehicleRent2);
 
         LocalDate startDate3 = LocalDate.of(2020,1,5);
         LocalDate endDate3 = startDate3.plusDays(1);
-        VehicleRent vehicleRent3 = new VehicleRent(startDate3,endDate3,bus1);
+        int numberOfDays3 = (int) ChronoUnit.DAYS.between(startDate3,endDate3);
+        VehicleRent vehicleRent3 = new VehicleRent(startDate3,endDate3, numberOfDays3, bus1);
         c2.addVehicleRent(vehicleRent3);
 
         LocalDate startDate4 = LocalDate.of(2019,1,15);
         LocalDate endDate4 = startDate4.plusDays(1);
-        VehicleRent vehicleRent4 = new VehicleRent(startDate4,endDate4,car5);
+        int numberOfDays4 = (int) ChronoUnit.DAYS.between(startDate4,endDate4);
+        VehicleRent vehicleRent4 = new VehicleRent(startDate4,endDate4, numberOfDays4, car5);
         c3.addVehicleRent(vehicleRent4);
 
         LocalDate startDate5 = LocalDate.of(2020,1,5);
         LocalDate endDate5 = startDate5.plusDays(1);
-        VehicleRent vehicleRent5 = new VehicleRent(startDate5,endDate5,mc1);
+        int numberOfDays5 = (int) ChronoUnit.DAYS.between(startDate5,endDate5);
+        VehicleRent vehicleRent5 = new VehicleRent(startDate5,endDate5, numberOfDays5, mc1);
         c4.addVehicleRent(vehicleRent5);
 
         LocalDate startDate6 = LocalDate.of(2020,1,25);
         LocalDate endDate6 = LocalDate.now();
-        VehicleRent vehicleRent6 = new VehicleRent(startDate6,endDate6,mc3);
+        int numberOfDays6 = (int) ChronoUnit.DAYS.between(startDate6,endDate6);
+        VehicleRent vehicleRent6 = new VehicleRent(startDate6,endDate6, numberOfDays6, mc3);
         c4.addVehicleRent(vehicleRent6);
 
         customers = new ArrayList<>();
