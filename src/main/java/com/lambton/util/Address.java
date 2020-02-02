@@ -20,6 +20,4 @@ public class Address {
         this.streetName = streetName;
     }
 
-    public Address() {
-    }
 }
