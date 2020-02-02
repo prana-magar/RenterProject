@@ -43,7 +43,7 @@ public class MainRunner {
 
         //Customer 2
         Address address2 = new Address("Canada","Ontario","Toronto","M3B3A2","46.7615","86.4111"," cosburn avenue");
-        String salt2 = PasswordUtil.getSalt("asdq321e1231231".length());
+        String salt2 = PasswordUtil.getSalt("abhishek199566".length());
         Customer c2 = new Customer("C2",
                 "Abhishek",
                 "Jaya",
@@ -56,6 +56,7 @@ public class MainRunner {
 
         //Customer 3
         Address address3 = new Address("Canada","Ontario","Toronto","M3B3A3","42.7615","85.4111"," cosburn avenue");
+        String salt3 = PasswordUtil.getSalt("raghav77".length());
         Customer c3 = new Customer("C3",
                 "Raghav",
                 "Bobal",
@@ -68,6 +69,7 @@ public class MainRunner {
 
         //Customer 4
         Address address4 = new Address("Canada","Ontario","Toronto","M4B3A4","41.7616","84.4112","down town");
+        String salt4 = PasswordUtil.getSalt("ozzy@1249".length());
         Customer c4 = new Customer("C4",
                 "Ozzy",
                 "Osbourne",
@@ -80,6 +82,7 @@ public class MainRunner {
 
         //Customer 5
         Address address5 = new Address("Canada","Ontario","Toronto","C3A2V2","41.7617","66.4156","eron avenue");
+        String salt5 = PasswordUtil.getSalt("alicia22".length());
         Customer c5 = new Customer("C5",
                 "Alicia",
                 "Keys",
