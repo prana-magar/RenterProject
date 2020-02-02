@@ -64,9 +64,13 @@ public class PasswordUtil {
      */
     public static String generateSecurePassword(String password, String salt)
     {
-        //TODO
-        //This method generates the secure password by calling getHash
-        return null;
+        String returnValue = null;
+        byte[] securePassword = getHash(password.toCharArray(), salt.getBytes());
+
+        //Encode secure user password into Base64
+        returnValue = Base64.getEncoder().encodeToString(securePassword);
+
+        return returnValue;
     }
 
 }
