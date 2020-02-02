@@ -23,6 +23,7 @@ public class MainRunner {
 
     static void init(){
         //Customer 1
+
         Customer c1 = new Customer("C1", "Prakash", "Rana", Gender.MALE, LocalDate.now(), "(437) 9908989 ", "prakash@gmail.com", "ranaprakash", "asdq321e1231231", new Address());
 
         //Customer 2
