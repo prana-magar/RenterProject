@@ -43,19 +43,74 @@ public class MainRunner {
         Customer c5 = new Customer("C5", "Alicia", "Keys", Gender.FEMALE, LocalDate.now(), "(989) 9805690", "alicia@gmail.com", "AlKeys", "alicia22", address5);
 
         //Driver 1
-        Driver d1 = new Driver("D1", "Ram", "Rana", Gender.MALE, LocalDate.now(), "(989) 9076891", "ramrana@yahoo.com", "RamRana", "rananana11", "677-43-0205", Boolean.TRUE, 32332.6F);
+        Driver d1 = new Driver("D1",
+                "Ram",
+                "Rana",
+                Gender.MALE,
+                LocalDate.now(),
+                "(989) 9076891",
+                "ramrana@yahoo.com",
+                "RamRana",
+                "rananana11",
+                "677-43-0205",
+                Boolean.TRUE,
+                32332.6F);
 
         //Driver2
-        Driver d2 = new Driver("D2", "Scott", "Adkins", Gender.MALE, LocalDate.now(), "(437) 9870091", "scottadkins@asd.com", "Scotty", "sctt77", "885-66-0755", Boolean.TRUE, 28099.6F);
+        Driver d2 = new Driver("D2",
+                "Scott",
+                "Adkins",
+                Gender.MALE,
+                LocalDate.now(),
+                "(437) 9870091",
+                "scottadkins@asd.com",
+                "Scotty",
+                "sctt77",
+                "885-66-0755",
+                Boolean.TRUE,
+                28099.6F);
 
         //Driver 3
-        Driver d3 = new Driver("D3", "Charles", "Manson", Gender.MALE, LocalDate.now(), "(437) 8790991", "charlesmanson@asd.com", "CharlesManson", "charles44", "796-04-3290", Boolean.FALSE, 19090.0F);
+        Driver d3 = new Driver("D3",
+                "Charles",
+                "Manson",
+                Gender.MALE,
+                LocalDate.now(),
+                "(437) 8790991",
+                "charlesmanson@asd.com",
+                "CharlesManson",
+                "charles44",
+                "796-04-3290",
+                Boolean.FALSE,
+                19090.0F);
 
         //Driver 4
-        Driver d4 = new Driver("D4", "Caria", "MacNamee", Gender.FEMALE, LocalDate.now(), "(878) 7670009", "cmacnee@asd.com", "CMac", "cmanee090", "255-69-1229", Boolean.TRUE, 32019.0F);
+        Driver d4 = new Driver("D4",
+                "Caria",
+                "MacNamee",
+                Gender.FEMALE,
+                LocalDate.now(),
+                "(878) 7670009",
+                "cmacnee@asd.com",
+                "CMac",
+                "cmanee090",
+                "255-69-1229",
+                Boolean.TRUE,
+                32019.0F);
 
         //Driver 5
-        Driver d5 = new Driver("D5", "Eveline", "Lumox", Gender.FEMALE, LocalDate.now(), "(863) 2253855", "lumoxine@asd.com", "Elumonin", "lumox1992", "335-87-9680", Boolean.TRUE, 32231.0F);
+        Driver d5 = new Driver("D5",
+                "Eveline",
+                "Lumox",
+                Gender.FEMALE,
+                LocalDate.now(),
+                "(863) 2253855",
+                "lumoxine@asd.com",
+                "Elumonin",
+                "lumox1992",
+                "335-87-9680",
+                Boolean.TRUE,
+                32231.0F);
 
         //Driver 6
         Driver d6 = new Driver("D6",
@@ -70,8 +125,6 @@ public class MainRunner {
                 "335-87-9620",
                 Boolean.TRUE,
                 32231.0F);
-
-
 
         //Creation of different vehicle objects BEGIN here
         //Car Objects

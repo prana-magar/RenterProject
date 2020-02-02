@@ -9,7 +9,6 @@ public class Address {
     private String longitude;
     private String streetName;
 
-
     public Address(String country, String province, String city, String pincode, String latitude, String longitude, String streetName) {
         this.country = country;
         this.province = province;
@@ -19,5 +18,4 @@ public class Address {
         this.longitude = longitude;
         this.streetName = streetName;
     }
-
 }

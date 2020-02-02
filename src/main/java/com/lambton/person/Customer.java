@@ -15,7 +15,6 @@ public class Customer extends Person {
     private Address address;
     private ArrayList<VehicleRent> vehicleRents;
 
-
     public Customer(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String mobileNumber, String emailId, String userName, String password, Address address) {
         super(id, firstName, lastName, gender, birthDate, mobileNumber, emailId, userName, password);
         this.address = address;
@@ -26,7 +25,6 @@ public class Customer extends Person {
         this.address = address;
         this.vehicleRents = vehicleRents;
     }
-
 
     @Override
     public String toString() {
