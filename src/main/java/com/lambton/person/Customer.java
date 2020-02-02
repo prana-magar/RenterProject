@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
-public class Customer extends Person implements IDisplay {
+public class Customer extends Person {
 
     private Address address;
     private ArrayList<VehicleRent> vehicleRents;

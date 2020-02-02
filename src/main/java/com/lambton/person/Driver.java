@@ -4,7 +4,7 @@ import com.lambton.util.IDisplay;
 
 import java.time.LocalDate;
 
-public class Driver extends Person implements IDisplay {
+public class Driver extends Person {
 
     private String drivingLicenceNumber;
     private Boolean isDrivingHistoryClean;
