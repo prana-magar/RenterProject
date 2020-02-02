@@ -3,6 +3,7 @@ package com.lambton;
 //import com.google.gson.Gson;
 import com.lambton.person.*;
 import com.lambton.util.Address;
+import com.lambton.util.PasswordUtil;
 import com.lambton.vehicle.*;
 
 import java.time.Duration;
@@ -24,8 +25,11 @@ public class MainRunner {
     private static ArrayList<VehicleRent> vehicleRents;
 
     static void init(){
+
+
         //Customer 1
         Address address1 = new Address("Canada","Ontario","Toronto","M3B3A1","43.7615","79.4111"," graydon hall drive");
+        String salt1 = PasswordUtil.getSalt("asdq321e1231231".length());
         Customer c1 = new Customer("C1",
                 "Prakash",
                 "Rana",
@@ -39,6 +43,7 @@ public class MainRunner {
 
         //Customer 2
         Address address2 = new Address("Canada","Ontario","Toronto","M3B3A2","46.7615","86.4111"," cosburn avenue");
+        String salt2 = PasswordUtil.getSalt("asdq321e1231231".length());
         Customer c2 = new Customer("C2",
                 "Abhishek",
                 "Jaya",
