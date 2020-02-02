@@ -12,4 +12,17 @@ public class PasswordUtil {
     private static final int ITERATIONS = 10000;
     private static final int KEY_LENGTH = 256;
 
+    /**
+     * Generate Salt value
+     * @param length
+     * @return
+     */
+    public static String getSalt(int length) {
+        StringBuilder returnValue = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+            returnValue.append(ALPHABET.charAt(RANDOM.nextInt(ALPHABET.length())));
+        }
+        return new String(returnValue);
+    }
+
 }
