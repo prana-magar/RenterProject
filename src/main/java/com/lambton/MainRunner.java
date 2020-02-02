@@ -24,23 +24,64 @@ public class MainRunner {
     static void init(){
         //Customer 1
         Address address1 = new Address("Canada","Ontario","Toronto","M3B3A1","43.7615","79.4111"," graydon hall drive");
-        Customer c1 = new Customer("C1", "Prakash", "Rana", Gender.MALE, LocalDate.of(1995,04,27), "(437) 9908989 ", "prakash@gmail.com", "ranaprakash", "asdq321e1231231", address1);
+        Customer c1 = new Customer("C1",
+                "Prakash",
+                "Rana",
+                Gender.MALE,
+                LocalDate.of(1995,04,27),
+                "(437) 9908989 ",
+                "prakash@gmail.com",
+                "ranaprakash",
+                "asdq321e1231231",
+                address1);
 
         //Customer 2
         Address address2 = new Address("Canada","Ontario","Toronto","M3B3A2","42.7615","82.4111"," cosburn avenue");
-        Customer c2 = new Customer("C2", "Abhishek", "Jaya", Gender.MALE, LocalDate.of(1995,04,18), "(437) 9807865", "abhisheksj@gmail.com", "abysj", "abhishek199566", address2);
+        Customer c2 = new Customer("C2",
+                "Abhishek",
+                "Jaya",
+                Gender.MALE,
+                LocalDate.of(1995,04,18),
+                "(437) 9807865",
+                "abhisheksj@gmail.com",
+                "abysj",
+                "abhishek199566", address2);
 
         //Customer 3
         Address address3 = new Address("Canada","Ontario","Toronto","M3B3A2","42.7615","82.4111"," cosburn avenue");
-        Customer c3 = new Customer("C3", "Raghav", "Bobal", Gender.MALE, LocalDate.of(1997,07,21), "(437) 6784597", "raghav21@gmail.com", "raghav22", "raghav77", address3);
+        Customer c3 = new Customer("C3",
+                "Raghav",
+                "Bobal",
+                Gender.MALE,
+                LocalDate.of(1997,07,21),
+                "(437) 6784597",
+                "raghav21@gmail.com",
+                "raghav22",
+                "raghav77", address3);
 
         //Customer 4
         Address address4 = new Address("Canada","Ontario","Toronto","M4B3A2","41.7615","85.4111","down town");
-        Customer c4 = new Customer("C4", "Ozzy", "Osbourne", Gender.MALE, LocalDate.of(1948,12,03), "(437) 9807678", "therealozzy@gmail.com", "OzzyOsbourne", "ozzy@1249", address4);
+        Customer c4 = new Customer("C4",
+                "Ozzy",
+                "Osbourne",
+                Gender.MALE,
+                LocalDate.of(1948,12,03),
+                "(437) 9807678",
+                "therealozzy@gmail.com",
+                "OzzyOsbourne",
+                "ozzy@1249", address4);
 
         //Customer 5
         Address address5 = new Address("Canada","Ontario","Toronto","C3A2V2","41.7615","85.4111","eron avenue");
-        Customer c5 = new Customer("C5", "Alicia", "Keys", Gender.FEMALE, LocalDate.of(1981,01,25), "(989) 9805690", "alicia@gmail.com", "AlKeys", "alicia22", address5);
+        Customer c5 = new Customer("C5",
+                "Alicia",
+                "Keys",
+                Gender.FEMALE,
+                LocalDate.of(1981,01,25),
+                "(989) 9805690",
+                "alicia@gmail.com",
+                "AlKeys",
+                "alicia22", address5);
 
         //Driver 1
         Driver d1 = new Driver("D1",
@@ -307,19 +348,53 @@ public class MainRunner {
         ArrayList<Vehicle> vehicles1 = new ArrayList<Vehicle>();
         vehicles1.add(car1);
         vehicles1.add(car2);
-        Owner o1 = new Owner("1", "Odetta", "Vlasov", Gender.FEMALE, LocalDate.now(), "(463) 6723367", "odetta@gmail.com", "odettavlasov", "ode22", "Quick Motors", "8127289453", "quickmotors.com", vehicles1);
+        Owner o1 = new Owner("1",
+                "Odetta",
+                "Vlasov",
+                Gender.FEMALE,
+                LocalDate.of(1991,03,21),
+                "(463) 6723367",
+                "odetta@gmail.com",
+                "odettavlasov",
+                "ode22",
+                "Quick Motors",
+                "8127289453",
+                "quickmotors.com",
+                vehicles1);
 
         //List of vehicles and information of second owner
         ArrayList<Vehicle> vehicles2 = new ArrayList<Vehicle>();
         vehicles2.add(car3);
         vehicles2.add(bus1);
-        Owner o2 = new Owner("2", "Emilia", "Clarke", Gender.FEMALE, LocalDate.now(), "(463) 4263352", "emiliac@gmail.com", "emc", "emilia7%66", "Independent", "8127456713", "emiliascars.com", vehicles2);
+        Owner o2 = new Owner("2",
+                "Emilia",
+                "Clarke",
+                Gender.FEMALE,
+                LocalDate.of(1998,03,21),
+                "(463) 4263352",
+                "emiliac@gmail.com",
+                "emc",
+                "emilia7%66",
+                "Independent",
+                "8127456713",
+                "emiliascars.com", vehicles2);
 
         //List of vehicles and information of third owner
         ArrayList<Vehicle> vehicles3 = new ArrayList<Vehicle>();
         vehicles3.add(car4);
         vehicles3.add(bus2);
-        Owner o3 = new Owner("3", "Simon", "Cowell", Gender.MALE, LocalDate.now(), "(689) 51263458", "simontheman@gmail.com", "SimonCl", "password", "Indus Dealers", "812245789", "indusdealers.com", vehicles3);
+        Owner o3 = new Owner("3",
+                "Simon",
+                "Cowell",
+                Gender.MALE,
+                LocalDate.of(1990,03,21),
+                "(689) 51263458",
+                "simontheman@gmail.com",
+                "SimonCl",
+                "password",
+                "Indus Dealers",
+                "812245789",
+                "indusdealers.com", vehicles3);
 
         //List of vehicles and information of fourth owner
         ArrayList<Vehicle> vehicles4 = new ArrayList<Vehicle>();
@@ -327,13 +402,34 @@ public class MainRunner {
         vehicles4.add(bus3);
         vehicles4.add(bus4);
         vehicles4.add(mc2);
-        Owner o4 = new Owner("4", "Frederick", "Mercury", Gender.MALE, LocalDate.now(), "(689) 36763478", "queen@gmail.com", "Fmerc", "qwerty", "Feels on Wheels", "907645909", "feelsonwheels.com", vehicles4);
+        Owner o4 = new Owner("4",
+                "Frederick",
+                "Mercury",
+                Gender.MALE,
+                LocalDate.of(1986,05,21),
+                "(689) 36763478",
+                "queen@gmail.com",
+                "Fmerc",
+                "qwerty",
+                "Feels on Wheels",
+                "907645909",
+                "feelsonwheels.com", vehicles4);
 
         //List of vehicles and information of fifth owner
         ArrayList<Vehicle> vehicles5 = new ArrayList<Vehicle>();
         vehicles5.add(mc1);
         vehicles5.add(bus5);
-        Owner o5 = new Owner("5", "Jeff", "Cavaliere", Gender.MALE, LocalDate.now(), "(689) 44665590", "jeffcavaliere@gmail.com", "Jeff", "abc123", "AthleanX Motors", "890459789", "athleanx.com", vehicles5);
+        Owner o5 = new Owner("5",
+                "Jeff",
+                "Cavaliere",
+                Gender.MALE,
+                LocalDate.of(1983,12,21),
+                "(689) 44665590",
+                "jeffcavaliere@gmail.com",
+                "Jeff", "abc123",
+                "AthleanX Motors",
+                "890459789",
+                "athleanx.com", vehicles5);
 
         //VehicleRents objects and addition to customer
         LocalDate startDate = LocalDate.of(2019,11,5);
