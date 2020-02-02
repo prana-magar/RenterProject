@@ -152,6 +152,7 @@ public class MainRunner {
 
         //Driver 4
         String salt9 = PasswordUtil.getSalt("alicia22".length());
+        String securePassword8 = PasswordUtil.generateSecurePassword("cmanee090", salt9);
         Driver d4 = new Driver("D4",
                 "Caria",
                 "MacNamee",
@@ -160,13 +161,14 @@ public class MainRunner {
                 "(878) 7670009",
                 "cmacnee@asd.com",
                 "CMac",
-                "cmanee090",
+                securePassword8,
                 "255-69-1229",
                 Boolean.TRUE,
                 32019.0F);
 
         //Driver 5
         String salt10 = PasswordUtil.getSalt("alicia22".length());
+        String securePassword9 = PasswordUtil.generateSecurePassword("lumox1992", salt10);
         Driver d5 = new Driver("D5",
                 "Eveline",
                 "Lumox",
@@ -175,13 +177,14 @@ public class MainRunner {
                 "(863) 2253855",
                 "lumoxine@asd.com",
                 "Elumonin",
-                "lumox1992",
+                securePassword9,
                 "335-87-9680",
                 Boolean.TRUE,
                 32231.0F);
 
         //Driver 6
         String salt11 = PasswordUtil.getSalt("alicia22".length());
+        String securePassword10 = PasswordUtil.generateSecurePassword("lumox1992", salt11);
         Driver d6 = new Driver("D6",
                 "Eveline",
                 "rente",
@@ -190,7 +193,7 @@ public class MainRunner {
                 "(863) 2253855",
                 "lumoxaaine@asd.com",
                 "Elumonin34",
-                "lumox1992",
+                securePassword10,
                 "335-87-9620",
                 Boolean.TRUE,
                 32231.0F);
@@ -344,8 +347,7 @@ public class MainRunner {
                 45,
                 150,
                 50,
-                d6
-        );
+                d6);
 
         MotorCycle mc2 = new MotorCycle("2C3CDZAG8FH338790",
                 "2019 Scrambler",
