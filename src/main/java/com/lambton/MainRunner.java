@@ -110,6 +110,7 @@ public class MainRunner {
                 "AlKeys",
                 securePassword
                 , address5);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Driver 1
         password = "rananana11";
@@ -127,7 +128,7 @@ public class MainRunner {
                 "677-43-0205",
                 Boolean.TRUE,
                 32332.6F);
-
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
         //Driver2
         password = "sctt77";
         salt = PasswordUtil.getSalt(password.length());
@@ -144,6 +145,7 @@ public class MainRunner {
                 "885-66-0755",
                 Boolean.TRUE,
                 28099.6F);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Driver 3
         password = "charles44";
@@ -161,6 +163,7 @@ public class MainRunner {
                 "796-04-3290",
                 Boolean.FALSE,
                 19090.0F);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Driver 4
         password = "cmanee090";
@@ -178,6 +181,7 @@ public class MainRunner {
                 "255-69-1229",
                 Boolean.TRUE,
                 32019.0F);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Driver 5
         password = "lumox1992";
@@ -195,6 +199,7 @@ public class MainRunner {
                 "335-87-9680",
                 Boolean.TRUE,
                 32231.0F);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
 
         //Driver 6
@@ -213,6 +218,7 @@ public class MainRunner {
                 "335-87-9620",
                 Boolean.TRUE,
                 32231.0F);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Creation of different vehicle objects BEGIN here
         //Car Objects
