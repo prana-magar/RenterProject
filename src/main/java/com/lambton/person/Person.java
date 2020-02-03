@@ -6,9 +6,11 @@ import com.lambton.util.PasswordUtil;
 
 import java.time.LocalDate;
 
-//Person class is an abstract class containing attributes to be inherited by Customer, Driver and Owner Classes
 
- public abstract class Person implements IDisplay {
+/**
+ * Person class is an abstract class containing attributes to be inherited by Customer, Driver and Owner Classes
+ */
+public abstract class Person implements IDisplay {
     private String id;
     private String firstName;
     private String lastName;
@@ -20,9 +22,9 @@ import java.time.LocalDate;
     private String salt;
     private Contact contact;
 
-     Person(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String userName,
-            String password,Contact contact) {
-        String salt = PasswordUtil.getSalt(password.length());
+    Person(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String userName,
+           String password, Contact contact) {
+        this.salt = PasswordUtil.getSalt(password.length());
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -34,12 +36,12 @@ import java.time.LocalDate;
         this.age = setAge();
     }
 
-     String getFullName(){
+    String getFullName() {
         return this.firstName + " " + this.lastName;
     }
 
 
-    private int setAge(){
+    private int setAge() {
         this.age = LocalDate.now().getYear() - this.birthDate.getYear();
         return this.age;
     }
@@ -47,97 +49,94 @@ import java.time.LocalDate;
 
     @Override
     public String toString() {
-       return "Person{" +
-               "id='" + id + '\'' +
-               ", firstName='" + firstName + '\'' +
-               ", lastName='" + lastName + '\'' +
-               ", gender=" + gender +
-               ", birthDate=" + birthDate +
-               ", age=" + age +
-               ", userName='" + userName + '\'' +
-               ", password='" + password + '\'' +
-               ", contact='" + contact + '\'' +
-               '}';
+        return "Person{" +
+                "id='" + id + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", gender=" + gender +
+                ", birthDate=" + birthDate +
+                ", age=" + age +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", contact='" + contact + '\'' +
+                '}';
     }
-
-
 
 
     @Override
     public void display() {
-       System.out.println(this.toString());
+        System.out.println(this.toString());
     }
 
+    public String getId() {
+        return id;
+    }
 
-     public String getId() {
-         return id;
-     }
+    public void setId(String id) {
+        this.id = id;
+    }
 
-     public void setId(String id) {
-         this.id = id;
-     }
+    public String getFirstName() {
+        return firstName;
+    }
 
-     public String getFirstName() {
-         return firstName;
-     }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-     public void setFirstName(String firstName) {
-         this.firstName = firstName;
-     }
+    public String getLastName() {
+        return lastName;
+    }
 
-     public String getLastName() {
-         return lastName;
-     }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-     public void setLastName(String lastName) {
-         this.lastName = lastName;
-     }
+    public Gender getGender() {
+        return gender;
+    }
 
-     public Gender getGender() {
-         return gender;
-     }
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
 
-     public void setGender(Gender gender) {
-         this.gender = gender;
-     }
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
 
-     public LocalDate getBirthDate() {
-         return birthDate;
-     }
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
 
-     public void setBirthDate(LocalDate birthDate) {
-         this.birthDate = birthDate;
-     }
+    public String getUserName() {
+        return userName;
+    }
 
-     public String getUserName() {
-         return userName;
-     }
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
-     public void setUserName(String userName) {
-         this.userName = userName;
-     }
+    public String getPassword() {
+        return password;
+    }
 
-     public String getPassword() {
-         return password;
-     }
+    public void setPassword(String password) {
+        this.password = PasswordUtil.generateSecurePassword(password, salt);
+    }
 
-     public void setPassword(String password) {
-         this.password = password;
-     }
+    public String getSalt() {
+        return salt;
+    }
 
-     public String getSalt() {
-         return salt;
-     }
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
 
-     public void setSalt(String salt) {
-         this.salt = salt;
-     }
+    public Contact getContact() {
+        return contact;
+    }
 
-     public Contact getContact() {
-         return contact;
-     }
-
-     public void setContact(Contact contact) {
-         this.contact = contact;
-     }
- }
+    public void setContact(Contact contact) {
+        this.contact = contact;
+    }
+}
