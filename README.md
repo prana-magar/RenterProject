@@ -34,7 +34,7 @@ We have used the following packages and classes to implement the above given str
 * **PasswordUtil Class**: Class used for encrption and decryption of passwords
 
 ### *Rent Package*
-* **IDisplay Class**: Contains rental information such as startDate, endDate, kmsDriven, totalBill etc.
+* **VehicleRent Class**: Contains rental information such as startDate, endDate, kmsDriven, totalBill etc.
 
 
 ### *MainRunner Class*
