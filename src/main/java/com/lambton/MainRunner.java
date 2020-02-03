@@ -11,6 +11,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class MainRunner {
 
@@ -594,6 +595,22 @@ public class MainRunner {
 
     }
 
+    private void checkVehicleRentsValidity(Customer customer)
+    {
+        if (Objects.nonNull(customer)) {
+
+            for (VehicleRent vehicleRent : customer.getVehicleRents()) {
+
+                if (Objects.nonNull(vehicleRent)) {
+                    LocalDate localDate = LocalDate.of(2020, 02, 02);
+                    if (vehicleRent.getRentEndDate().isBefore(localDate)) {
+                        customer.getVehicleRents().remove(vehicleRent);
+                    }
+                }
+            }
+        }
+    }
+
     public static void main(String[] args) {
         init();
 
@@ -633,5 +650,7 @@ public class MainRunner {
                 }
             }
         }
+
+
     }
 }
