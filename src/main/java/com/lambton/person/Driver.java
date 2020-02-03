@@ -13,8 +13,8 @@ public class Driver extends Person {
     private Float salary;
 
 
-    public Driver(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String userName, String password, String drivingLicenceNumber, Boolean isDrivingHistoryClean, Float salary,Contact contact) {
-        super(id, firstName, lastName, gender, birthDate, userName, password,contact);
+    public Driver(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String userName, String password, String salt, String drivingLicenceNumber, Boolean isDrivingHistoryClean, Float salary,Contact contact) {
+        super(id, firstName, lastName, gender, birthDate, userName, password, salt, contact);
         this.drivingLicenceNumber = drivingLicenceNumber;
         this.isDrivingHistoryClean = isDrivingHistoryClean;
         this.salary = salary;

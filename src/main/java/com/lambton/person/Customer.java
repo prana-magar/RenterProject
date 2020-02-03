@@ -14,12 +14,12 @@ public class Customer extends Person {
 
     private ArrayList<VehicleRent> vehicleRents;
 
-    public Customer(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String userName, String password, Contact contact) {
-        super(id, firstName, lastName, gender, birthDate, userName, password,contact);
+    public Customer(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String userName, String password, String salt, Contact contact) {
+        super(id, firstName, lastName, gender, birthDate, userName, password, salt,contact);
     }
 
-    public Customer(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String userName, String password, Address address, ArrayList<VehicleRent> vehicleRents,Contact contact) {
-        super(id, firstName, lastName, gender, birthDate, userName, password,contact);
+    public Customer(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String userName, String password, String salt, Address address, ArrayList<VehicleRent> vehicleRents,Contact contact) {
+        super(id, firstName, lastName, gender, birthDate, userName, password,salt,contact);
         this.vehicleRents = vehicleRents;
     }
 

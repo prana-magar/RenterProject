@@ -17,8 +17,8 @@ public class Owner extends Person {
     private String url;
     private List<Vehicle> vehicles;
 
-    public Owner(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String userName, String password, String companyTitle, String landLineNumber, String url, ArrayList<Vehicle> vehicles, Contact contact) {
-        super(id, firstName, lastName, gender, birthDate, userName, password, contact);
+    public Owner(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String userName, String password,String salt, String companyTitle, String landLineNumber, String url, ArrayList<Vehicle> vehicles, Contact contact) {
+        super(id, firstName, lastName, gender, birthDate, userName, password, salt, contact);
         this.companyTitle = companyTitle;
         this.landLineNumber = landLineNumber;
         this.url = url;

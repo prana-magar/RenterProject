@@ -48,8 +48,11 @@ public class MainRunner {
                 LocalDate.of(1995,4,27),
                 "ranaprakash",
                 securePassword,
+                salt,
                 contact1);
         boolean isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
+        System.out.println("Is validated pw " + isPasswordValid);
+
 
         //Customer 2
         Address address2 = new Address("Canada","Ontario","Toronto","M3B3A2","46.7615","86.4111"," cosburn avenue");
@@ -64,6 +67,7 @@ public class MainRunner {
                 LocalDate.of(1995,4,18),
                 "abysj",
                 securePassword,
+                salt,
                 contact2);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
@@ -80,6 +84,7 @@ public class MainRunner {
                 LocalDate.of(1997,07,21),
                 "raghav22",
                 securePassword,
+                salt,
                 contact3);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
@@ -96,6 +101,7 @@ public class MainRunner {
                 LocalDate.of(1948,12,03),
                 "OzzyOsbourne",
                 securePassword,
+                salt,
                 contact4);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
@@ -111,7 +117,8 @@ public class MainRunner {
                 Gender.FEMALE,
                 LocalDate.of(1981,01,25),
                 "AlKeys",
-                securePassword
+                securePassword,
+                salt
                 , contact5);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
@@ -128,6 +135,7 @@ public class MainRunner {
                 LocalDate.of(1991,03,21),
                 "RamRana",
                 securePassword,
+                salt,
                 "677-43-0205",
                 Boolean.TRUE,
                 32332.6F,
@@ -148,6 +156,7 @@ public class MainRunner {
                 LocalDate.of(1996,04,11),
                 "Scotty",
                 securePassword,
+                salt,
                 "885-66-0755",
                 Boolean.TRUE,
                 28099.6F,
@@ -167,6 +176,7 @@ public class MainRunner {
                 LocalDate.of(1999,01,27),
                 "CharlesManson",
                 securePassword,
+                salt,
                 "796-04-3290",
                 Boolean.FALSE,
                 19090.0F,
@@ -186,6 +196,7 @@ public class MainRunner {
                 LocalDate.of(1996,05,22),
                 "CMac",
                 securePassword,
+                salt,
                 "255-69-1229",
                 Boolean.TRUE,
                 32019.0F,
@@ -205,6 +216,7 @@ public class MainRunner {
                 LocalDate.of(1990, 11,25),
                 "Elumonin",
                 securePassword,
+                salt,
                 "335-87-9680",
                 Boolean.TRUE,
                 32231.0F,
@@ -225,6 +237,7 @@ public class MainRunner {
                 LocalDate.of(1994,07,18),
                 "Elumonin34",
                 securePassword,
+                salt,
                 "335-87-9620",
                 Boolean.TRUE,
                 32231.0F,
@@ -424,6 +437,7 @@ public class MainRunner {
                 LocalDate.of(1991,03,21),
                 "odettavlasov",
                 securePassword,
+                salt,
                 "Quick Motors",
                 "8127289453",
                 "quickmotors.com",
@@ -448,6 +462,7 @@ public class MainRunner {
                 LocalDate.of(1998,03,21),
                 "emc",
                 securePassword,
+                salt,
                 "Independent",
                 "8127456713",
                 "emiliascars.com", vehicles2,
@@ -471,6 +486,7 @@ public class MainRunner {
                 LocalDate.of(1990,03,21),
                 "SimonCl",
                 securePassword,
+                salt,
                 "Indus Dealers",
                 "812245789",
                 "indusdealers.com", vehicles3,
@@ -496,6 +512,7 @@ public class MainRunner {
                 LocalDate.of(1986,05,21),
                 "Fmerc",
                 securePassword,
+                salt,
                 "Feels on Wheels",
                 "907645909",
                 "feelsonwheels.com", vehicles4,
@@ -519,6 +536,7 @@ public class MainRunner {
                 LocalDate.of(1983,12,21),
                 "Jeff",
                 securePassword,
+                salt,
                 "AthleanX Motors",
                 "890459789",
                 "athleanx.com",

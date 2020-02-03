@@ -23,7 +23,7 @@ public abstract class Person implements IDisplay {
     private Contact contact;
 
     Person(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String userName,
-           String password, Contact contact) {
+           String password,String salt, Contact contact) {
         this.salt = PasswordUtil.getSalt(password.length());
         this.id = id;
         this.firstName = firstName;
