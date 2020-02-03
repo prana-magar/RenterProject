@@ -534,6 +534,14 @@ public class MainRunner {
             System.out.println(e);
         }
 
+
+        try {
+            vehicleRent1.setRentEndDate(LocalDate.now().minusDays(3));
+        }
+        catch (IllegalRentParamException e){
+            System.out.println(e);
+        }
+
         c1.addVehicleRent(vehicleRent1);
 
         LocalDate startDate2 = LocalDate.of(2020,1,15);

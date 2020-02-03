@@ -76,7 +76,16 @@ public class VehicleRent implements IDisplay {
         return rentEndDate;
     }
 
-    public void setRentEndDate(LocalDate rentEndDate) {
+    public void setRentEndDate(LocalDate rentEndDate) throws IllegalRentParamException{
+        if(rentEndDate.isBefore(LocalDate.now())){
+            throw new IllegalRentParamException("End date cant be in past");
+        }
+        this.rentEndDate = rentEndDate;
+        this.calculateNumberOfDays();
+        this.calculateTotalBill();
+    }
+
+    public void setRentEndDate(LocalDate rentEndDate,boolean suppresWarning){
         this.rentEndDate = rentEndDate;
         this.calculateNumberOfDays();
         this.calculateTotalBill();

@@ -26,7 +26,7 @@ public class Contact {
 
         if(!this.validatePhoneNumber(mobileNumber))
         {
-            throw new IllegalArgumentException("PhoneNumbe not proper.Should have length 7<= phoneNumber >=16");
+            throw new IllegalArgumentException("PhoneNumber not proper.Should have length 7<= phoneNumber >=16");
         }
         this.mobileNumber = mobileNumber;
 
