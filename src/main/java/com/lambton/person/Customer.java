@@ -1,30 +1,25 @@
 package com.lambton.person;
 
-import com.lambton.util.Address;
-import com.lambton.util.IDisplay;
-import com.lambton.VehicleRent;
-import com.lambton.util.PasswordUtil;
+import com.lambton.rent.VehicleRent;
 
-import javax.xml.stream.FactoryConfigurationError;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.TreeMap;
-// customer class inherits person class and holds the details of customer as well as the vehicles they have rented
 
+
+/**customer class inherits person class and holds the details of customer as well as the vehicles they have rented
+ *
+ */
 public class Customer extends Person {
 
-    private Address address;
     private ArrayList<VehicleRent> vehicleRents;
 
-    public Customer(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String mobileNumber, String emailId, String userName, String password, Address address) {
-        super(id, firstName, lastName, gender, birthDate, mobileNumber, emailId, userName, password);
-        this.address = address;
+    public Customer(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String userName, String password, Contact contact) {
+        super(id, firstName, lastName, gender, birthDate, userName, password,contact);
     }
 
-    public Customer(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String mobileNumber, String emailId, String userName, String password, Address address, ArrayList<VehicleRent> vehicleRents) {
-        super(id, firstName, lastName, gender, birthDate, mobileNumber, emailId, userName, password);
-        this.address = address;
+    public Customer(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String userName, String password, Address address, ArrayList<VehicleRent> vehicleRents,Contact contact) {
+        super(id, firstName, lastName, gender, birthDate, userName, password,contact);
         this.vehicleRents = vehicleRents;
     }
 
@@ -32,34 +27,30 @@ public class Customer extends Person {
     public String toString() {
         return "Customer{" +
                 super.toString()+
-                " address=" + address +
                 " vehicleRents=" + vehicleRents +
                 '}';
     }
 
-    public void addVehicleRent(VehicleRent vehicleRent){
+    public void addVehicleRents(VehicleRent vehicleRent){
 
         if(this.vehicleRents == null){
             this.vehicleRents = new ArrayList<>();
         }
 
-        if(this.vehicleRents.contains(vehicleRent)){
-            System.out.println("Already Present");
-        }
         this.vehicleRents.add(vehicleRent);
     }
 
     public void addVehicleRents(List<VehicleRent> vehicleRents){
         for(VehicleRent vehicleRent: vehicleRents){
-            this.addVehicleRent(vehicleRent);
+            this.addVehicleRents(vehicleRent);
         }
     }
 
-    public Boolean hasBookings(){
+    public boolean hasBookings(){
         return this.vehicleRents != null;
     }
 
-    public Boolean hasLiveBookings(){
+    public boolean hasLiveBookings(){
 
         for(VehicleRent vehicleRent: this.vehicleRents){
             if(vehicleRent.isLive()){
@@ -69,13 +60,6 @@ public class Customer extends Person {
         return false;
     }
 
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
 
     public List<VehicleRent> getVehicleRents() {
         return vehicleRents;

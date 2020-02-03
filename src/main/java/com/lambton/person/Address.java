@@ -1,6 +1,11 @@
-package com.lambton.util;
 //The util package contains the address and passwordUtil classes and an IDisplay interface
 //Address class contains the address information that is used in MainRunner
+
+package com.lambton.person;
+
+/**
+ * This class is to hold address attributes
+ */
 
 public class Address {
     private String country;
@@ -19,5 +24,18 @@ public class Address {
         this.latitude = latitude;
         this.longitude = longitude;
         this.streetName = streetName;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "country='" + country + '\'' +
+                ", province='" + province + '\'' +
+                ", city='" + city + '\'' +
+                ", pincode='" + pincode + '\'' +
+                ", latitude='" + latitude + '\'' +
+                ", longitude='" + longitude + '\'' +
+                ", streetName='" + streetName + '\'' +
+                '}';
     }
 }

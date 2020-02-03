@@ -13,9 +13,19 @@ public abstract class Vehicle implements IDisplay {
     private int numberOfSeat;
     private FuelType fuelType;
     private float baseRate;
+    private float perKmRate;
     private Driver driver;
 
-    public Vehicle(String vehicleId, String description, String manufacturer, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, FuelType fuelType, float baseRate, Driver driver) {
+    public float getPerKmRate() {
+        return perKmRate;
+    }
+
+    public void setPerKmRate(float perKmRate) {
+        this.perKmRate = perKmRate;
+    }
+
+
+     Vehicle(String vehicleId, String description, String manufacturer, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, FuelType fuelType, float baseRate,float perKmRate, Driver driver) {
         this.vehicleId = vehicleId;
         this.description = description;
         this.manufacturer = manufacturer;
@@ -26,9 +36,10 @@ public abstract class Vehicle implements IDisplay {
         this.fuelType = fuelType;
         this.baseRate = baseRate;
         this.driver = driver;
+        this.perKmRate = perKmRate;
     }
 
-    public Vehicle(String vehicleId, String description, String manufacturer, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, FuelType fuelType, float baseRate) {
+     Vehicle(String vehicleId, String description, String manufacturer, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, FuelType fuelType, float baseRate, float perKmRate) {
         this.vehicleId = vehicleId;
         this.description = description;
         this.manufacturer = manufacturer;
@@ -38,6 +49,7 @@ public abstract class Vehicle implements IDisplay {
         this.numberOfSeat = numberOfSeat;
         this.fuelType = fuelType;
         this.baseRate = baseRate;
+        this.perKmRate = perKmRate;
     }
 
 

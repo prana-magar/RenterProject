@@ -5,25 +5,29 @@ package com.lambton.vehicle;
 import com.lambton.person.Driver;
 import com.lambton.util.IDisplay;
 
+/**
+ * This class is to hold bus attributes
+ */
+
 public class Bus extends Vehicle {
 
     private String busType;
     private Boolean accessibilityServices;
     private Boolean wifiAvailability;
-    private int StandingCapacity;
+    private int standingCapacity;
 
     public Bus(String vehicleId, String busType, String description, String manufacturer, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, int StandingCapacity, Boolean wifiAvailability, Boolean accessibilityServices, FuelType fuelType, float baseRate) {
-        super(vehicleId, description, manufacturer, isSelfDrive, isInsured, insuranceProviderName, numberOfSeat, fuelType, baseRate);
+        super(vehicleId, description, manufacturer, isSelfDrive, isInsured, insuranceProviderName, numberOfSeat, fuelType, baseRate,7.0f);
         this.busType = busType;
-        this.StandingCapacity = StandingCapacity;
+        this.standingCapacity = StandingCapacity;
         this.accessibilityServices = accessibilityServices;
         this.wifiAvailability = wifiAvailability;
     }
 
     public Bus(String vehicleId, String busType, String description, String manufacturer, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, int StandingCapacity, Boolean wifiAvailability, Boolean accessibilityServices, FuelType fuelType, float baseRate, Driver driver) {
-        super(vehicleId, description, manufacturer, isSelfDrive, isInsured, insuranceProviderName, numberOfSeat, fuelType, baseRate,driver);
+        super(vehicleId, description, manufacturer, isSelfDrive, isInsured, insuranceProviderName, numberOfSeat, fuelType, baseRate,7.0f,driver);
         this.busType = busType;
-        this.StandingCapacity = StandingCapacity;
+        this.standingCapacity = StandingCapacity;
         this.accessibilityServices = accessibilityServices;
         this.wifiAvailability = wifiAvailability;
     }
@@ -47,10 +51,10 @@ public class Bus extends Vehicle {
         this.busType = busType;
     }
 
-    public int getStandingCapacity() {  return StandingCapacity; }
+    public int getStandingCapacity() {  return standingCapacity; }
 
     public void setStandingCapacity(int standingCapacity) {
-        StandingCapacity = standingCapacity;
+        standingCapacity = standingCapacity;
     }
 
     public Boolean getAccessibilityServices() {

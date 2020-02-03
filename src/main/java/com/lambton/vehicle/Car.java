@@ -3,20 +3,24 @@ package com.lambton.vehicle;
 import com.lambton.person.Driver;
 //Car class contains attributes inherited from Vehicle as well as carColor and carType
 
+/**
+ * This class is to hold car attributes
+ */
+
 public class Car extends Vehicle {
 
     private String carType;
     private String carColor;
 
     public Car(String vehicleId, String description, String manufacturer, String carType, String carColor, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, FuelType fuelType, float baseRate) {
-        super(vehicleId, description, manufacturer, isSelfDrive, isInsured, insuranceProviderName, numberOfSeat, fuelType, baseRate);
+        super(vehicleId, description, manufacturer, isSelfDrive, isInsured, insuranceProviderName, numberOfSeat, fuelType, baseRate,5.0f);
         this.carType = carType;
         this.carColor = carColor;
     }
 
 
     public Car(String vehicleId, String description, String manufacturer, String carType, String carColor, Boolean isSelfDrive, Boolean isInsured, String insuranceProviderName, int numberOfSeat, FuelType fuelType, float baseRate,Driver driver) {
-        super(vehicleId, description, manufacturer, isSelfDrive, isInsured, insuranceProviderName, numberOfSeat, fuelType, baseRate,driver);
+        super(vehicleId, description, manufacturer, isSelfDrive, isInsured, insuranceProviderName, numberOfSeat, fuelType, baseRate, 5.0f,driver);
         this.carType = carType;
         this.carColor = carColor;
     }
