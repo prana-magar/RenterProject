@@ -34,25 +34,23 @@ public class MainRunner {
 
         //Customer 1
         Address address1 = new Address("Canada","Ontario","Toronto","M3B3A1","43.7615","79.4111"," graydon hall drive");
+        Contact contact1 = new Contact("(437) 9908989","prakash@gmail.com",address1);
         String password = "asdq321e1231231";
         String salt = PasswordUtil.getSalt(password.length());
         String securePassword = PasswordUtil.generateSecurePassword(password, salt);
-        System.out.println("\n The generated Secure Password for Customer 1 is - " + securePassword);
         Customer c1 = new Customer("C1",
                 "Prakash",
                 "Rana",
                 Gender.MALE,
-                LocalDate.of(1995,04,27),
-                "(437) 9908989 ",
-                "prakash@gmail.com",
+                LocalDate.of(1995,4,27),
                 "ranaprakash",
                 securePassword,
-                address1);
+                contact1);
         boolean isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
-        System.out.println("\n Is Password Valid for Customer 1 - " + isPasswordValid);
 
         //Customer 2
         Address address2 = new Address("Canada","Ontario","Toronto","M3B3A2","46.7615","86.4111"," cosburn avenue");
+        Contact contact2 = new Contact("(437) 9807865","abhisheksj@gmail.com",address2);
         password = "abhishek199566";
         salt = PasswordUtil.getSalt(password.length());
         securePassword = PasswordUtil.generateSecurePassword(password, salt);
@@ -60,16 +58,15 @@ public class MainRunner {
                 "Abhishek",
                 "Jaya",
                 Gender.MALE,
-                LocalDate.of(1995,04,18),
-                "(437) 9807865",
-                "abhisheksj@gmail.com",
+                LocalDate.of(1995,4,18),
                 "abysj",
                 securePassword,
-                address2);
+                contact2);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Customer 3
         Address address3 = new Address("Canada","Ontario","Toronto","M3B3A3","42.7615","85.4111"," cosburn avenue");
+        Contact contact3 = new Contact("(437) 6784597", "raghav21@gmail.com",address3);
         password = "raghav77";
         salt = PasswordUtil.getSalt(password.length());
         securePassword = PasswordUtil.generateSecurePassword("raghav77", salt);
@@ -78,15 +75,14 @@ public class MainRunner {
                 "Bobal",
                 Gender.MALE,
                 LocalDate.of(1997,07,21),
-                "(437) 6784597",
-                "raghav21@gmail.com",
                 "raghav22",
                 securePassword,
-                address3);
+                contact3);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Customer 4
         Address address4 = new Address("Canada","Ontario","Toronto","M4B3A4","41.7616","84.4112","down town");
+        Contact contact4 = new Contact("(437) 9807678","therealozzy@gmail.com",address4);
         password = "ozzy@1249";
         salt = PasswordUtil.getSalt(password.length());
         securePassword = PasswordUtil.generateSecurePassword(password, salt);
@@ -95,15 +91,14 @@ public class MainRunner {
                 "Osbourne",
                 Gender.MALE,
                 LocalDate.of(1948,12,03),
-                "(437) 9807678",
-                "therealozzy@gmail.com",
                 "OzzyOsbourne",
                 securePassword,
-                address4);
+                contact4);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Customer 5
         Address address5 = new Address("Canada","Ontario","Toronto","C3A2V2","41.7617","66.4156","eron avenue");
+        Contact contact5 = new Contact("(989) 9805690","alicia@gmail.com",address5);
         password = "alicia22";
         salt = PasswordUtil.getSalt(password.length());
         securePassword = PasswordUtil.generateSecurePassword(password, salt);
@@ -112,15 +107,15 @@ public class MainRunner {
                 "Keys",
                 Gender.FEMALE,
                 LocalDate.of(1981,01,25),
-                "(989) 9805690",
-                "alicia@gmail.com",
                 "AlKeys",
                 securePassword
-                , address5);
+                , contact5);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Driver 1
         password = "rananana11";
+        Contact driverContact1 = new Contact("(989) 9076891",
+                "ramrana@yahoo.com");
         salt = PasswordUtil.getSalt(password.length());
         securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Driver d1 = new Driver("D1",
@@ -128,15 +123,18 @@ public class MainRunner {
                 "Rana",
                 Gender.MALE,
                 LocalDate.of(1991,03,21),
-                "(989) 9076891",
-                "ramrana@yahoo.com",
                 "RamRana",
                 securePassword,
                 "677-43-0205",
                 Boolean.TRUE,
-                32332.6F);
+                32332.6F,
+                driverContact1);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
+
+
         //Driver2
+        Contact driverContact2=  new Contact("(437) 9870091",
+                "scottadkins@asd.com");
         password = "sctt77";
         salt = PasswordUtil.getSalt(password.length());
         securePassword = PasswordUtil.generateSecurePassword(password, salt);
@@ -145,16 +143,17 @@ public class MainRunner {
                 "Adkins",
                 Gender.MALE,
                 LocalDate.of(1996,04,11),
-                "(437) 9870091",
-                "scottadkins@asd.com",
                 "Scotty",
                 securePassword,
                 "885-66-0755",
                 Boolean.TRUE,
-                28099.6F);
+                28099.6F,
+                driverContact2);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Driver 3
+        Contact driverContact3 = new Contact("(437) 8790991",
+                "charlesmanson@asd.com");
         password = "charles44";
         salt = PasswordUtil.getSalt(password.length());
         securePassword = PasswordUtil.generateSecurePassword(password, salt);
@@ -163,16 +162,17 @@ public class MainRunner {
                 "Manson",
                 Gender.MALE,
                 LocalDate.of(1999,01,27),
-                "(437) 8790991",
-                "charlesmanson@asd.com",
                 "CharlesManson",
                 securePassword,
                 "796-04-3290",
                 Boolean.FALSE,
-                19090.0F);
+                19090.0F,
+                driverContact3);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Driver 4
+        Contact driverContact4 = new Contact("(878) 7670009",
+                "cmacnee@asd.com");
         password = "cmanee090";
         salt = PasswordUtil.getSalt(password.length());
         securePassword = PasswordUtil.generateSecurePassword(password, salt);
@@ -181,16 +181,17 @@ public class MainRunner {
                 "MacNamee",
                 Gender.FEMALE,
                 LocalDate.of(1996,05,22),
-                "(878) 7670009",
-                "cmacnee@asd.com",
                 "CMac",
                 securePassword,
                 "255-69-1229",
                 Boolean.TRUE,
-                32019.0F);
+                32019.0F,
+                driverContact4);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Driver 5
+        Contact driverContact5 = new Contact("(863) 2253855",
+                "lumoxine@asd.com");
         password = "lumox1992";
         salt = PasswordUtil.getSalt(password.length());
         securePassword = PasswordUtil.generateSecurePassword(password, salt);
@@ -199,17 +200,18 @@ public class MainRunner {
                 "Lumox",
                 Gender.FEMALE,
                 LocalDate.of(1990, 11,25),
-                "(863) 2253855",
-                "lumoxine@asd.com",
                 "Elumonin",
                 securePassword,
                 "335-87-9680",
                 Boolean.TRUE,
-                32231.0F);
+                32231.0F,
+                driverContact5);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
 
         //Driver 6
+        Contact driverContact6 = new Contact("(863) 2253855",
+                "lumoxaaine@asd.com");
         password = "lumox1992";
         salt = PasswordUtil.getSalt(password.length());
         securePassword = PasswordUtil.generateSecurePassword(password, salt);
@@ -218,13 +220,12 @@ public class MainRunner {
                 "rente",
                 Gender.FEMALE,
                 LocalDate.of(1994,07,18),
-                "(863) 2253855",
-                "lumoxaaine@asd.com",
                 "Elumonin34",
                 securePassword,
                 "335-87-9620",
                 Boolean.TRUE,
-                32231.0F);
+                32231.0F,
+                driverContact6);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Creation of different vehicle objects BEGIN here
@@ -407,6 +408,9 @@ public class MainRunner {
         ArrayList<Vehicle> vehicles1 = new ArrayList<Vehicle>();
         vehicles1.add(car1);
         vehicles1.add(car2);
+
+        Contact ownerContact1 = new Contact("(463) 6723367",
+                "odetta@gmail.com");
         password = "ode22";
         salt = PasswordUtil.getSalt(password.length());
         securePassword = PasswordUtil.generateSecurePassword(password, salt);
@@ -415,20 +419,22 @@ public class MainRunner {
                 "Vlasov",
                 Gender.FEMALE,
                 LocalDate.of(1991,03,21),
-                "(463) 6723367",
-                "odetta@gmail.com",
                 "odettavlasov",
                 securePassword,
                 "Quick Motors",
                 "8127289453",
                 "quickmotors.com",
-                vehicles1);
+                vehicles1,
+                ownerContact1);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //List of vehicles and information of second owner
         ArrayList<Vehicle> vehicles2 = new ArrayList<Vehicle>();
         vehicles2.add(car3);
         vehicles2.add(bus1);
+
+        Contact ownerContact2 = new Contact("(463) 4263352",
+                "emiliac@gmail.com");
         password = "emilia7%66";
         salt = PasswordUtil.getSalt(password.length());
         securePassword = PasswordUtil.generateSecurePassword(password, salt);
@@ -437,19 +443,21 @@ public class MainRunner {
                 "Clarke",
                 Gender.FEMALE,
                 LocalDate.of(1998,03,21),
-                "(463) 4263352",
-                "emiliac@gmail.com",
                 "emc",
                 securePassword,
                 "Independent",
                 "8127456713",
-                "emiliascars.com", vehicles2);
+                "emiliascars.com", vehicles2,
+                ownerContact2);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //List of vehicles and information of third owner
         ArrayList<Vehicle> vehicles3 = new ArrayList<Vehicle>();
         vehicles3.add(car4);
         vehicles3.add(bus2);
+
+        Contact ownerContact3 = new Contact("(689) 51263458",
+                "simontheman@gmail.com");
         password = "password";
         salt = PasswordUtil.getSalt(password.length());
         securePassword = PasswordUtil.generateSecurePassword(password, salt);
@@ -458,13 +466,12 @@ public class MainRunner {
                 "Cowell",
                 Gender.MALE,
                 LocalDate.of(1990,03,21),
-                "(689) 51263458",
-                "simontheman@gmail.com",
                 "SimonCl",
                 securePassword,
                 "Indus Dealers",
                 "812245789",
-                "indusdealers.com", vehicles3);
+                "indusdealers.com", vehicles3,
+                ownerContact3);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //List of vehicles and information of fourth owner
@@ -473,6 +480,9 @@ public class MainRunner {
         vehicles4.add(bus3);
         vehicles4.add(bus4);
         vehicles4.add(mc2);
+
+        Contact ownerContact4 = new Contact("(689) 36763478",
+                "queen@gmail.com");
         password = "qwerty";
         salt = PasswordUtil.getSalt(password.length());
         securePassword = PasswordUtil.generateSecurePassword(password, salt);
@@ -481,19 +491,21 @@ public class MainRunner {
                 "Mercury",
                 Gender.MALE,
                 LocalDate.of(1986,05,21),
-                "(689) 36763478",
-                "queen@gmail.com",
                 "Fmerc",
                 securePassword,
                 "Feels on Wheels",
                 "907645909",
-                "feelsonwheels.com", vehicles4);
+                "feelsonwheels.com", vehicles4,
+                ownerContact4);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //List of vehicles and information of fifth owner
         ArrayList<Vehicle> vehicles5 = new ArrayList<Vehicle>();
         vehicles5.add(mc1);
         vehicles5.add(bus5);
+
+        Contact ownerContact5 = new Contact("(689) 44665590",
+                "jeffcavaliere@gmail.com");
         password = "abc123";
         salt = PasswordUtil.getSalt(password.length());
         securePassword = PasswordUtil.generateSecurePassword(password, salt);
@@ -502,14 +514,13 @@ public class MainRunner {
                 "Cavaliere",
                 Gender.MALE,
                 LocalDate.of(1983,12,21),
-                "(689) 44665590",
-                "jeffcavaliere@gmail.com",
                 "Jeff",
                 securePassword,
                 "AthleanX Motors",
                 "890459789",
                 "athleanx.com",
-                vehicles5);
+                vehicles5,
+                ownerContact5);
         isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //VehicleRents objects and addition to customer
