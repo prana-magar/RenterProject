@@ -2,6 +2,7 @@ package com.lambton;
 
 //import com.google.gson.Gson;
 import com.lambton.person.*;
+import com.lambton.rent.IllegalRentParamException;
 import com.lambton.rent.VehicleRent;
 import com.lambton.person.Address;
 import com.lambton.util.PasswordUtil;
@@ -525,13 +526,25 @@ public class MainRunner {
         LocalDate startDate = LocalDate.of(2019,11,5);
         LocalDate endDate = startDate.plusDays(3);
         VehicleRent vehicleRent1 = new VehicleRent(startDate,endDate, car1);
-        vehicleRent1.setKmDriven(30);
+
+        try {
+            vehicleRent1.setKmDriven(-5);
+        }
+        catch (IllegalRentParamException e){
+            System.out.println(e);
+        }
+
         c1.addVehicleRent(vehicleRent1);
 
         LocalDate startDate2 = LocalDate.of(2020,1,15);
         LocalDate endDate2 = startDate2.plusDays(1);
         VehicleRent vehicleRent2 = new VehicleRent(startDate2,endDate2, car3);
-        vehicleRent2.setKmDriven(20);
+        try {
+            vehicleRent2.setKmDriven(20);
+        }
+        catch (IllegalRentParamException e){
+            System.out.println(e.getMessage());
+        }
         c2.addVehicleRent(vehicleRent2);
 
         LocalDate startDate3 = LocalDate.of(2020,1,5);
@@ -542,7 +555,12 @@ public class MainRunner {
         LocalDate startDate4 = LocalDate.of(2019,1,15);
         LocalDate endDate4 = startDate4.plusDays(1);
         VehicleRent vehicleRent4 = new VehicleRent(startDate4,endDate4,  car5);
-        vehicleRent4.setKmDriven(2);
+        try {
+            vehicleRent4.setKmDriven(10);
+        }
+        catch (IllegalRentParamException e){
+            System.out.println(e.getMessage());
+        }
         c3.addVehicleRent(vehicleRent4);
 
         LocalDate startDate5 = LocalDate.of(2020,1,5);

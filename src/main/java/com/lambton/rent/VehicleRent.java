@@ -91,7 +91,10 @@ public class VehicleRent implements IDisplay {
         return kmDriven;
     }
 
-    public void setKmDriven(int kmDriven) {
+    public void setKmDriven(int kmDriven) throws IllegalRentParamException{
+        if(kmDriven < 0){
+            throw new IllegalRentParamException(" Km driven shouldn't be negative.");
+        }
         this.kmDriven = kmDriven;
         this.calculateTotalBill();
     }
