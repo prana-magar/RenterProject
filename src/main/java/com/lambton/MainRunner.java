@@ -12,7 +12,8 @@ import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
+/*Contains all object initializations as well as methods to display owner,
+driver and customer information along with their bookings*/
 public class MainRunner {
 
     private static ArrayList<Customer> customers;
