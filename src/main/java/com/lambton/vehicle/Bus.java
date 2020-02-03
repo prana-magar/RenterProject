@@ -3,6 +3,10 @@ package com.lambton.vehicle;
 import com.lambton.person.Driver;
 import com.lambton.util.IDisplay;
 
+/**
+ * This class is to hold bus attributes
+ */
+
 public class Bus extends Vehicle {
 
     private String busType;

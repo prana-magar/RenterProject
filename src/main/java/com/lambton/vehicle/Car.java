@@ -2,6 +2,10 @@ package com.lambton.vehicle;
 
 import com.lambton.person.Driver;
 
+/**
+ * This class is to hold car attributes
+ */
+
 public class Car extends Vehicle {
 
     private String carType;

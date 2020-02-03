@@ -2,6 +2,10 @@ package com.lambton.vehicle;
 
 import com.lambton.person.Driver;
 
+/**
+ * This class is to hold motorcycle attributes
+ */
+
 public class MotorCycle extends Vehicle {
 
     private int topSpeed;
