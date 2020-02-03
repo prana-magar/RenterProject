@@ -32,6 +32,7 @@ public class MainRunner {
         String password = "asdq321e1231231";
         String salt = PasswordUtil.getSalt(password.length());
         String securePassword = PasswordUtil.generateSecurePassword(password, salt);
+        System.out.println("\n The generated Secure Password for Customer 1 is - " + securePassword);
         Customer c1 = new Customer("C1",
                 "Prakash",
                 "Rana",
@@ -43,6 +44,7 @@ public class MainRunner {
                 securePassword,
                 address1);
         boolean isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
+        System.out.println("\n Is Password Valid for Customer 1 - " + isPasswordValid);
 
         //Customer 2
         Address address2 = new Address("Canada","Ontario","Toronto","M3B3A2","46.7615","86.4111"," cosburn avenue");
@@ -76,6 +78,7 @@ public class MainRunner {
                 "raghav22",
                 securePassword,
                 address3);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Customer 4
         Address address4 = new Address("Canada","Ontario","Toronto","M4B3A4","41.7616","84.4112","down town");
@@ -92,6 +95,7 @@ public class MainRunner {
                 "OzzyOsbourne",
                 securePassword,
                 address4);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Customer 5
         Address address5 = new Address("Canada","Ontario","Toronto","C3A2V2","41.7617","66.4156","eron avenue");
@@ -108,6 +112,7 @@ public class MainRunner {
                 "AlKeys",
                 securePassword
                 , address5);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Driver 1
         password = "rananana11";
@@ -125,7 +130,7 @@ public class MainRunner {
                 "677-43-0205",
                 Boolean.TRUE,
                 32332.6F);
-
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
         //Driver2
         password = "sctt77";
         salt = PasswordUtil.getSalt(password.length());
@@ -142,6 +147,7 @@ public class MainRunner {
                 "885-66-0755",
                 Boolean.TRUE,
                 28099.6F);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Driver 3
         password = "charles44";
@@ -159,6 +165,7 @@ public class MainRunner {
                 "796-04-3290",
                 Boolean.FALSE,
                 19090.0F);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Driver 4
         password = "cmanee090";
@@ -176,6 +183,7 @@ public class MainRunner {
                 "255-69-1229",
                 Boolean.TRUE,
                 32019.0F);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Driver 5
         password = "lumox1992";
@@ -193,6 +201,7 @@ public class MainRunner {
                 "335-87-9680",
                 Boolean.TRUE,
                 32231.0F);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
 
         //Driver 6
@@ -211,6 +220,7 @@ public class MainRunner {
                 "335-87-9620",
                 Boolean.TRUE,
                 32231.0F);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //Creation of different vehicle objects BEGIN here
         //Car Objects
@@ -392,6 +402,9 @@ public class MainRunner {
         ArrayList<Vehicle> vehicles1 = new ArrayList<Vehicle>();
         vehicles1.add(car1);
         vehicles1.add(car2);
+        password = "ode22";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Owner o1 = new Owner("1",
                 "Odetta",
                 "Vlasov",
@@ -400,16 +413,20 @@ public class MainRunner {
                 "(463) 6723367",
                 "odetta@gmail.com",
                 "odettavlasov",
-                "ode22",
+                securePassword,
                 "Quick Motors",
                 "8127289453",
                 "quickmotors.com",
                 vehicles1);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //List of vehicles and information of second owner
         ArrayList<Vehicle> vehicles2 = new ArrayList<Vehicle>();
         vehicles2.add(car3);
         vehicles2.add(bus1);
+        password = "emilia7%66";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Owner o2 = new Owner("2",
                 "Emilia",
                 "Clarke",
@@ -418,15 +435,19 @@ public class MainRunner {
                 "(463) 4263352",
                 "emiliac@gmail.com",
                 "emc",
-                "emilia7%66",
+                securePassword,
                 "Independent",
                 "8127456713",
                 "emiliascars.com", vehicles2);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //List of vehicles and information of third owner
         ArrayList<Vehicle> vehicles3 = new ArrayList<Vehicle>();
         vehicles3.add(car4);
         vehicles3.add(bus2);
+        password = "password";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Owner o3 = new Owner("3",
                 "Simon",
                 "Cowell",
@@ -435,10 +456,11 @@ public class MainRunner {
                 "(689) 51263458",
                 "simontheman@gmail.com",
                 "SimonCl",
-                "password",
+                securePassword,
                 "Indus Dealers",
                 "812245789",
                 "indusdealers.com", vehicles3);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //List of vehicles and information of fourth owner
         ArrayList<Vehicle> vehicles4 = new ArrayList<Vehicle>();
@@ -446,6 +468,9 @@ public class MainRunner {
         vehicles4.add(bus3);
         vehicles4.add(bus4);
         vehicles4.add(mc2);
+        password = "qwerty";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Owner o4 = new Owner("4",
                 "Frederick",
                 "Mercury",
@@ -454,15 +479,19 @@ public class MainRunner {
                 "(689) 36763478",
                 "queen@gmail.com",
                 "Fmerc",
-                "qwerty",
+                securePassword,
                 "Feels on Wheels",
                 "907645909",
                 "feelsonwheels.com", vehicles4);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //List of vehicles and information of fifth owner
         ArrayList<Vehicle> vehicles5 = new ArrayList<Vehicle>();
         vehicles5.add(mc1);
         vehicles5.add(bus5);
+        password = "abc123";
+        salt = PasswordUtil.getSalt(password.length());
+        securePassword = PasswordUtil.generateSecurePassword(password, salt);
         Owner o5 = new Owner("5",
                 "Jeff",
                 "Cavaliere",
@@ -470,10 +499,13 @@ public class MainRunner {
                 LocalDate.of(1983,12,21),
                 "(689) 44665590",
                 "jeffcavaliere@gmail.com",
-                "Jeff", "abc123",
+                "Jeff",
+                securePassword,
                 "AthleanX Motors",
                 "890459789",
-                "athleanx.com", vehicles5);
+                "athleanx.com",
+                vehicles5);
+        isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
 
         //VehicleRents objects and addition to customer
         LocalDate startDate = LocalDate.of(2019,11,5);
