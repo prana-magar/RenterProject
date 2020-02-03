@@ -19,6 +19,7 @@ We have used the following packages and classes to implement the above given str
 * **Driver Class**: Holds information about the drivers that are available
 * **Owner Class**: Holds information about owners and the vehicles they own
 * **Gender Class**: Enum class to hold gender (Male, Female, Other)
+* **Contact**: Stores all contact information about a person
 
 ### *Vehicle Package*<br>
 * **Vehicle Class**: Abstract class containing attributes to be inherited by Bus, Car, MotorCycle
