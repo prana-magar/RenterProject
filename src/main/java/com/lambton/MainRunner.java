@@ -32,6 +32,7 @@ public class MainRunner {
         String password = "asdq321e1231231";
         String salt = PasswordUtil.getSalt(password.length());
         String securePassword = PasswordUtil.generateSecurePassword(password, salt);
+        System.out.println("\n The generated Secure Password for Customer 1 is - " + securePassword);
         Customer c1 = new Customer("C1",
                 "Prakash",
                 "Rana",
@@ -43,6 +44,7 @@ public class MainRunner {
                 securePassword,
                 address1);
         boolean isPasswordValid =  PasswordUtil.validatePassword(password, securePassword ,salt);
+        System.out.println("\n Is Password Valid for Customer 1 - " + isPasswordValid);
 
         //Customer 2
         Address address2 = new Address("Canada","Ontario","Toronto","M3B3A2","46.7615","86.4111"," cosburn avenue");
