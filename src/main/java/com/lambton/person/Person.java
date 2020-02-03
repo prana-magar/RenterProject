@@ -5,6 +5,8 @@ import com.lambton.util.PasswordUtil;
 
 import java.time.LocalDate;
 
+//Person class is an abstract class containing attributes to be inherited by Customer, Driver and Owner Classes
+
  public abstract class Person implements IDisplay {
     private String id;
     private String firstName;
