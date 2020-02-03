@@ -4,6 +4,8 @@ import com.lambton.util.IDisplay;
 
 import java.time.LocalDate;
 
+//Driver class inherits person class and it holds information about the drivers that are available
+
 public class Driver extends Person {
 
     private String drivingLicenceNumber;
