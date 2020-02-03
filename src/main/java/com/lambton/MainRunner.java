@@ -6,6 +6,8 @@ import com.lambton.util.Address;
 import com.lambton.util.PasswordUtil;
 import com.lambton.vehicle.*;
 
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -26,7 +28,6 @@ public class MainRunner {
     private static ArrayList<VehicleRent> vehicleRents;
 
     static void init(){
-
 
         //Customer 1
         Address address1 = new Address("Canada","Ontario","Toronto","M3B3A1","43.7615","79.4111"," graydon hall drive");
@@ -611,8 +612,13 @@ public class MainRunner {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         init();
+
+        PrintStream originalOut = System.out;
+
+        PrintStream fileOut = new PrintStream("./output_vehicle_renting_system.txt");
+        System.setOut(fileOut);
 
         // Print all owners
         System.out.println("\n*LIST OF ALL OWNERS*\n");
@@ -652,12 +658,12 @@ public class MainRunner {
         }
 
         // Removes Vehicle with expired BOOKINGS
-        System.out.println("\n*Remove Vehicle with expired BOOKINGS*\n");
+      /*  System.out.println("\n*Remove Vehicle with expired BOOKINGS*\n");
         MainRunner main = new MainRunner();
         for (Customer customer : customers)
         {
             main.checkVehicleRentsValidity(customer);
         }
-
+*/
     }
 }
