@@ -616,9 +616,13 @@ public class MainRunner {
         init();
 
         PrintStream originalOut = System.out;
+        PrintStream originalErr = System.err;
+
 
         PrintStream fileOut = new PrintStream("./output_vehicle_renting_system.txt");
+        PrintStream fileErr = new PrintStream("./renterProject_errors.txt");
         System.setOut(fileOut);
+        System.setErr(fileErr);
 
         // Print all owners
         System.out.println("\n*LIST OF ALL OWNERS*\n");
