@@ -3,7 +3,7 @@
 ## PROJECT CONTRIBUTORS
 
 Abhishek Santhosh Jaya (C0769778)<br>
-Prakash Rana<br>
+Prakash Rana (C0773839)<br>
 Raghav Bobal<br>
 
 ## PROJECT DESCRIPTION
