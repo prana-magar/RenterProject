@@ -7,6 +7,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+//Owner class inherits person class and holds information about owners and the vehicles they own
+
 public class Owner extends Person {
     private String companyTitle;
     private String landLineNumber;
