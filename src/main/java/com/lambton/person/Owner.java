@@ -7,16 +7,18 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-//Owner class inherits person class and holds information about owners and the vehicles they own
 
+/**
+ * Owner class inherits person class and holds information about owners and the vehicles they own
+ */
 public class Owner extends Person {
     private String companyTitle;
     private String landLineNumber;
     private String url;
     private List<Vehicle> vehicles;
 
-    public Owner(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String userName, String password, String companyTitle, String landLineNumber, String url, ArrayList<Vehicle> vehicles,Contact contact) {
-        super(id, firstName, lastName, gender, birthDate, userName, password,contact);
+    public Owner(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String userName, String password, String companyTitle, String landLineNumber, String url, ArrayList<Vehicle> vehicles, Contact contact) {
+        super(id, firstName, lastName, gender, birthDate, userName, password, contact);
         this.companyTitle = companyTitle;
         this.landLineNumber = landLineNumber;
         this.url = url;
@@ -27,7 +29,7 @@ public class Owner extends Person {
     @Override
     public String toString() {
         return "Owner{" +
-                super.toString()+
+                super.toString() +
                 " companyTitle='" + companyTitle + '\'' +
                 ", landLineNumber='" + landLineNumber + '\'' +
                 ", Vehicles='" + vehicles + '\'' +
@@ -65,6 +67,6 @@ public class Owner extends Person {
     }
 
     public void setVehicles(List<Vehicle> vehicles) {
-        this.vehicles =  vehicles;
+        this.vehicles = vehicles;
     }
 }
