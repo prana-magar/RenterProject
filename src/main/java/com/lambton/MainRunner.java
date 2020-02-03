@@ -651,6 +651,13 @@ public class MainRunner {
             }
         }
 
+        // Removes Vehicle with expired BOOKINGS
+        System.out.println("\n*Remove Vehicle with expired BOOKINGS*\n");
+        MainRunner main = new MainRunner();
+        for (Customer customer : customers)
+        {
+            main.checkVehicleRentsValidity(customer);
+        }
 
     }
 }
