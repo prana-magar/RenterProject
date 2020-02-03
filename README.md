@@ -40,4 +40,5 @@ We have used the following packages and classes to implement the above given str
 * Contains rental information such as startDate, endDate, kmsDriven, totalBill etc.
 
 ## REFERENCES
-* [Appsdeveloperblog](http://www.appsdeveloperblog.com/encrypt-user-password-example-java/)
+* [Apps Developer Blog](http://www.appsdeveloperblog.com/encrypt-user-password-example-java/) - Used to create the encryption/decryption method
+* [DEV2QA](https://www.dev2qa.com/how-to-write-console-output-to-text-file-in-java/) - Used to write output to .txt file
