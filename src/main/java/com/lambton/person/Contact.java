@@ -4,7 +4,9 @@ import com.lambton.util.Address;
 
 import java.util.regex.Pattern;
 
-
+/**
+ * Stores all contact information about a person.
+ */
 public class Contact {
 
     private String mobileNumber;
@@ -26,6 +28,19 @@ public class Contact {
         }
         this.emailId = emailId;
         this.address = address;
+    }
+
+    public Contact(String mobileNumber, String emailId) {
+        if(!this.validatePhoneNumber(mobileNumber))
+        {
+            throw new IllegalArgumentException("PhoneNumbe not proper.Should have length 7<= phoneNumber >=16");
+        }
+        this.mobileNumber = mobileNumber;
+
+        if(!this.validateEmailId(emailId)){
+            throw new IllegalArgumentException("Email not proper");
+        }
+        this.emailId = emailId;
     }
 
 
