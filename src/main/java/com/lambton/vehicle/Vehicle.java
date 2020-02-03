@@ -2,7 +2,12 @@ package com.lambton.vehicle;
 // vehicle package contains the Bus,Car,FuelType and MotorCycle classes
 import com.lambton.person.Driver;
 import com.lambton.util.IDisplay;
-//Abstract class containing attributes to be inherited by Bus, Car, MotorCycle
+
+
+/**
+ * Abstract class containing attributes to be inherited by any vehicle
+ */
+
 public abstract class Vehicle implements IDisplay {
     private String vehicleId;
     private String description;

@@ -1,5 +1,8 @@
 package com.lambton.util;
-//Interface containing one method public void display()
+/**
+ * Interface containing one method to  display()
+ */
+
 public interface IDisplay {
      void display();
 }
