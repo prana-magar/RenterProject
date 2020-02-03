@@ -612,53 +612,57 @@ public class MainRunner {
         }
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         init();
 
-        PrintStream originalOut = System.out;
-        PrintStream originalErr = System.err;
+        try {
+            PrintStream originalOut = System.out;
+            PrintStream originalErr = System.err;
 
+            PrintStream fileOut = new PrintStream("./output_vehicle_renting_system.txt");
+            PrintStream fileErr = new PrintStream("./renterProject_errors.txt");
+            System.setOut(fileOut);
+            System.setErr(fileErr);
 
-        PrintStream fileOut = new PrintStream("./output_vehicle_renting_system.txt");
-        PrintStream fileErr = new PrintStream("./renterProject_errors.txt");
-        System.setOut(fileOut);
-        System.setErr(fileErr);
-
-        // Print all owners
-        System.out.println("\n*LIST OF ALL OWNERS*\n");
-        for(Owner owner: owners){
-            owner.display();
-        }
-
-        // Print all customers with their bookings
-        System.out.println("\n*CUSTOMERS AND THEIR BOOKINGS*\n");
-        for(Customer customer: customers){
-            customer.display();
-            for(VehicleRent vehicleRent:vehicleRents){
-                vehicleRent.display();
+            // Print all owners
+            System.out.println("\n*LIST OF ALL OWNERS*\n");
+            for (Owner owner : owners) {
+                owner.display();
             }
-        }
 
-        // all customers with some bookings
-        System.out.println("\n*CUSTOMERS WITH SOME BOOKINGS*\n");
-        for(Customer customer: customers){
-            if(customer.getVehicleRents() != null){
+            // Print all customers with their bookings
+            System.out.println("\n*CUSTOMERS AND THEIR BOOKINGS*\n");
+            for (Customer customer : customers) {
                 customer.display();
+                for (VehicleRent vehicleRent : vehicleRents) {
+                    vehicleRent.display();
+                }
             }
-        }
 
-        // all customers with some live/current bookings
-        System.out.println("\n*CUSTOMERS WITH LIVE/CURRENT BOOKINGS*\n");
-        for(Customer customer: customers){
-            customer.display();
-            ArrayList<VehicleRent> vehicleRents = (ArrayList<VehicleRent>) customer.getVehicleRents();
-            if(customer.getVehicleRents() != null){
-                for(VehicleRent vehicleRent: vehicleRents){
-                    if(vehicleRent.isLive()){
-                        vehicleRent.display();
+            // all customers with some bookings
+            System.out.println("\n*CUSTOMERS WITH SOME BOOKINGS*\n");
+            for (Customer customer : customers) {
+                if (customer.getVehicleRents() != null) {
+                    customer.display();
+                }
+            }
+
+            // all customers with some live/current bookings
+            System.out.println("\n*CUSTOMERS WITH LIVE/CURRENT BOOKINGS*\n");
+            for (Customer customer : customers) {
+                customer.display();
+                ArrayList<VehicleRent> vehicleRents = (ArrayList<VehicleRent>) customer.getVehicleRents();
+                if (customer.getVehicleRents() != null) {
+                    for (VehicleRent vehicleRent : vehicleRents) {
+                        if (vehicleRent.isLive()) {
+                            vehicleRent.display();
+                        }
                     }
                 }
             }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.out.println("The specified file could not be found " + e.getMessage());
         }
 
         // Removes Vehicle with expired BOOKINGS
