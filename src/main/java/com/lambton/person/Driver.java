@@ -51,7 +51,11 @@ public class Driver extends Person {
         return salary;
     }
 
-    public void setSalary(Float salary) {
+    public void setSalary(Float salary) throws SalaryException{
+
+        if(salary < 500){
+            throw new SalaryException("Salary can't be below 500");
+        }
         this.salary = salary;
     }
 }
