@@ -4,6 +4,7 @@ import com.lambton.person.*;
 import com.lambton.rent.IllegalRentParamException;
 import com.lambton.rent.VehicleRent;
 import com.lambton.person.Address;
+import com.lambton.util.IDisplay;
 import com.lambton.util.PasswordUtil;
 import com.lambton.vehicle.*;
 
@@ -736,8 +737,29 @@ public class MainRunner {
 
 
 
+            // Dynamic dispatch
+
+            System.out.println("\n*Dynamic DISPATCH WITH PARENT REF*\n");
+
+            Person person;
+            Customer customerObj = customers.get(0);
+            Owner ownerObj = owners.get(0);
+
+            person = customerObj;
+            person.display();
+
+            person = ownerObj;
+            person.display();
 
 
+            System.out.println("\n*Dynamic DISPATCH WITH INTERFACE REF*\n");
+            // using interface
+            IDisplay iDisplay;
+            iDisplay = customerObj;
+            iDisplay.display();
+
+            iDisplay = ownerObj;
+            iDisplay.display();
 
 
 
