@@ -526,38 +526,35 @@ public class MainRunner {
         //VehicleRents objects and addition to customer
         LocalDate startDate = LocalDate.of(2019,11,5);
         LocalDate endDate = startDate.plusDays(3);
-        int numberOfDays = (int) ChronoUnit.DAYS.between(startDate,endDate);
-        VehicleRent vehicleRent1 = new VehicleRent(startDate,endDate, numberOfDays, car1);
+        VehicleRent vehicleRent1 = new VehicleRent(startDate,endDate, car1);
+        vehicleRent1.setKmDriven(30);
         c1.addVehicleRent(vehicleRent1);
 
         LocalDate startDate2 = LocalDate.of(2020,1,15);
         LocalDate endDate2 = startDate2.plusDays(1);
-        int numberOfDays2 = (int) ChronoUnit.DAYS.between(startDate2,endDate2);
-        VehicleRent vehicleRent2 = new VehicleRent(startDate2,endDate2, numberOfDays2, car3);
+        VehicleRent vehicleRent2 = new VehicleRent(startDate2,endDate2, car3);
+        vehicleRent2.setKmDriven(20);
         c2.addVehicleRent(vehicleRent2);
 
         LocalDate startDate3 = LocalDate.of(2020,1,5);
         LocalDate endDate3 = startDate3.plusDays(1);
-        int numberOfDays3 = (int) ChronoUnit.DAYS.between(startDate3,endDate3);
-        VehicleRent vehicleRent3 = new VehicleRent(startDate3,endDate3, numberOfDays3, bus1);
+        VehicleRent vehicleRent3 = new VehicleRent(startDate3,endDate3, bus1);
         c2.addVehicleRent(vehicleRent3);
 
         LocalDate startDate4 = LocalDate.of(2019,1,15);
         LocalDate endDate4 = startDate4.plusDays(1);
-        int numberOfDays4 = (int) ChronoUnit.DAYS.between(startDate4,endDate4);
-        VehicleRent vehicleRent4 = new VehicleRent(startDate4,endDate4, numberOfDays4, car5);
+        VehicleRent vehicleRent4 = new VehicleRent(startDate4,endDate4,  car5);
+        vehicleRent4.setKmDriven(2);
         c3.addVehicleRent(vehicleRent4);
 
         LocalDate startDate5 = LocalDate.of(2020,1,5);
         LocalDate endDate5 = startDate5.plusDays(1);
-        int numberOfDays5 = (int) ChronoUnit.DAYS.between(startDate5,endDate5);
-        VehicleRent vehicleRent5 = new VehicleRent(startDate5,endDate5, numberOfDays5, mc1);
+        VehicleRent vehicleRent5 = new VehicleRent(startDate5,endDate5, mc1);
         c4.addVehicleRent(vehicleRent5);
 
         LocalDate startDate6 = LocalDate.of(2020,1,25);
         LocalDate endDate6 = LocalDate.now();
-        int numberOfDays6 = (int) ChronoUnit.DAYS.between(startDate6,endDate6);
-        VehicleRent vehicleRent6 = new VehicleRent(startDate6,endDate6, numberOfDays6, mc3);
+        VehicleRent vehicleRent6 = new VehicleRent(startDate6,endDate6, mc3);
         c4.addVehicleRent(vehicleRent6);
 
         customers = new ArrayList<>();
@@ -687,6 +684,14 @@ public class MainRunner {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.out.println("The specified file could not be found " + e.getMessage());
+        }
+
+        // All rents with price
+        System.out.println("\n*All RENTS WITH BILL INFO*\n");
+        for(VehicleRent vehicleRent: vehicleRents){
+            System.out.printf("Km driven: %d , No of days: %d, vehicle_type: %s--> total_bill: %f %n",
+                    vehicleRent.getKmDriven(),vehicleRent.getNumberOfDays(),vehicleRent.getVehicle().getClass(),vehicleRent.getTotalBill()
+                    );
         }
 
         // Removes Vehicle with expired BOOKINGS

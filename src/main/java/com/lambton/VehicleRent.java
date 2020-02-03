@@ -5,19 +5,22 @@ import com.lambton.vehicle.Vehicle;
 
 import java.time.LocalDate;
 
+import static java.time.temporal.ChronoUnit.DAYS;
+
 public class VehicleRent implements IDisplay {
     private LocalDate rentStartDate;
     private LocalDate rentEndDate;
-    private int numberOfDays;
+    private long numberOfDays;
     private int kmDriven;
     private float totalBill;
     private Vehicle vehicle;
 
-    public VehicleRent(LocalDate rentStartDate, LocalDate rentEndDate, int numberOfDays,  Vehicle vehicle) {
+    public VehicleRent(LocalDate rentStartDate, LocalDate rentEndDate, Vehicle vehicle) {
         this.rentStartDate = rentStartDate;
         this.rentEndDate = rentEndDate;
-        this.numberOfDays = numberOfDays;
+        this.numberOfDays = this.calculateNumberOfDays();
         this.vehicle = vehicle;
+        this.calculateTotalBill();
     }
 
     @Override
@@ -32,9 +35,31 @@ public class VehicleRent implements IDisplay {
                 '}';
     }
 
+
     @Override
     public void display() {
         System.out.println(this.toString());
+    }
+
+
+    /**
+     * returns the number of days current rent was booked
+     * @return
+     */
+    private long calculateNumberOfDays(){
+        return DAYS.between(this.rentStartDate,this.rentEndDate);
+    }
+
+
+    /**
+     * returns the total bill of current rent
+     * @return
+     */
+    private void calculateTotalBill(){
+        float baseRate = this.vehicle.getBaseRate();
+        float perKmRate = this.vehicle.getPerKmRate();
+        int kmDrived = this.getKmDriven();
+        this.totalBill =  baseRate + perKmRate * kmDrived;
     }
 
     public LocalDate getRentStartDate() {
@@ -43,6 +68,8 @@ public class VehicleRent implements IDisplay {
 
     public void setRentStartDate(LocalDate rentStartDate) {
         this.rentStartDate = rentStartDate;
+        this.calculateNumberOfDays();
+        this.calculateTotalBill();
     }
 
     public LocalDate getRentEndDate() {
@@ -51,15 +78,14 @@ public class VehicleRent implements IDisplay {
 
     public void setRentEndDate(LocalDate rentEndDate) {
         this.rentEndDate = rentEndDate;
+        this.calculateNumberOfDays();
+        this.calculateTotalBill();
     }
 
-    public int getNumberOfDays() {
+    public long getNumberOfDays() {
         return numberOfDays;
     }
 
-    public void setNumberOfDays(int numberOfDays) {
-        this.numberOfDays = numberOfDays;
-    }
 
     public int getKmDriven() {
         return kmDriven;
@@ -67,15 +93,14 @@ public class VehicleRent implements IDisplay {
 
     public void setKmDriven(int kmDriven) {
         this.kmDriven = kmDriven;
+        this.calculateTotalBill();
     }
 
     public float getTotalBill() {
+        this.calculateTotalBill();
         return totalBill;
     }
 
-    public void setTotalBill(float totalBill) {
-        this.totalBill = totalBill;
-    }
 
     public Vehicle getVehicle() {
         return vehicle;
@@ -83,6 +108,7 @@ public class VehicleRent implements IDisplay {
 
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
+        this.calculateTotalBill();
     }
 
     public boolean isLive(){
