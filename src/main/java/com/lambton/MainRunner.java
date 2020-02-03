@@ -12,6 +12,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Objects;
 
 
@@ -308,6 +309,18 @@ public class MainRunner {
                 FuelType.DIESEL,
                 100);
 
+        Car car6 = new Car("as5TDBKRFH4ES020941",
+                "Mercedes-Benz GLE SUV",
+                "Mercedes",
+                "SUV",
+                "Blue",
+                true,
+                true,
+                "Digit Insurance",
+                6,
+                FuelType.DIESEL,
+                100);
+
         //Bus Objects
         Bus bus1 = new Bus("SALVN2BG3DH848046",
                 "Low-floor",
@@ -410,6 +423,18 @@ public class MainRunner {
 
         MotorCycle mc3 = new MotorCycle("1FTEW1E82AF943821",
                 "2004 Thundercat YZF600R",
+                "Yamaha",
+                true,
+                true,
+                "Bikesareus Insurance",
+                2,
+                FuelType.PETROL,
+                43,
+                145,
+                50);
+
+        MotorCycle mc4 = new MotorCycle("1FTEasW1E82AF943821",
+                " Thundercat YZF600R",
                 "Yamaha",
                 true,
                 true,
@@ -638,11 +663,14 @@ public class MainRunner {
         cars.add(car3);
         cars.add(car4);
         cars.add(car5);
+        cars.add(car6);
+
 
         motorCycles = new ArrayList<>();
         motorCycles.add(mc1);
         motorCycles.add(mc2);
         motorCycles.add(mc3);
+        motorCycles.add(mc4);
 
         vehicleRents = new ArrayList<>();
         vehicleRents.add(vehicleRent1);
@@ -663,10 +691,10 @@ public class MainRunner {
          * @param originalOut Saving original out stream
          * @param originalErr Saving original err stream
          */
-        try {
-            PrintStream originalOut = System.out;
-            PrintStream originalErr = System.err;
 
+        PrintStream originalOut = System.out;
+        PrintStream originalErr = System.err;
+        try {
             PrintStream fileOut = new PrintStream("./output_vehicle_renting_system.txt");
             PrintStream fileErr = new PrintStream("./renterProject_errors.txt");
             System.setOut(fileOut);
@@ -770,12 +798,33 @@ public class MainRunner {
                         vehicleRent.getKmDriven(),vehicleRent.getNumberOfDays(),vehicleRent.getVehicle().getClass(),vehicleRent.getTotalBill()
                 );
             }
+
+
+            // All CARS that are not Booked right now
+            System.out.println("\n*All Non BOOKED CARS*\n");
+
+            HashSet<Vehicle> bookedVehicles = new HashSet<>();
+            for(VehicleRent vehicleRent: vehicleRents){
+                if(vehicleRent.isLive()){
+                    bookedVehicles.add(vehicleRent.getVehicle());
+                }
+            }
+
+            for(Vehicle vehicle:cars){
+                if(!bookedVehicles.contains(vehicle)){
+                    vehicle.display();
+                }
+            }
+
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.out.println("The specified file could not be found " + e.getMessage());
         }
-
-
+        finally {
+            System.setOut(originalOut);
+            System.setErr(originalErr);
+        }
 
 
     }

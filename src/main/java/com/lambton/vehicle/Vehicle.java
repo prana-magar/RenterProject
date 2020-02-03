@@ -52,6 +52,10 @@ public abstract class Vehicle implements IDisplay {
         this.perKmRate = perKmRate;
     }
 
+    @Override
+    public int hashCode() {
+        return vehicleId.hashCode();
+    }
 
     public String getVehicleId() {
         return vehicleId;
