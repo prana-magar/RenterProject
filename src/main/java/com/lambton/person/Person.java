@@ -1,4 +1,5 @@
 package com.lambton.person;
+//The person package contains the customers,owners and driver classes that inherits from person class
 
 import com.lambton.util.IDisplay;
 import com.lambton.util.PasswordUtil;

@@ -10,6 +10,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
+// customer class inherits person class and holds the details of customer as well as the vehicles they have rented
 
 public class Customer extends Person {
 
