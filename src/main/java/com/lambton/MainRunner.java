@@ -542,7 +542,7 @@ public class MainRunner {
             System.out.println(e);
         }
 
-        c1.addVehicleRent(vehicleRent1);
+        c1.addVehicleRents(vehicleRent1);
 
         LocalDate startDate2 = LocalDate.of(2020,1,15);
         LocalDate endDate2 = startDate2.plusDays(1);
@@ -553,12 +553,12 @@ public class MainRunner {
         catch (IllegalRentParamException e){
             System.out.println(e.getMessage());
         }
-        c2.addVehicleRent(vehicleRent2);
+        c2.addVehicleRents(vehicleRent2);
 
         LocalDate startDate3 = LocalDate.of(2020,1,5);
         LocalDate endDate3 = startDate3.plusDays(1);
         VehicleRent vehicleRent3 = new VehicleRent(startDate3,endDate3, bus1);
-        c2.addVehicleRent(vehicleRent3);
+        c2.addVehicleRents(vehicleRent3);
 
         LocalDate startDate4 = LocalDate.of(2019,1,15);
         LocalDate endDate4 = startDate4.plusDays(1);
@@ -569,17 +569,17 @@ public class MainRunner {
         catch (IllegalRentParamException e){
             System.out.println(e.getMessage());
         }
-        c3.addVehicleRent(vehicleRent4);
+        c3.addVehicleRents(vehicleRent4);
 
         LocalDate startDate5 = LocalDate.of(2020,1,5);
         LocalDate endDate5 = startDate5.plusDays(1);
         VehicleRent vehicleRent5 = new VehicleRent(startDate5,endDate5, mc1);
-        c4.addVehicleRent(vehicleRent5);
+        c4.addVehicleRents(vehicleRent5);
 
         LocalDate startDate6 = LocalDate.of(2020,1,25);
         LocalDate endDate6 = LocalDate.now();
         VehicleRent vehicleRent6 = new VehicleRent(startDate6,endDate6, mc3);
-        c4.addVehicleRent(vehicleRent6);
+        c4.addVehicleRents(vehicleRent6);
 
         customers = new ArrayList<>();
         customers.add(c1);
@@ -631,24 +631,9 @@ public class MainRunner {
 
     }
 
-    private void checkVehicleRentsValidity(Customer customer)
-    {
-        if (Objects.nonNull(customer)) {
-
-            for (VehicleRent vehicleRent : customer.getVehicleRents()) {
-
-                if (Objects.nonNull(vehicleRent)) {
-                    LocalDate localDate = LocalDate.of(2020, 2, 2);
-                    if (vehicleRent.getRentEndDate().isBefore(localDate)) {
-                        customer.getVehicleRents().remove(vehicleRent);
-                    }
-                }
-            }
-        }
-    }
 
     public static void main(String[] args) {
-        init();
+
 
         /**
          * Storing original output and providing new output as text file
@@ -663,6 +648,8 @@ public class MainRunner {
             PrintStream fileErr = new PrintStream("./renterProject_errors.txt");
             System.setOut(fileOut);
             System.setErr(fileErr);
+
+            init();
 
             /**
              * Displaying relevant information
@@ -687,12 +674,12 @@ public class MainRunner {
             // all customers with some bookings
             System.out.println("\n*CUSTOMERS WITH SOME BOOKINGS*\n");
             for (Customer customer : customers) {
-                if (customer.getVehicleRents() != null) {
+                if (customer.hasBookings()) {
                     customer.display();
                 }
             }
 
-            // all customers with some live/current bookings
+            // all customers with some live/current bookings vehicle
             System.out.println("\n*CUSTOMERS WITH LIVE/CURRENT BOOKINGS*\n");
             for (Customer customer : customers) {
                 customer.display();
@@ -705,26 +692,47 @@ public class MainRunner {
                     }
                 }
             }
+
+            // overloading addVehicles in customer class
+            System.out.println("\n*Overloading example*\n");
+            Customer customer = customers.get(0);
+            ArrayList<VehicleRent> vehicleRentsBackup = (ArrayList<VehicleRent>) customer.getVehicleRents();
+
+            // before adding objects
+            System.out.println(customer.getVehicleRents().size());
+
+            VehicleRent singleVehicleRent = vehicleRents.get(0);
+
+            // takes single vehicle rent object
+            customer.addVehicleRents(singleVehicleRent);
+            System.out.println(customer.getVehicleRents().size());
+
+            // same interface but takes list of vehicle rent
+            customer.addVehicleRents(vehicleRents);
+            System.out.println(customer.getVehicleRents().size());
+
+
+
+
+
+
+
+
+
+            // All rents with price
+            System.out.println("\n*All RENTS WITH BILL INFO*\n");
+            for(VehicleRent vehicleRent: vehicleRents){
+                System.out.printf("Km driven: %d , No of days: %d, vehicle_type: %s--> total_bill: %f %n",
+                        vehicleRent.getKmDriven(),vehicleRent.getNumberOfDays(),vehicleRent.getVehicle().getClass(),vehicleRent.getTotalBill()
+                );
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.out.println("The specified file could not be found " + e.getMessage());
         }
 
-        // All rents with price
-        System.out.println("\n*All RENTS WITH BILL INFO*\n");
-        for(VehicleRent vehicleRent: vehicleRents){
-            System.out.printf("Km driven: %d , No of days: %d, vehicle_type: %s--> total_bill: %f %n",
-                    vehicleRent.getKmDriven(),vehicleRent.getNumberOfDays(),vehicleRent.getVehicle().getClass(),vehicleRent.getTotalBill()
-                    );
-        }
 
-        // Removes Vehicle with expired BOOKINGS
-      /*  System.out.println("\n*Remove Vehicle with expired BOOKINGS*\n");
-        MainRunner main = new MainRunner();
-        for (Customer customer : customers)
-        {
-            main.checkVehicleRentsValidity(customer);
-        }
-*/
+
+
     }
 }

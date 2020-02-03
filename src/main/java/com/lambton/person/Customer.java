@@ -27,29 +27,26 @@ public class Customer extends Person {
                 '}';
     }
 
-    public void addVehicleRent(VehicleRent vehicleRent){
+    public void addVehicleRents(VehicleRent vehicleRent){
 
         if(this.vehicleRents == null){
             this.vehicleRents = new ArrayList<>();
         }
 
-        if(this.vehicleRents.contains(vehicleRent)){
-            System.out.println("Already Present");
-        }
         this.vehicleRents.add(vehicleRent);
     }
 
     public void addVehicleRents(List<VehicleRent> vehicleRents){
         for(VehicleRent vehicleRent: vehicleRents){
-            this.addVehicleRent(vehicleRent);
+            this.addVehicleRents(vehicleRent);
         }
     }
 
-    public Boolean hasBookings(){
+    public boolean hasBookings(){
         return this.vehicleRents != null;
     }
 
-    public Boolean hasLiveBookings(){
+    public boolean hasLiveBookings(){
 
         for(VehicleRent vehicleRent: this.vehicleRents){
             if(vehicleRent.isLive()){
