@@ -1,7 +1,5 @@
 package com.lambton.person;
 
-import com.lambton.util.Address;
-
 import java.util.regex.Pattern;
 
 /**

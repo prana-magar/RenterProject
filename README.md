@@ -20,6 +20,7 @@ We have used the following packages and classes to implement the above given str
 * **Owner Class**: Holds information about owners and the vehicles they own
 * **Gender Class**: Enum class to hold gender (Male, Female, Other)
 * **Contact**: Stores all contact information about a person
+* **Address Class**: Class containing address information used in MainRunner
 
 ### *Vehicle Package*<br>
 * **Vehicle Class**: Abstract class containing attributes to be inherited by Bus, Car, MotorCycle
@@ -29,16 +30,16 @@ We have used the following packages and classes to implement the above given str
 * **FuelType Class**: Enum class to hold the type of fuel used (Petrol, Diesel, Electric)
 
 ### *Utility Package*<br>
-* **Adress Class**: Class containing address information used in MainRunner
 * **IDisplay Class**: Interface containing one method public void display()
 * **PasswordUtil Class**: Class used for encrption and decryption of passwords
+
+### *Rent Package*
+* **IDisplay Class**: Contains rental information such as startDate, endDate, kmsDriven, totalBill etc.
 
 
 ### *MainRunner Class*
 * Contains all object initializations as well as methods to display owner, driver and customer information along with their bookings
 
-### *VehicleRent Class*
-* Contains rental information such as startDate, endDate, kmsDriven, totalBill etc.
 
 ## REFERENCES
 * [Apps Developer Blog](http://www.appsdeveloperblog.com/encrypt-user-password-example-java/) - Used to create the encryption/decryption method

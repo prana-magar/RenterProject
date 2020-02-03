@@ -1,4 +1,4 @@
-package com.lambton;
+package com.lambton.rent;
 
 import com.lambton.util.IDisplay;
 import com.lambton.vehicle.Vehicle;

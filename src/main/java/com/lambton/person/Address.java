@@ -1,4 +1,4 @@
-package com.lambton.util;
+package com.lambton.person;
 
 /**
  * This class is to hold address attributes
