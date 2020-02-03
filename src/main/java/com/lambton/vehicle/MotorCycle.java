@@ -1,5 +1,5 @@
 package com.lambton.vehicle;
-
+//MotorCycle class contains the attributes inherited from Vehicle as well as mileage and topSpeed
 import com.lambton.person.Driver;
 
 public class MotorCycle extends Vehicle {

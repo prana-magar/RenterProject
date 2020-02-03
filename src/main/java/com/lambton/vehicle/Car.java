@@ -1,6 +1,7 @@
 package com.lambton.vehicle;
 
 import com.lambton.person.Driver;
+//Car class contains attributes inherited from Vehicle as well as carColor and carType
 
 public class Car extends Vehicle {
 

@@ -1,5 +1,7 @@
 package com.lambton.vehicle;
 
+//Bus class contains attributes inherited from Vehicle as well as busType, wifi and accessibility services
+
 import com.lambton.person.Driver;
 import com.lambton.util.IDisplay;
 
