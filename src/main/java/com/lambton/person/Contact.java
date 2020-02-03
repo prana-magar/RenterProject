@@ -14,6 +14,15 @@ public class Contact {
     private Address address;
 
 
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "mobileNumber='" + mobileNumber + '\'' +
+                ", emailId='" + emailId + '\'' +
+                ", address=" + address +
+                '}';
+    }
+
     public Contact(String mobileNumber, String emailId, Address address) {
 
 

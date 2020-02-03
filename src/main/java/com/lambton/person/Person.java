@@ -53,6 +53,7 @@ import java.time.LocalDate;
                ", age=" + age +
                ", userName='" + userName + '\'' +
                ", password='" + password + '\'' +
+               ", contact='" + contact + '\'' +
                '}';
     }
 

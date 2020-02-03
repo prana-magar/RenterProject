@@ -22,4 +22,17 @@ public class Address {
         this.longitude = longitude;
         this.streetName = streetName;
     }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "country='" + country + '\'' +
+                ", province='" + province + '\'' +
+                ", city='" + city + '\'' +
+                ", pincode='" + pincode + '\'' +
+                ", latitude='" + latitude + '\'' +
+                ", longitude='" + longitude + '\'' +
+                ", streetName='" + streetName + '\'' +
+                '}';
+    }
 }
