@@ -27,6 +27,9 @@ public class MainRunner {
 
     private static ArrayList<VehicleRent> vehicleRents;
 
+    /**
+     * Method to initialize all objects
+     */
     static void init(){
 
         //Customer 1
@@ -603,7 +606,7 @@ public class MainRunner {
             for (VehicleRent vehicleRent : customer.getVehicleRents()) {
 
                 if (Objects.nonNull(vehicleRent)) {
-                    LocalDate localDate = LocalDate.of(2020, 02, 02);
+                    LocalDate localDate = LocalDate.of(2020, 2, 2);
                     if (vehicleRent.getRentEndDate().isBefore(localDate)) {
                         customer.getVehicleRents().remove(vehicleRent);
                     }
@@ -615,6 +618,11 @@ public class MainRunner {
     public static void main(String[] args) {
         init();
 
+        /**
+         * Storing original output and providing new output as text file
+         * @param originalOut Saving original out stream
+         * @param originalErr Saving original err stream
+         */
         try {
             PrintStream originalOut = System.out;
             PrintStream originalErr = System.err;
@@ -623,6 +631,11 @@ public class MainRunner {
             PrintStream fileErr = new PrintStream("./renterProject_errors.txt");
             System.setOut(fileOut);
             System.setErr(fileErr);
+
+            /**
+             * Displaying relevant information
+             * @param display() Implementing interface method
+             */
 
             // Print all owners
             System.out.println("\n*LIST OF ALL OWNERS*\n");

@@ -1,5 +1,9 @@
 package com.lambton.util;
 
+/**
+ * This class is to hold address attributes
+ */
+
 public class Address {
     private String country;
     private String province;
