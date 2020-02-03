@@ -35,6 +35,7 @@ We have used the following packages and classes to implement the above given str
 
 ### *Rent Package*
 * **VehicleRent Class**: Contains rental information such as startDate, endDate, kmsDriven, totalBill etc.
+* **IllegalRentParamException**: Class for custom exception
 
 
 ### *MainRunner Class*
