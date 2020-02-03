@@ -1,4 +1,6 @@
 package com.lambton.util;
+//The util package contains the address and passwordUtil classes and an IDisplay interface
+//Address class contains the address information that is used in MainRunner
 
 public class Address {
     private String country;
